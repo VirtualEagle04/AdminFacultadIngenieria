@@ -15,12 +15,14 @@ import co.edu.unbosque.model.EstudianteDTO;
 import co.edu.unbosque.model.UUIDUsuarioDAO;
 import co.edu.unbosque.model.UUIDUsuarioDTO;
 import co.edu.unbosque.util.MailSender;
+import co.edu.unbosque.view.MainWindow;
 
 public class Controller {
 
 	private EstudianteDAO edao;
 	private UUIDUsuarioDAO uuidDAO;
 	private AdminDAO adao;
+	private MainWindow vp;
 	
 	//QUITAR
 	private Scanner sc;
@@ -30,6 +32,7 @@ public class Controller {
 		uuidDAO = new UUIDUsuarioDAO();
 		adao = new AdminDAO();
 		sc = new Scanner(System.in);
+		vp = new MainWindow();
 	}
 
 	public void run() throws AddressException, MessagingException {
