@@ -1,5 +1,7 @@
 package co.edu.unbosque.model.persistance;
 
+import java.awt.Graphics;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -10,6 +12,16 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.JFreeChart;
+
+import com.itextpdf.text.BadElementException;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfWriter;
+
 public class FileHandler {
 
 	private static Scanner lector;
@@ -17,6 +29,9 @@ public class FileHandler {
 	private static PrintWriter escritor;
 	private static ObjectInputStream ois;
 	private static ObjectOutputStream oos;
+	private static FileOutputStream fos;
+	private static PdfWriter pdfesc;
+	private static PdfContentByte pcb;
 
 	public FileHandler() {
 		// Rutas relativas: Dependen desde el archivo actual.
@@ -26,7 +41,8 @@ public class FileHandler {
 	public static void escribirSerializado(String nombre_archivo, Object obj) {
 
 		try {
-			oos = new ObjectOutputStream(new FileOutputStream("src/co/edu/unbosque/model/persistance/" + nombre_archivo));
+			oos = new ObjectOutputStream(
+					new FileOutputStream("src/co/edu/unbosque/model/persistance/" + nombre_archivo));
 			oos.writeObject(obj);
 			oos.close();
 		} catch (FileNotFoundException e) {
@@ -36,7 +52,7 @@ public class FileHandler {
 		}
 
 	}
-	
+
 	public static Object leerSerializado(String nombre_archivo) {
 		try {
 			ois = new ObjectInputStream(new FileInputStream("src/co/edu/unbosque/model/persistance/" + nombre_archivo));
@@ -45,13 +61,13 @@ public class FileHandler {
 			return o;
 		} catch (FileNotFoundException e) {
 			System.err.println("Error de Lectura: No se ha encontrado el archivo. (Serializado/Salida).");
-			
+
 		} catch (IOException e) {
 			System.err.println("Error de Lectura: Revise Permisos. (Serializado/Salida).");
 		} catch (ClassNotFoundException e) {
 			System.err.println("Error de Lectura: No se ha encontrado el archivo. (Serializado/Salida).");
-		} 
-		
+		}
+
 		return null;
 	}
 
@@ -91,4 +107,46 @@ public class FileHandler {
 		}
 	}
 
+	public static void crearPdf(String nombre_pdf, JFreeChart[] chart) {
+
+		Document documento = new Document();
+
+		ByteArrayOutputStream[] baos = new ByteArrayOutputStream[chart.length];
+
+		Image[] img = new Image[chart.length];
+
+		int ind = 0;
+		for (JFreeChart jfc : chart) {
+			baos[ind] = new ByteArrayOutputStream();
+			try {
+				ChartUtilities.writeChartAsPNG(baos[ind], jfc, 500, 300);
+
+				img[ind] = Image.getInstance(baos[ind].toByteArray());
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			ind++;
+		}
+
+		try {
+
+			fos = new FileOutputStream("src/co/edu/unbosque/model/persistance/" + nombre_pdf);
+
+			pdfesc = PdfWriter.getInstance(documento, fos);
+
+			documento.open();
+
+			for (Image i : img) {
+				documento.add(i);
+			}
+
+			documento.close();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
 }
