@@ -32,7 +32,7 @@ public class MTC {
 	}
 	
 	
-	public static int modaEdad(ArrayList<EstudianteDTO> lista_estudiantes) {
+	public static HashMap<Integer, Integer> modaEdad(ArrayList<EstudianteDTO> lista_estudiantes) {
 		HashMap<Integer, Integer> map = new HashMap<>();
 		int[] edades = crearArrayEdades(lista_estudiantes);
 		
@@ -45,16 +45,16 @@ public class MTC {
 				map.put(edad, 1);
 			}
 		}
-		int moda = 0;
-		int mayor = 0;
-		for(HashMap.Entry<Integer, Integer> parejas : map.entrySet()) {
-			if(parejas.getValue() > mayor) {
-				mayor = parejas.getValue();
-				moda = parejas.getKey();
-			}
-		}
+//		int moda = 0;
+//		int mayor = 0;
+//		for(HashMap.Entry<Integer, Integer> parejas : map.entrySet()) {
+//			if(parejas.getValue() > mayor) {
+//				mayor = parejas.getValue();
+//				moda = parejas.getKey();
+//			}
+//		}
 		
-		return moda;
+		return map;
 		
 	}
 	

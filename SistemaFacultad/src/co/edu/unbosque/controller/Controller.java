@@ -12,6 +12,7 @@ import co.edu.unbosque.model.EstudianteDAO;
 import co.edu.unbosque.model.EstudianteDTO;
 import co.edu.unbosque.model.UUIDUsuarioDAO;
 import co.edu.unbosque.model.UUIDUsuarioDTO;
+import co.edu.unbosque.model.persistance.FileHandler;
 import co.edu.unbosque.util.MTC;
 import co.edu.unbosque.util.MailSender;
 import co.edu.unbosque.view.MainWindow;
@@ -36,10 +37,11 @@ public class Controller {
 
 	public void run() throws AddressException, MessagingException {
 		
-		System.out.println("Moda: "+ MTC.modaEdad(edao.getLista()));
-		System.out.println("Media: "+ MTC.mediaEdad(edao.getLista()));
-		System.out.println("Mediana: "+ MTC.medianaEdad(edao.getLista()));
-		System.out.println("-------------------");
+//		System.out.println("Media: "+ MTC.mediaEdad(edao.getLista()));
+//		System.out.println("Mediana: "+ MTC.medianaEdad(edao.getLista()));
+		
+		//FileHandler.crearPdf("PruebaGraficas2.pdf", FileHandler.crearGraficas(0, 0, MTC.modaEdad(edao.getLista())));
+		
 		
 		
 		
