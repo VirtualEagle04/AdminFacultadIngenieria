@@ -11,5 +11,8 @@
 	<classpathentry kind="lib" path="src/javax.faces-api-2.0.jar"/>
 	<classpathentry kind="lib" path="src/javax-inject.jar"/>
 	<classpathentry kind="lib" path="src/mail.jar"/>
+	<classpathentry kind="lib" path="src/itextpdf-5.5.13.3.jar"/>
+	<classpathentry kind="lib" path="src/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="src/jcommon-1.0.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
