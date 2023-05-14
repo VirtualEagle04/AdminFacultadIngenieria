@@ -1,9 +1,7 @@
 package co.edu.unbosque.controller;
 
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
-import java.util.UUID;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
@@ -14,6 +12,7 @@ import co.edu.unbosque.model.EstudianteDAO;
 import co.edu.unbosque.model.EstudianteDTO;
 import co.edu.unbosque.model.UUIDUsuarioDAO;
 import co.edu.unbosque.model.UUIDUsuarioDTO;
+import co.edu.unbosque.util.MTC;
 import co.edu.unbosque.util.MailSender;
 import co.edu.unbosque.view.MainWindow;
 
@@ -32,10 +31,17 @@ public class Controller {
 		uuidDAO = new UUIDUsuarioDAO();
 		adao = new AdminDAO();
 		sc = new Scanner(System.in);
-		vp = new MainWindow();
+		//vp = new MainWindow();
 	}
 
 	public void run() throws AddressException, MessagingException {
+		
+		System.out.println("Moda: "+ MTC.modaEdad(edao.getLista()));
+		System.out.println("Media: "+ MTC.mediaEdad(edao.getLista()));
+		System.out.println("Mediana: "+ MTC.medianaEdad(edao.getLista()));
+		System.out.println("-------------------");
+		
+		
 		
 		//UNICAMENTE PARA TESTEOS: ELIMINAR DESPUES DE IMPLEMENTARLO A LA VISTA
 		ppal: while(true) {
@@ -83,11 +89,11 @@ public class Controller {
 					//ENVIAR CORREO DE CONFIRMACION
 					String codigo = MailSender.createAuthEmail(correo);
 					
-					if(MailSender.sendEmail()) {
-						System.out.println("Revise su correo e ingrese el Codigo de Confirmacion.");
-					}else {
-						System.out.println("Error en el envio del correo.");
-					}
+//					if(MailSender.sendEmail()) {
+//						System.out.println("Revise su correo e ingrese el Codigo de Confirmacion.");
+//					}else {
+//						System.out.println("Error en el envio del correo.");
+//					}
 					
 					//ALMACENAR USUARIO-CODIGO
 					uuidDAO.crear(new UUIDUsuarioDTO(usuario, codigo));
