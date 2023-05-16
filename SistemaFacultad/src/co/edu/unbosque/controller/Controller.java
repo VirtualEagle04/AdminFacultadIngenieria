@@ -37,12 +37,15 @@ public class Controller {
 
 	public void run() throws AddressException, MessagingException {
 		
-//		System.out.println("Media: "+ MTC.mediaEdad(edao.getLista()));
-//		System.out.println("Mediana: "+ MTC.medianaEdad(edao.getLista()));
+//		FileHandler.crearPdf("GraficaEdad.pdf", FileHandler.crearGraficaEdad(MTC.mediaEdad(edao.getLista()), MTC.medianaEdad(edao.getLista()), MTC.modaEdad(edao.getLista())));
+//		FileHandler.crearPdf("GraficaGenero.pdf", FileHandler.crearGraficaGenero(MTC.modaGenero(edao.getLista())));
+//		FileHandler.crearPdf("GraficaPrograma.pdf", FileHandler.crearGraficaPrograma(MTC.modaPrograma(edao.getLista())));
+//		FileHandler.crearPdf("GraficaEstado.pdf", FileHandler.crearGraficaActivoInactivo(MTC.modaActivoInactivo(edao.getLista())));
+//		FileHandler.crearPdf("GraficaJornada.pdf", FileHandler.crearGraficaJornada(MTC.modaJornada(edao.getLista())));
+//		FileHandler.crearPdf("GraficaNacionalidad.pdf", FileHandler.crearGraficaNacionalidad(MTC.modaNacionalidad(edao.getLista())));
+		FileHandler.crearPdf("Graficas.pdf", FileHandler.crearGraficas(edao.getLista()));
 		
-		//FileHandler.crearPdf("PruebaGraficas2.pdf", FileHandler.crearGraficas(0, 0, MTC.modaEdad(edao.getLista())));
-		
-		
+		System.exit(0);
 		
 		
 		//UNICAMENTE PARA TESTEOS: ELIMINAR DESPUES DE IMPLEMENTARLO A LA VISTA

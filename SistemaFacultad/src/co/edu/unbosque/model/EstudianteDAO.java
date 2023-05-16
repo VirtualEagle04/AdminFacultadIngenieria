@@ -56,6 +56,37 @@ public class EstudianteDAO implements OperacionesDAO{
 
 	}
 	
+	private void escribirEnArchivo() {
+		StringBuilder sb = new StringBuilder();
+		int indice = lista.size();
+		for (EstudianteDTO e : lista) {
+			
+			sb.append(e.getDocumento()+",");
+			sb.append(e.getNombres()+",");
+			sb.append(e.getApellidos()+",");
+			sb.append(e.getGenero()+",");
+			sb.append(e.getUsuario()+",");
+			sb.append(e.getCorreo()+",");
+			sb.append(e.getFecha_nacimiento()+"");
+			sb.append((e.isEsta_activo()? "ACTIVO":"INACTIVO")+",");
+			sb.append(e.getPrograma()+",");
+			sb.append(e.getJornada()+",");
+			sb.append(e.getLugar_nacimiento()+",");
+			sb.append(e.getFecha_registro()+",");
+			sb.append(e.getNacional_extranjero());
+			
+			
+			if (indice == 1) {
+				continue;
+			} else {
+				indice--;
+				sb.append("\n");
+			}
+		}
+		FileHandler.escribirArchivo("datosEstSobreescrito.csv", sb.toString());
+		//FileHandler.escribirSerializado("serie.fvr", lista);
+	}
+	
 	//CRUD
 
 	@Override
