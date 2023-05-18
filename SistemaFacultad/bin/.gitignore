@@ -1,4 +1,10 @@
-/itextpdf-5.5.13.3.jar
-/jcommon-1.0.23.jar
-/jfreechart-1.0.19.jar
+
+/Assets/
 /co/
+/javax-inject.jar
+/javax.activation-1.1.0.v201105071233.jar
+/javax.ejb.jar
+/javax.faces-api-2.0.jar
+/mail.jar
+/jcalendar-1.1.4.jar
+/Fonts/
