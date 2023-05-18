@@ -31,13 +31,13 @@ public class AdminControll extends JPanel {
 	private JButton back3, ascendant, descending, delete, activate, actualpdf, generatepdf, generate;
 	private JScrollPane barra1, barra2;
 	private JComboBox<String> campotipo;
-	private Font Franklin;
+	private Font franklin;
 
 	public AdminControll() {
 
 		try {
 
-			Franklin = Font.createFont(Font.TRUETYPE_FONT,
+			franklin = Font.createFont(Font.TRUETYPE_FONT,
 					new File("src/Assets/Fonts/Franklin Gothic Demi Cond Regular.ttf"));
 
 		} catch (FontFormatException e) {
@@ -66,13 +66,13 @@ public class AdminControll extends JPanel {
 
 		ind_lista = new JLabel("Seleccione Documento a Generar");
 		ind_lista.setBounds(70, 5, 270, 30);
-		ind_lista.setFont(Franklin);
+		ind_lista.setFont(franklin);
 		ind_lista.setFont(ind_lista.getFont().deriveFont(Font.PLAIN, 20));
 		ind_lista.setForeground(Color.WHITE);
 		panel_pdfs.add(ind_lista);
 
 		ind5 = new JLabel("Generar");
-		ind5.setFont(Franklin);
+		ind5.setFont(franklin);
 		ind5.setFont(ind5.getFont().deriveFont(Font.PLAIN, 17));
 		ind5.setBounds(169, 340, 120, 30);
 		ind5.setForeground(Color.WHITE);
@@ -103,28 +103,28 @@ public class AdminControll extends JPanel {
 		panel_pdfs.add(panel_list2);
 
 		ind1 = new JLabel("Generar Actual");
-		ind1.setFont(Franklin);
+		ind1.setFont(franklin);
 		ind1.setFont(ind1.getFont().deriveFont(Font.PLAIN, 17));
 		ind1.setBounds(500, 340, 120, 30);
 		ind1.setForeground(Color.WHITE);
 		add(ind1);
 
 		ind2 = new JLabel("Generar PDF");
-		ind2.setFont(Franklin);
+		ind2.setFont(franklin);
 		ind2.setFont(ind2.getFont().deriveFont(Font.PLAIN, 17));
 		ind2.setBounds(509, 385, 120, 30);
 		ind2.setForeground(Color.WHITE);
 		add(ind2);
 
 		ind3 = new JLabel("Eliminar Estudiante");
-		ind3.setFont(Franklin);
+		ind3.setFont(franklin);
 		ind3.setFont(ind3.getFont().deriveFont(Font.PLAIN, 15));
 		ind3.setBounds(425, 250, 150, 30);
 		ind3.setForeground(Color.WHITE);
 		add(ind3);
 
 		ind4 = new JLabel("Activar/Inactivar");
-		ind4.setFont(Franklin);
+		ind4.setFont(franklin);
 		ind4.setFont(ind4.getFont().deriveFont(Font.PLAIN, 15));
 		ind4.setBounds(570, 250, 150, 30);
 		ind4.setForeground(Color.WHITE);
@@ -433,11 +433,11 @@ public class AdminControll extends JPanel {
 	}
 
 	public Font getFranklin() {
-		return Franklin;
+		return franklin;
 	}
 
 	public void setFranklin(Font franklin) {
-		Franklin = franklin;
+		franklin = franklin;
 	}
 
 }

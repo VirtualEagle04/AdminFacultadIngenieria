@@ -16,7 +16,7 @@ import javax.swing.border.MatteBorder;
 
 public class AdminAccesPanel extends JPanel {
 
-	private Font Franklin;
+	private Font franklin;
 	private JTextField user2, password;
 	private JLabel ind_user2, ind_pass, background2, shadow2;
 	private JButton join, back2;
@@ -25,7 +25,7 @@ public class AdminAccesPanel extends JPanel {
 
 		try {
 
-			Franklin = Font.createFont(Font.TRUETYPE_FONT,
+			franklin = Font.createFont(Font.TRUETYPE_FONT,
 					new File("src/Assets/Fonts/Franklin Gothic Demi Cond Regular.ttf"));
 
 		} catch (FontFormatException e) {
@@ -51,7 +51,7 @@ public class AdminAccesPanel extends JPanel {
 		add(shadow2);
 
 		ind_user2 = new JLabel("Ingrese el Usuario");
-		ind_user2.setFont(Franklin);
+		ind_user2.setFont(franklin);
 		ind_user2.setFont(ind_user2.getFont().deriveFont(Font.PLAIN, 20));
 		ind_user2.setForeground(Color.WHITE);
 		ind_user2.setBounds(50, 30, 150, 30);
@@ -67,7 +67,7 @@ public class AdminAccesPanel extends JPanel {
 		background2.add(user2);
 
 		ind_pass = new JLabel("Ingrese la Contraseña");
-		ind_pass.setFont(Franklin);
+		ind_pass.setFont(franklin);
 		ind_pass.setFont(ind_pass.getFont().deriveFont(Font.PLAIN, 20));
 		ind_pass.setForeground(Color.WHITE);
 		ind_pass.setBounds(50, 120, 170, 30);
@@ -103,11 +103,11 @@ public class AdminAccesPanel extends JPanel {
 	}
 
 	public Font getFranklin() {
-		return Franklin;
+		return franklin;
 	}
 
 	public void setFranklin(Font franklin) {
-		Franklin = franklin;
+		franklin = franklin;
 	}
 
 	public JTextField getUser2() {

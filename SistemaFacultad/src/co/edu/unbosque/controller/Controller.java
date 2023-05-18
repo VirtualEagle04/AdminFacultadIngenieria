@@ -99,6 +99,12 @@ public class Controller implements ActionListener{
 		vp.getCreationpanel().getNacional().addActionListener(this);
 		vp.getCreationpanel().getNacional().setActionCommand("cambio_origen");
 		
+		vp.getCreationpanel().getBpais().addActionListener(this);
+		vp.getCreationpanel().getBpais().setActionCommand("mostrar_lista");
+		
+		vp.getCreationpanel().getConfirmar().addActionListener(this);
+		vp.getCreationpanel().getConfirmar().setActionCommand("confirmar_lugar_nacimiento");
+		
 		//PANEL ADMIN
 		vp.getAdminpanel().getJoin().addActionListener(this);
 		vp.getAdminpanel().getJoin().setActionCommand("ingresar");
@@ -127,6 +133,10 @@ public class Controller implements ActionListener{
 		switch (e.getActionCommand()) {
 		case "Student_registration":{
 			
+			vp.getAdmin().setVisible(false);
+			vp.getStudents().setVisible(false);
+			vp.getActivation().setVisible(false);
+			
 			vp.getCreationpanel().setVisible(true);
 			vp.getActivationpanel().setVisible(false);
 			vp.getAdminpanel().setVisible(false);
@@ -134,12 +144,20 @@ public class Controller implements ActionListener{
 		}
 		case "Activation":{
 			
+			vp.getAdmin().setVisible(false);
+			vp.getStudents().setVisible(false);
+			vp.getActivation().setVisible(false);
+			
 			vp.getActivationpanel().setVisible(true);
 			vp.getAdminpanel().setVisible(false);
 			vp.getCreationpanel().setVisible(false);
 			break;
 		}
 		case "Admin":{
+			
+			vp.getAdmin().setVisible(false);
+			vp.getStudents().setVisible(false);
+			vp.getActivation().setVisible(false);
 			
 			vp.getAdminpanel().setVisible(true);
 			vp.getActivationpanel().setVisible(false);
@@ -149,6 +167,10 @@ public class Controller implements ActionListener{
 		case "back_creation":{
 			
 			vp.setVisible(true);
+			vp.getAdmin().setVisible(true);
+			vp.getStudents().setVisible(true);
+			vp.getActivation().setVisible(true);
+			
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
 			vp.getCreationpanel().setVisible(false);
@@ -156,11 +178,19 @@ public class Controller implements ActionListener{
 		case "back_activation":{
 			
 			vp.setVisible(true);
+			vp.getAdmin().setVisible(true);
+			vp.getStudents().setVisible(true);
+			vp.getActivation().setVisible(true);
+			
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
 			vp.getCreationpanel().setVisible(false);
 		}
 		case "back_admin":{
+			
+			vp.getAdmin().setVisible(true);
+			vp.getStudents().setVisible(true);
+			vp.getActivation().setVisible(true);
 			
 			vp.setVisible(true);
 			vp.getAdminpanel().setVisible(false);
@@ -171,6 +201,9 @@ public class Controller implements ActionListener{
 		case "back_admin_controll":{
 			
 			vp.setVisible(true);
+			vp.getAdmin().setVisible(true);
+			vp.getStudents().setVisible(true);
+			vp.getActivation().setVisible(true);
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
 			vp.getAdmincontroll().setVisible(false);
@@ -180,12 +213,18 @@ public class Controller implements ActionListener{
 		case "abrir_calendario": {
 			
 			vp.getCreationpanel().getMcalend().setVisible(true);
+			vp.getCreationpanel().getJornada().setVisible(false);
+			vp.getCreationpanel().getBpais().setVisible(false);
+			vp.getCreationpanel().getAgregar().setVisible(false);
 			
 			break;
 		}
 		case "confirmar_fecha": {
 			
 			vp.getCreationpanel().getMcalend().setVisible(false);
+			vp.getCreationpanel().getJornada().setVisible(true);
+			vp.getCreationpanel().getBpais().setVisible(true);
+			vp.getCreationpanel().getAgregar().setVisible(true);
 			
 			if(vp.getCreationpanel().getCalendario().getCalendar() != null) {
 				
@@ -276,8 +315,27 @@ public class Controller implements ActionListener{
 			
 			break;
 		}
-		
-		
+		case "mostrar_lista":{
+			
+			vp.getCreationpanel().getFondolista().setVisible(true);
+			vp.getCreationpanel().getConfirmar_fecha().setVisible(false);
+			vp.getCreationpanel().getJornada().setVisible(false);
+			vp.getCreationpanel().getAgregar().setVisible(false);
+			
+			break;
+		}
+		case "confirmar_lugar_nacimiento":{
+			
+			vp.getCreationpanel().getFondolista().setVisible(false);
+			vp.getCreationpanel().getConfirmar_fecha().setVisible(true);
+			vp.getCreationpanel().getJornada().setVisible(true);
+			vp.getCreationpanel().getAgregar().setVisible(true);
+			
+			
+			
+			
+			break;
+		}
 		case "ingresar":{
 			
 			vp.setVisible(true);

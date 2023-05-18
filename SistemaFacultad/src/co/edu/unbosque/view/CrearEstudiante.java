@@ -1,5 +1,6 @@
 package co.edu.unbosque.view;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -9,13 +10,17 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.swing.BorderFactory;
+import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
+import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
 import javax.swing.border.MatteBorder;
 
 import com.toedter.calendar.JCalendar;
@@ -23,13 +28,16 @@ import com.toedter.calendar.JCalendar;
 public class CrearEstudiante extends JPanel {
 
 	private JLabel imgfondo;
-	private JPanel fondo, campos, mcalend;
+	private JPanel fondo, campos, mcalend, fondolista, plista;
 	private JCalendar calendario;
-	private JTextField nombre, apellido, correo, documento, fecha;
+	private JTextField paises,nombre, apellido, correo, documento, fecha;
 	private JComboBox<String> programa, jornada, genero, nacional;
-	private JButton calendar, volver, agregar, confirmar_fecha;
-	private JLabel indnombre, indapellido, indcorreo, inddocumento, indprograma, indjornada, indgenero, indfecha, indlugar;
+	private JButton confirmar, bpais, calendar, volver, agregar, confirmar_fecha;
+	private JLabel indpais,indnombre, indapellido, indcorreo, inddocumento, indprograma, indjornada, indgenero, indfecha, indlugar;
 	private Font franklin;
+	private JList<String> lista_pais;
+	private DefaultListModel<String> modelo_pais;
+	private JScrollPane barra4;
 
 	public CrearEstudiante() {
 
@@ -46,24 +54,59 @@ public class CrearEstudiante extends JPanel {
 
 		setSize(750, 480);
 		setLayout(null);
+		
 
-		JPanel fondo = new JPanel();
+
+		fondolista = new JPanel();
+		fondolista.setBounds(465, 248, 268, 187);
+		fondolista.setBackground(new Color(90, 191, 175));
+		fondolista.setLayout(null);
+		add(fondolista).setVisible(false);
+		
+		confirmar = new JButton();
+		confirmar.setBounds(85, 155, 100, 25);
+		ImageIcon logoconfirmar2 = new ImageIcon("src/Assets/confirmarFecha.png");
+		confirmar.setIcon(new ImageIcon(logoconfirmar2.getImage().getScaledInstance(100, 25, Image.SCALE_SMOOTH)));
+		confirmar.setOpaque(false);
+		confirmar.setBorderPainted(false);
+		confirmar.setContentAreaFilled(false);
+		confirmar.setFocusable(false);
+		fondolista.add(confirmar);
+		
+		lista_pais = new JList<>();
+		lista_pais.setBounds(10, 10, 247, 140);
+		modelo_pais = new DefaultListModel<>();
+		lista_pais.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		
+		barra4 = new JScrollPane(lista_pais);
+		barra4.setBounds(0,0,248,140);
+		
+		plista = new JPanel();
+		plista.setBounds(10, 10, 247, 140);
+		plista.setLayout(null);
+		plista.add(barra4);
+		add(plista);
+		fondolista.add(plista);
+		
+		
+		fondo = new JPanel();
+		fondo.setBackground(Color.red);
 		fondo.setLayout(null);
 		fondo.setSize(750, 480);
 
-		JLabel imgfondo = new JLabel();
-		imgfondo.setSize(734, 442);
-		ImageIcon fondo2 = new ImageIcon("src/Assets/RegistroEstudiante.jpg");
-		imgfondo.setIcon(new ImageIcon(fondo2.getImage().getScaledInstance(734, 442, Image.SCALE_SMOOTH)));
+		imgfondo = new JLabel(new ImageIcon("src/Assets/RegistroEstudiante.jpg"));
+		imgfondo.setBounds(0, 0, 750, 480);
 
 		campos = new JPanel();
 		campos.setLayout(null);
 		campos.setSize(750, 480);
 		campos.setOpaque(false);
 
+
 		nombre = new JTextField();
-		nombre.setBounds(370, 128, 140, 25);
+		nombre.setBounds(315, 128, 140, 25);
 		nombre.setForeground(Color.WHITE);
+		nombre.setFont(new Font("Consolas", Font.PLAIN, 15));
 		MatteBorder borde=BorderFactory.createMatteBorder(0, 0, 1, 0, Color.WHITE);
 		nombre.setBorder(borde);
 		nombre.setOpaque(false);
@@ -71,18 +114,21 @@ public class CrearEstudiante extends JPanel {
 		apellido = new JTextField();
 		apellido.setBounds(548, 128, 140, 25);
 		apellido.setForeground(Color.WHITE);
+		apellido.setFont(new Font("Consolas", Font.PLAIN, 15));
 		apellido.setBorder(borde);
 		apellido.setOpaque(false);
 
 		correo = new JTextField();
-		correo.setBounds(370, 188, 140, 25);
+		correo.setBounds(315, 188, 140, 25);
 		correo.setForeground(Color.WHITE);
+		correo.setFont(new Font("Consolas", Font.PLAIN, 15));
 		correo.setBorder(borde);
 		correo.setOpaque(false);
 
 		documento = new JTextField();
 		documento.setBounds(548, 188, 140, 25);
 		documento.setForeground(Color.WHITE);
+		documento.setFont(new Font("Consolas", Font.PLAIN, 15));
 		documento.setBorder(borde);
 		documento.setOpaque(false);
 
@@ -90,38 +136,61 @@ public class CrearEstudiante extends JPanel {
 				"Ingeniería industrial", "Ingeniería en sistemas" };
 
 		programa = new JComboBox(programas);
-		programa.setBounds(370, 248, 140, 25);
+		programa.setBounds(315, 248, 140, 25);
 
 		fecha = new JTextField();
 		fecha.setBounds(545, 248, 140, 25);
 		fecha.setForeground(Color.WHITE);
+		fecha.setFont(new Font("Consolas", Font.PLAIN, 15));
 		fecha.setBorder(borde);
 		fecha.setOpaque(false);
 		fecha.setEditable(false);
+		
+		indpais = new JLabel("Lugar de Nacimiento");
+		indpais.setFont(franklin);
+		indpais.setFont(indpais.getFont().deriveFont(Font.PLAIN, 15));
+		indpais.setBounds(546, 332, 140, 50);
+		indpais.setForeground(Color.WHITE);
+		
+		paises = new JTextField();
+		paises.setBounds(545, 368, 140, 25);
+		paises.setForeground(Color.WHITE);
+		paises.setFont(new Font("Consolas", Font.PLAIN, 15));
+		paises.setBorder(borde);
+		paises.setOpaque(false);
+		paises.setEditable(false);
 
 		String[] generos = { "Seleccionar", "Masculino", "Femenino" };
 		
 		genero = new JComboBox(generos);
-		genero.setBounds(370, 308, 140, 25);
+		genero.setBounds(315, 308, 140, 25);
 
 		String[] jornadas = {"Diurno"};
 
 		jornada = new JComboBox(jornadas);
-		jornada.setBounds(548, 308, 140, 25);
+		jornada.setBounds(545, 308, 140, 25);
 
 		String[] opciones = {"Nacional", "Extranjero" };
 		
+
 		nacional = new JComboBox(opciones);
-		nacional.setBounds(370, 368, 140, 25);
+		nacional.setBounds(315, 368, 140, 25);
 
 
 		calendar = new JButton();
-		calendar.setBounds(546, 248, 140, 25);
-		ImageIcon logocalendar = new ImageIcon("src/Assets/logocalendar.png");
-		calendar.setIcon(new ImageIcon(logocalendar.getImage().getScaledInstance(140, 25, Image.SCALE_SMOOTH)));
+		calendar.setBounds(655, 248, 30, 25);
+		calendar.setIcon(new ImageIcon("src/Assets/logocalendar.png"));
 		calendar.setOpaque(false);
 		calendar.setBorderPainted(false);
 		calendar.setContentAreaFilled(false);
+		
+		bpais = new JButton();
+		bpais.setBounds(655,368,30,25);
+		bpais.setFocusable(false);
+		bpais.setBorderPainted(false);
+		bpais.setContentAreaFilled(false);
+		bpais.setIcon(new ImageIcon("src/Assets/paises.png"));
+		
 
 		volver = new JButton();
 		volver.setBounds(15, 15, 100, 25);
@@ -129,27 +198,29 @@ public class CrearEstudiante extends JPanel {
 		volver.setIcon(new ImageIcon(logovolver.getImage().getScaledInstance(100, 25, Image.SCALE_SMOOTH)));
 		volver.setOpaque(false);
 		volver.setBorderPainted(false);
+		volver.setFocusable(false);
 		volver.setContentAreaFilled(false);
 
 		agregar = new JButton();
-		agregar.setBounds(562, 364, 115, 35);
-		ImageIcon logoagregar = new ImageIcon("src/Assets/AgregarC.png");
-		agregar.setIcon(new ImageIcon(logoagregar.getImage().getScaledInstance(115, 35, Image.SCALE_SMOOTH)));
+		agregar.setBounds(435, 405, 130, 30);
 		agregar.setOpaque(false);
 		agregar.setBorderPainted(false);
+		agregar.setFocusable(false);
 		agregar.setContentAreaFilled(false);
+		agregar.setIcon(new ImageIcon("src/Assets/AgregarC.png"));
 
 		calendario = new JCalendar();
 //		calendario.setPreferredSize(new Dimension(256, 152));
 		calendario.setBounds(5, 10, 256, 132);
-		calendario.setBackground(new Color(103, 216, 198));
+		calendario.setBackground(new Color(90, 191, 175));
 
 		mcalend = new JPanel();
 		mcalend.setLayout(null);
-		mcalend.setBounds(420, 244, 268, 182);
-		mcalend.setBackground(new Color(103, 216, 198));
+		mcalend.setBounds(465, 248, 268, 187);
+		mcalend.setBackground(new Color(90, 191, 175));
 		mcalend.add(calendario);
 		mcalend.setVisible(false);
+		
 		
 		confirmar_fecha = new JButton();
 		confirmar_fecha.setBounds(80, 145, 100, 25);
@@ -158,12 +229,13 @@ public class CrearEstudiante extends JPanel {
 		confirmar_fecha.setOpaque(false);
 		confirmar_fecha.setBorderPainted(false);
 		confirmar_fecha.setContentAreaFilled(false);
+		confirmar_fecha.setFocusable(false);
 		mcalend.add(confirmar_fecha, JLayeredPane.DRAG_LAYER);
 		
 		indnombre=new JLabel("Nombre Completo");
 		indnombre.setFont(franklin);
 		indnombre.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
-		indnombre.setBounds(370, 92, 140, 50);
+		indnombre.setBounds(315, 92, 140, 50);
 		indnombre.setForeground(Color.WHITE);
 		
 		indapellido=new JLabel("Apellido Completo");
@@ -175,7 +247,7 @@ public class CrearEstudiante extends JPanel {
 		indcorreo = new JLabel("Correo electrónico");
 		indcorreo.setFont(franklin);
 		indcorreo.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
-		indcorreo.setBounds(370, 152, 140, 50);
+		indcorreo.setBounds(315, 152, 140, 50);
 		indcorreo.setForeground(Color.WHITE);
 		
 		inddocumento = new JLabel("Documento de identidad");
@@ -187,7 +259,7 @@ public class CrearEstudiante extends JPanel {
 		indprograma = new JLabel("Programa de estudio");
 		indprograma.setFont(franklin);
 		indprograma.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
-		indprograma.setBounds(370, 212, 140, 50);
+		indprograma.setBounds(315, 212, 140, 50);
 		indprograma.setForeground(Color.WHITE);
 		
 		indfecha = new JLabel("Fecha de nacimiento");
@@ -199,7 +271,7 @@ public class CrearEstudiante extends JPanel {
 		indgenero = new JLabel("Género");
 		indgenero.setFont(franklin);
 		indgenero.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
-		indgenero.setBounds(370, 272, 140, 50);
+		indgenero.setBounds(315, 272, 140, 50);
 		indgenero.setForeground(Color.WHITE);
 
 		indjornada = new JLabel("Jornada");
@@ -211,7 +283,7 @@ public class CrearEstudiante extends JPanel {
 		indlugar = new JLabel("Nacional / Extranjero");
 		indlugar.setFont(franklin);
 		indlugar.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
-		indlugar.setBounds(370, 332, 140, 50);
+		indlugar.setBounds(315, 332, 140, 50);
 		indlugar.setForeground(Color.WHITE);
 		
 		
@@ -232,6 +304,9 @@ public class CrearEstudiante extends JPanel {
 		campos.add(programa);
 		campos.add(indfecha);
 		campos.add(fecha);
+		campos.add(bpais);
+		campos.add(paises);
+		campos.add(indpais);
 		campos.add(indgenero);
 		campos.add(genero);
 		campos.add(indjornada);
@@ -246,6 +321,116 @@ public class CrearEstudiante extends JPanel {
 
 		setVisible(true);
 	}
+	
+	
+
+	public JPanel getFondolista() {
+		return fondolista;
+	}
+
+
+
+	public void setFondolista(JPanel fondolista) {
+		this.fondolista = fondolista;
+	}
+
+
+
+	public JPanel getPlista() {
+		return plista;
+	}
+
+
+
+	public void setPlista(JPanel plista) {
+		this.plista = plista;
+	}
+
+
+
+	public JTextField getPaises() {
+		return paises;
+	}
+
+
+
+	public void setPaises(JTextField paises) {
+		this.paises = paises;
+	}
+
+
+
+	public JButton getConfirmar() {
+		return confirmar;
+	}
+
+
+
+	public void setConfirmar(JButton confirmar) {
+		this.confirmar = confirmar;
+	}
+
+
+
+	public JButton getBpais() {
+		return bpais;
+	}
+
+
+
+	public void setBpais(JButton bpais) {
+		this.bpais = bpais;
+	}
+
+
+
+	public JLabel getIndpais() {
+		return indpais;
+	}
+
+
+
+	public void setIndpais(JLabel indpais) {
+		this.indpais = indpais;
+	}
+
+
+
+	public JList<String> getLista_pais() {
+		return lista_pais;
+	}
+
+
+
+	public void setLista_pais(JList<String> lista_pais) {
+		this.lista_pais = lista_pais;
+	}
+
+
+
+	public DefaultListModel<String> getModelo_pais() {
+		return modelo_pais;
+	}
+
+
+
+	public void setModelo_pais(DefaultListModel<String> modelo_pais) {
+		this.modelo_pais = modelo_pais;
+	}
+
+
+
+	public JScrollPane getBarra4() {
+		return barra4;
+	}
+
+
+
+	public void setBarra4(JScrollPane barra4) {
+		this.barra4 = barra4;
+	}
+
+
 
 	public JLabel getImgfondo() {
 		return imgfondo;
