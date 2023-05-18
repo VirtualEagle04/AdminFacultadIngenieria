@@ -58,8 +58,6 @@ public class FileHandler {
 	private static PdfContentByte pcb;
 
 	public FileHandler() {
-		// Rutas relativas: Dependen desde el archivo actual.
-		// Rutas absolutas: Empiezan desde el origen del disco.
 	}
 
 	public static void escribirSerializado(String nombre_archivo, Object obj) {
@@ -95,7 +93,7 @@ public class FileHandler {
 		return null;
 	}
 
-	public static String abrirArchivoText(String nombre_archivo) {
+	public static String abrirArchivo(String nombre_archivo) {
 
 		archivo = new File("src/co/edu/unbosque/model/persistance/" + nombre_archivo);
 		StringBuilder contenido = new StringBuilder();
@@ -166,6 +164,7 @@ public class FileHandler {
 		}
 
 	}
+	
 	//GENERAL
 	public static JFreeChart[] crearGraficas(ArrayList<EstudianteDTO> lista_est) {
 		JFreeChart[] graficas = new JFreeChart[6];
@@ -178,7 +177,6 @@ public class FileHandler {
 		
 		return graficas;
 	}
-	
 	//EDAD
 	public static JFreeChart crearGraficaEdad(int media, int mediana, HashMap<Integer, Integer> mapa_moda) {
 		

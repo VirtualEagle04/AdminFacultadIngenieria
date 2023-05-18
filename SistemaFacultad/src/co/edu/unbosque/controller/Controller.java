@@ -1,5 +1,6 @@
 package co.edu.unbosque.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -10,6 +11,8 @@ import co.edu.unbosque.model.AdminDAO;
 import co.edu.unbosque.model.AdminDTO;
 import co.edu.unbosque.model.EstudianteDAO;
 import co.edu.unbosque.model.EstudianteDTO;
+import co.edu.unbosque.model.PersistenciaEstudiantesDAO;
+import co.edu.unbosque.model.PersistenciaEstudiantesDTO;
 import co.edu.unbosque.model.UUIDUsuarioDAO;
 import co.edu.unbosque.model.UUIDUsuarioDTO;
 import co.edu.unbosque.model.persistance.FileHandler;
@@ -22,7 +25,10 @@ public class Controller {
 	private EstudianteDAO edao;
 	private UUIDUsuarioDAO uuidDAO;
 	private AdminDAO adao;
+	private PersistenciaEstudiantesDAO pdao;
 	private MainWindow vp;
+	
+	private int contador_cambios = 0; //SE RESETEA CADA X CAMBIOS
 	
 	//QUITAR
 	private Scanner sc;
@@ -31,23 +37,21 @@ public class Controller {
 		edao = new EstudianteDAO();
 		uuidDAO = new UUIDUsuarioDAO();
 		adao = new AdminDAO();
+		pdao = new PersistenciaEstudiantesDAO();
 		sc = new Scanner(System.in);
 		//vp = new MainWindow();
 	}
 
 	public void run() throws AddressException, MessagingException {
 		
-//		FileHandler.crearPdf("GraficaEdad.pdf", FileHandler.crearGraficaEdad(MTC.mediaEdad(edao.getLista()), MTC.medianaEdad(edao.getLista()), MTC.modaEdad(edao.getLista())));
-//		FileHandler.crearPdf("GraficaGenero.pdf", FileHandler.crearGraficaGenero(MTC.modaGenero(edao.getLista())));
-//		FileHandler.crearPdf("GraficaPrograma.pdf", FileHandler.crearGraficaPrograma(MTC.modaPrograma(edao.getLista())));
-//		FileHandler.crearPdf("GraficaEstado.pdf", FileHandler.crearGraficaActivoInactivo(MTC.modaActivoInactivo(edao.getLista())));
-//		FileHandler.crearPdf("GraficaJornada.pdf", FileHandler.crearGraficaJornada(MTC.modaJornada(edao.getLista())));
-//		FileHandler.crearPdf("GraficaNacionalidad.pdf", FileHandler.crearGraficaNacionalidad(MTC.modaNacionalidad(edao.getLista())));
-		FileHandler.crearPdf("Graficas.pdf", FileHandler.crearGraficas(edao.getLista()));
+//		pdao.crear(new PersistenciaEstudiantesDTO(edao.getLista()));
+		System.out.println(pdao.mostrarPDFs());
+		int seleccion = sc.nextInt();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
+		FileHandler.crearPdf("Estadisticas"+sdf.format(pdao.getLista_pdfs().get(seleccion).getFecha_generacion())+".pdf", FileHandler.crearGraficas(pdao.getLista_pdfs().get(seleccion).getLista_individual()));
+		
 		
 		System.exit(0);
-		
-		
 		//UNICAMENTE PARA TESTEOS: ELIMINAR DESPUES DE IMPLEMENTARLO A LA VISTA
 		ppal: while(true) {
 			System.out.println("1) Crear Estudiante\n2) Activar Estudiante\n3) Listados (Estudiantes, UUID, Admins)\n4) Inicio Sesion Admins\n5) Salir");

@@ -33,7 +33,7 @@ public class EstudianteDAO implements OperacionesDAO{
 	
 	private ArrayList<EstudianteDTO> cargarDesdeArchivo() {
 		ArrayList<EstudianteDTO> desde_archivo = new ArrayList<>();
-		String contenido = FileHandler.abrirArchivoText("datosEstSobreescrito.csv");
+		String contenido = FileHandler.abrirArchivo("datosEstSobreescrito.csv");
 		String[] lineas = contenido.split("\n");
 		for (String linea : lineas) {
 			String[] attr = linea.split(",");
