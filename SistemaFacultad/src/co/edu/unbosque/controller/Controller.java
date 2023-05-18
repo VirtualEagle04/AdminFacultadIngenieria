@@ -1,14 +1,22 @@
 package co.edu.unbosque.controller;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.Year;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.JComboBox;
 
 import co.edu.unbosque.model.AdminDAO;
 import co.edu.unbosque.model.AdminDTO;
@@ -33,6 +41,11 @@ public class Controller implements ActionListener{
 	private int contador_cambios = 0; //SE RESETEA CADA X CAMBIOS
 
 	private Scanner sc;
+	
+	private long documento_temp;
+	private String nombres_temp, apellidos_temp, correo_temp, fechaNacimiento_temp, usuario_temp, programa_temp, jornada_temp, lugar_temp, origen_temp;
+	private Date fecha_temp, fechaR_temp;
+	private char genero_temp;
 
 	public Controller() {
 		edao = new EstudianteDAO();
@@ -47,7 +60,7 @@ public class Controller implements ActionListener{
 
 	public void agregarLectores() {
 		
-//		3 iniciales
+		//MENU INICIAL
 		vp.getStudents().addActionListener(this);
 		vp.getStudents().setActionCommand("Student_registration");
 		
@@ -56,8 +69,11 @@ public class Controller implements ActionListener{
 		
 		vp.getAdmin().addActionListener(this);
 		vp.getAdmin().setActionCommand("Admin");
-//		botones volver
-	
+
+		//BOTONES VOLVER
+		vp.getCreationpanel().getVolver().addActionListener(this);
+		vp.getCreationpanel().getVolver().setActionCommand("back_creation");
+		
 		vp.getActivationpanel().getBack().addActionListener(this);
 		vp.getActivationpanel().getBack().setActionCommand("back_activation");
 		
@@ -67,10 +83,25 @@ public class Controller implements ActionListener{
 		vp.getAdmincontroll().getBack3().addActionListener(this);
 		vp.getAdmincontroll().getBack3().setActionCommand("back_admin_controll");
 		
-//		panel admin
+		//PANEL REGISTRO
+		vp.getCreationpanel().getCalendar().addActionListener(this);
+		vp.getCreationpanel().getCalendar().setActionCommand("abrir_calendario");
 		
+		vp.getCreationpanel().getAgregar().addActionListener(this);
+		vp.getCreationpanel().getAgregar().setActionCommand("agregar");
+		
+		vp.getCreationpanel().getConfirmar_fecha().addActionListener(this);
+		vp.getCreationpanel().getConfirmar_fecha().setActionCommand("confirmar_fecha");
+		
+		vp.getCreationpanel().getPrograma().addActionListener(this);
+		vp.getCreationpanel().getPrograma().setActionCommand("cambio_programa");
+		
+		vp.getCreationpanel().getNacional().addActionListener(this);
+		vp.getCreationpanel().getNacional().setActionCommand("cambio_origen");
+		
+		//PANEL ADMIN
 		vp.getAdminpanel().getJoin().addActionListener(this);
-		vp.getAdminpanel().getJoin().setActionCommand("join");
+		vp.getAdminpanel().getJoin().setActionCommand("ingresar");
 		
 		vp.getAdmincontroll().getGeneratepdf().addActionListener(this);
 		vp.getAdmincontroll().getGeneratepdf().setActionCommand("generatePDF");
@@ -96,40 +127,158 @@ public class Controller implements ActionListener{
 		switch (e.getActionCommand()) {
 		case "Student_registration":{
 			
-			
-			
+			vp.getCreationpanel().setVisible(true);
+			vp.getActivationpanel().setVisible(false);
+			vp.getAdminpanel().setVisible(false);
 			break;
 		}
 		case "Activation":{
 			
 			vp.getActivationpanel().setVisible(true);
 			vp.getAdminpanel().setVisible(false);
-			
+			vp.getCreationpanel().setVisible(false);
 			break;
 		}
 		case "Admin":{
 			
 			vp.getAdminpanel().setVisible(true);
 			vp.getActivationpanel().setVisible(false);
-			
+			vp.getCreationpanel().setVisible(false);
 			break;
+		}
+		case "back_creation":{
+			
+			vp.setVisible(true);
+			vp.getAdminpanel().setVisible(false);
+			vp.getActivationpanel().setVisible(false);
+			vp.getCreationpanel().setVisible(false);
 		}
 		case "back_activation":{
 			
 			vp.setVisible(true);
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
-			
+			vp.getCreationpanel().setVisible(false);
 		}
 		case "back_admin":{
 			
 			vp.setVisible(true);
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
+			vp.getCreationpanel().setVisible(false);
+			break;
+		}
+		case "back_admin_controll":{
+			
+			vp.setVisible(true);
+			vp.getAdminpanel().setVisible(false);
+			vp.getActivationpanel().setVisible(false);
+			vp.getAdmincontroll().setVisible(false);
+			vp.getCreationpanel().setVisible(false);
+			break;
+		}
+		case "abrir_calendario": {
+			
+			vp.getCreationpanel().getMcalend().setVisible(true);
 			
 			break;
 		}
-		case "join":{
+		case "confirmar_fecha": {
+			
+			vp.getCreationpanel().getMcalend().setVisible(false);
+			
+			if(vp.getCreationpanel().getCalendario().getCalendar() != null) {
+				
+				Calendar fecha_seleccionada = vp.getCreationpanel().getCalendario().getCalendar();
+
+				int dia = fecha_seleccionada.get(Calendar.DAY_OF_MONTH);
+				int mes = fecha_seleccionada.get(Calendar.MONTH) + 1;
+				int anio = fecha_seleccionada.get(Calendar.YEAR);
+
+				LocalDate fecha_nacimiento = LocalDate.of(anio, mes, dia);
+				LocalDate fecha_actual = LocalDate.now();
+
+				Period periodo = Period.between(fecha_nacimiento, fecha_actual);
+
+				int dias = periodo.getDays();
+				int meses = periodo.getMonths();
+				int anios = periodo.getYears();
+
+				int dias_totales = anios * 365 + meses * 30 + dias;
+
+				for (int i = fecha_nacimiento.getYear(); i <= fecha_actual.getYear(); i++) {
+
+					if (Year.of(i).isLeap()) {
+
+						LocalDate primer_dia_anio = LocalDate.of(i, mes, dia);
+						if (primer_dia_anio.isAfter(fecha_nacimiento) || primer_dia_anio.isEqual(fecha_nacimiento)
+								&& (primer_dia_anio.isBefore(fecha_actual) || primer_dia_anio.isEqual(fecha_actual))) {
+
+							dias_totales++;
+
+						}
+					}
+
+				}
+
+				int meses_totales = (anios * 12) + meses;
+
+				fechaNacimiento_temp = dia + "/" + mes + "/" + anio;
+
+				vp.getCreationpanel().getFecha().setText(fechaNacimiento_temp);
+			}
+			break;
+		}
+		case "agregar": {
+			
+			documento_temp = Long.parseLong(vp.getCreationpanel().getDocumento().getText());
+			nombres_temp = vp.getCreationpanel().getNombre().getText();
+			apellidos_temp = vp.getCreationpanel().getApellido().getText();
+			correo_temp = vp.getCreationpanel().getCorreo().getText();
+			
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			try {
+				fecha_temp = sdf.parse(fechaNacimiento_temp);
+			} catch (ParseException e1) {
+			}
+			String generoString = (String) vp.getCreationpanel().getGenero().getSelectedItem();
+			genero_temp = generoString.charAt(0);
+			
+			jornada_temp = (String) vp.getCreationpanel().getJornada().getSelectedItem();
+			
+			
+			
+			
+			
+			break;
+		}
+		case "cambio_programa": {
+			
+			programa_temp = (String) vp.getCreationpanel().getPrograma().getSelectedItem();
+			
+			String[] diurno = {"Diurno"};
+			String[] diurno_nocturno = {"Diurno", "Nocturno"};
+			
+			if(programa_temp.contains("sistemas") || programa_temp.contains("Electrónica")) {
+				vp.getCreationpanel().getJornada().setModel(new DefaultComboBoxModel<>(diurno_nocturno));
+				
+			}else {
+				vp.getCreationpanel().getJornada().setModel(new DefaultComboBoxModel<>(diurno));
+			}
+			
+			break;
+		}
+		case "cambio_origen": {
+			
+			origen_temp = (String) vp.getCreationpanel().getNacional().getSelectedItem();
+			
+			
+			
+			break;
+		}
+		
+		
+		case "ingresar":{
 			
 			vp.setVisible(true);
 			vp.getAdminpanel().setVisible(false);
@@ -145,19 +294,7 @@ public class Controller implements ActionListener{
 			break;
 		}
 		case "generate":{
-			
-			
-			
 			vp.getAdmincontroll().getPanel_pdfs().setVisible(false);
-			break;
-		}
-		case "back_admin_controll":{
-			
-			vp.setVisible(true);
-			vp.getAdminpanel().setVisible(false);
-			vp.getActivationpanel().setVisible(false);
-			vp.getAdmincontroll().setVisible(false);
-			
 			break;
 		}
 
@@ -171,13 +308,13 @@ public class Controller implements ActionListener{
 	public void run() throws AddressException, MessagingException {
 		
 //		pdao.crear(new PersistenciaEstudiantesDTO(edao.getLista()));
-		System.out.println(pdao.mostrarPDFs());
-		int seleccion = sc.nextInt();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
-		FileHandler.crearPdf("Estadisticas"+sdf.format(pdao.getLista_pdfs().get(seleccion).getFecha_generacion())+".pdf", FileHandler.crearGraficas(pdao.getLista_pdfs().get(seleccion).getLista_individual()));
+//		System.out.println(pdao.mostrarPDFs());
+//		int seleccion = sc.nextInt();
+//		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
+//		FileHandler.crearPdf("Estadisticas"+sdf.format(pdao.getLista_pdfs().get(seleccion).getFecha_generacion())+".pdf", FileHandler.crearGraficas(pdao.getLista_pdfs().get(seleccion).getLista_individual()));
 		
 		
-		System.exit(0);
+//		System.exit(0);
 		//UNICAMENTE PARA TESTEOS: ELIMINAR DESPUES DE IMPLEMENTARLO A LA VISTA
 		ppal: while(true) {
 			System.out.println("1) Crear Estudiante\n2) Activar Estudiante\n3) Listados (Estudiantes, UUID, Admins)\n4) Inicio Sesion Admins\n5) Salir");

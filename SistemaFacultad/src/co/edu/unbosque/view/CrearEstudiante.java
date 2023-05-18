@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.MatteBorder;
@@ -26,7 +27,7 @@ public class CrearEstudiante extends JPanel {
 	private JCalendar calendario;
 	private JTextField nombre, apellido, correo, documento, fecha;
 	private JComboBox<String> programa, jornada, genero, nacional;
-	private JButton calendar, volver, agregar;
+	private JButton calendar, volver, agregar, confirmar_fecha;
 	private JLabel indnombre, indapellido, indcorreo, inddocumento, indprograma, indjornada, indgenero, indfecha, indlugar;
 	private Font franklin;
 
@@ -103,7 +104,7 @@ public class CrearEstudiante extends JPanel {
 		genero = new JComboBox(generos);
 		genero.setBounds(370, 308, 140, 25);
 
-		String[] jornadas = { "Seleccionar", "Diurno", "Nocturno" };
+		String[] jornadas = {"Diurno"};
 
 		jornada = new JComboBox(jornadas);
 		jornada.setBounds(548, 308, 140, 25);
@@ -139,13 +140,25 @@ public class CrearEstudiante extends JPanel {
 		agregar.setContentAreaFilled(false);
 
 		calendario = new JCalendar();
-		calendario.setPreferredSize(new Dimension(256, 152));
+//		calendario.setPreferredSize(new Dimension(256, 152));
+		calendario.setBounds(5, 10, 256, 132);
 		calendario.setBackground(new Color(103, 216, 198));
 
 		mcalend = new JPanel();
-		mcalend.setBounds(420, 244, 266, 182);
+		mcalend.setLayout(null);
+		mcalend.setBounds(420, 244, 268, 182);
 		mcalend.setBackground(new Color(103, 216, 198));
+		mcalend.add(calendario);
 		mcalend.setVisible(false);
+		
+		confirmar_fecha = new JButton();
+		confirmar_fecha.setBounds(80, 145, 100, 25);
+		ImageIcon logoconfirmar = new ImageIcon("src/Assets/confirmarFecha.png");
+		confirmar_fecha.setIcon(new ImageIcon(logoconfirmar.getImage().getScaledInstance(100, 25, Image.SCALE_SMOOTH)));
+		confirmar_fecha.setOpaque(false);
+		confirmar_fecha.setBorderPainted(false);
+		confirmar_fecha.setContentAreaFilled(false);
+		mcalend.add(confirmar_fecha, JLayeredPane.DRAG_LAYER);
 		
 		indnombre=new JLabel("Nombre Completo");
 		indnombre.setFont(franklin);
@@ -201,8 +214,8 @@ public class CrearEstudiante extends JPanel {
 		indlugar.setBounds(370, 332, 140, 50);
 		indlugar.setForeground(Color.WHITE);
 		
-
-		mcalend.add(calendario);
+		
+		
 		add(mcalend);
 		add(calendar);
 		add(volver);
@@ -233,5 +246,231 @@ public class CrearEstudiante extends JPanel {
 
 		setVisible(true);
 	}
+
+	public JLabel getImgfondo() {
+		return imgfondo;
+	}
+
+	public void setImgfondo(JLabel imgfondo) {
+		this.imgfondo = imgfondo;
+	}
+
+	public JPanel getFondo() {
+		return fondo;
+	}
+
+	public void setFondo(JPanel fondo) {
+		this.fondo = fondo;
+	}
+
+	public JPanel getCampos() {
+		return campos;
+	}
+
+	public void setCampos(JPanel campos) {
+		this.campos = campos;
+	}
+
+	public JPanel getMcalend() {
+		return mcalend;
+	}
+
+	public void setMcalend(JPanel mcalend) {
+		this.mcalend = mcalend;
+	}
+
+	public JCalendar getCalendario() {
+		return calendario;
+	}
+
+	public void setCalendario(JCalendar calendario) {
+		this.calendario = calendario;
+	}
+
+	public JTextField getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(JTextField nombre) {
+		this.nombre = nombre;
+	}
+
+	public JTextField getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(JTextField apellido) {
+		this.apellido = apellido;
+	}
+
+	public JTextField getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(JTextField correo) {
+		this.correo = correo;
+	}
+
+	public JTextField getDocumento() {
+		return documento;
+	}
+
+	public void setDocumento(JTextField documento) {
+		this.documento = documento;
+	}
+
+	public JTextField getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(JTextField fecha) {
+		this.fecha = fecha;
+	}
+
+	public JComboBox<String> getPrograma() {
+		return programa;
+	}
+
+	public void setPrograma(JComboBox<String> programa) {
+		this.programa = programa;
+	}
+
+	public JComboBox<String> getJornada() {
+		return jornada;
+	}
+
+	public void setJornada(JComboBox<String> jornada) {
+		this.jornada = jornada;
+	}
+
+	public JComboBox<String> getGenero() {
+		return genero;
+	}
+
+	public void setGenero(JComboBox<String> genero) {
+		this.genero = genero;
+	}
+
+	public JComboBox<String> getNacional() {
+		return nacional;
+	}
+
+	public void setNacional(JComboBox<String> nacional) {
+		this.nacional = nacional;
+	}
+
+	public JButton getCalendar() {
+		return calendar;
+	}
+
+	public void setCalendar(JButton calendar) {
+		this.calendar = calendar;
+	}
+
+	public JButton getVolver() {
+		return volver;
+	}
+
+	public void setVolver(JButton volver) {
+		this.volver = volver;
+	}
+
+	public JButton getAgregar() {
+		return agregar;
+	}
+
+	public void setAgregar(JButton agregar) {
+		this.agregar = agregar;
+	}
+
+	public JLabel getIndnombre() {
+		return indnombre;
+	}
+
+	public void setIndnombre(JLabel indnombre) {
+		this.indnombre = indnombre;
+	}
+
+	public JLabel getIndapellido() {
+		return indapellido;
+	}
+
+	public void setIndapellido(JLabel indapellido) {
+		this.indapellido = indapellido;
+	}
+
+	public JLabel getIndcorreo() {
+		return indcorreo;
+	}
+
+	public void setIndcorreo(JLabel indcorreo) {
+		this.indcorreo = indcorreo;
+	}
+
+	public JLabel getInddocumento() {
+		return inddocumento;
+	}
+
+	public void setInddocumento(JLabel inddocumento) {
+		this.inddocumento = inddocumento;
+	}
+
+	public JLabel getIndprograma() {
+		return indprograma;
+	}
+
+	public void setIndprograma(JLabel indprograma) {
+		this.indprograma = indprograma;
+	}
+
+	public JLabel getIndjornada() {
+		return indjornada;
+	}
+
+	public void setIndjornada(JLabel indjornada) {
+		this.indjornada = indjornada;
+	}
+
+	public JLabel getIndgenero() {
+		return indgenero;
+	}
+
+	public void setIndgenero(JLabel indgenero) {
+		this.indgenero = indgenero;
+	}
+
+	public JLabel getIndfecha() {
+		return indfecha;
+	}
+
+	public void setIndfecha(JLabel indfecha) {
+		this.indfecha = indfecha;
+	}
+
+	public JLabel getIndlugar() {
+		return indlugar;
+	}
+
+	public void setIndlugar(JLabel indlugar) {
+		this.indlugar = indlugar;
+	}
+
+	public Font getFranklin() {
+		return franklin;
+	}
+
+	public void setFranklin(Font franklin) {
+		this.franklin = franklin;
+	}
+
+	public JButton getConfirmar_fecha() {
+		return confirmar_fecha;
+	}
+
+	public void setConfirmar_fecha(JButton confirmar_fecha) {
+		this.confirmar_fecha = confirmar_fecha;
+	}
+	
+	
 
 }

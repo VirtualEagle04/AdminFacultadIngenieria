@@ -14,7 +14,7 @@ public class MainWindow extends JFrame {
 	private JPanel background;
 	private JLabel logo, botones;
 	private JButton students, activation, admin;
-	private CrearEstudiante cest;
+	private CrearEstudiante creationpanel;
 	private ActivationPanel activationpanel;
 	private AdminAccesPanel adminpanel;
 	private AdminControll admincontroll;
@@ -28,7 +28,7 @@ public class MainWindow extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-		cest = new CrearEstudiante();
+		creationpanel = new CrearEstudiante();
 		activationpanel = new ActivationPanel();
 		adminpanel = new AdminAccesPanel();
 		admincontroll = new AdminControll();
@@ -36,7 +36,7 @@ public class MainWindow extends JFrame {
 		add(adminpanel).setVisible(false);
 		add(activationpanel).setVisible(false);
 		add(admincontroll).setVisible(false);
-		add(cest).setVisible(false);;
+		add(creationpanel).setVisible(false);;
 
 		logo = new JLabel(new ImageIcon("src/Assets/ueb.png"));
 		logo.setBounds(0, 0, 750, 480);
@@ -146,4 +146,14 @@ public class MainWindow extends JFrame {
 		this.admin = admin;
 	}
 
+	public CrearEstudiante getCreationpanel() {
+		return creationpanel;
+	}
+
+	public void setCreationpanel(CrearEstudiante creationpanel) {
+		this.creationpanel = creationpanel;
+	}
+
+	
+	
 }
