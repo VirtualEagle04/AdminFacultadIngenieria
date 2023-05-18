@@ -15,6 +15,9 @@ public class MainWindow extends JFrame {
 	private JLabel logo, botones;
 	private JButton students, activation, admin;
 	private CrearEstudiante cest;
+	private ActivationPanel activationpanel;
+	private AdminAccesPanel adminpanel;
+	private AdminControll admincontroll;
 
 	public MainWindow() {
 		
@@ -26,8 +29,15 @@ public class MainWindow extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		cest = new CrearEstudiante();
-		add(cest);
-		
+		activationpanel = new ActivationPanel();
+		adminpanel = new AdminAccesPanel();
+		admincontroll = new AdminControll();
+
+		add(adminpanel).setVisible(false);
+		add(activationpanel).setVisible(false);
+		add(admincontroll).setVisible(false);
+		add(cest).setVisible(false);;
+
 		logo = new JLabel(new ImageIcon("src/Assets/ueb.png"));
 		logo.setBounds(0, 0, 750, 480);
 		add(logo);
@@ -66,6 +76,74 @@ public class MainWindow extends JFrame {
 		add(background);
 
 		setVisible(true);
+	}
+
+	public AdminControll getAdmincontroll() {
+		return admincontroll;
+	}
+
+	public void setAdmincontroll(AdminControll admincontroll) {
+		this.admincontroll = admincontroll;
+	}
+
+	public ActivationPanel getActivationpanel() {
+		return activationpanel;
+	}
+
+	public void setActivationpanel(ActivationPanel activationpanel) {
+		this.activationpanel = activationpanel;
+	}
+
+	public AdminAccesPanel getAdminpanel() {
+		return adminpanel;
+	}
+
+	public void setAdminpanel(AdminAccesPanel adminpanel) {
+		this.adminpanel = adminpanel;
+	}
+
+	public void setBackground(JPanel background) {
+		this.background = background;
+	}
+
+	public JLabel getLogo() {
+		return logo;
+	}
+
+	public void setLogo(JLabel logo) {
+		this.logo = logo;
+	}
+
+	public JLabel getBotones() {
+		return botones;
+	}
+
+	public void setBotones(JLabel botones) {
+		this.botones = botones;
+	}
+
+	public JButton getStudents() {
+		return students;
+	}
+
+	public void setStudents(JButton students) {
+		this.students = students;
+	}
+
+	public JButton getActivation() {
+		return activation;
+	}
+
+	public void setActivation(JButton activation) {
+		this.activation = activation;
+	}
+
+	public JButton getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(JButton admin) {
+		this.admin = admin;
 	}
 
 }

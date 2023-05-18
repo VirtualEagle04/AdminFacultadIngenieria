@@ -1,11 +1,14 @@
 package co.edu.unbosque.controller;
 
 import java.text.SimpleDateFormat;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Date;
 import java.util.Scanner;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
+import javax.swing.DefaultListModel;
 
 import co.edu.unbosque.model.AdminDAO;
 import co.edu.unbosque.model.AdminDTO;
@@ -20,7 +23,7 @@ import co.edu.unbosque.util.MTC;
 import co.edu.unbosque.util.MailSender;
 import co.edu.unbosque.view.MainWindow;
 
-public class Controller {
+public class Controller implements ActionListener{
 
 	private EstudianteDAO edao;
 	private UUIDUsuarioDAO uuidDAO;
@@ -38,8 +41,133 @@ public class Controller {
 		pdao = new PersistenciaEstudiantesDAO();
 		sc = new Scanner(System.in);
 		vp = new MainWindow();
+		
+		agregarLectores();
 	}
 
+	public void agregarLectores() {
+		
+//		3 iniciales
+		vp.getStudents().addActionListener(this);
+		vp.getStudents().setActionCommand("Student_registration");
+		
+		vp.getActivation().addActionListener(this);
+		vp.getActivation().setActionCommand("Activation");
+		
+		vp.getAdmin().addActionListener(this);
+		vp.getAdmin().setActionCommand("Admin");
+//		botones volver
+	
+		vp.getActivationpanel().getBack().addActionListener(this);
+		vp.getActivationpanel().getBack().setActionCommand("back_activation");
+		
+		vp.getAdminpanel().getBack2().addActionListener(this);
+		vp.getAdminpanel().getBack2().setActionCommand("back_admin");
+		
+		vp.getAdmincontroll().getBack3().addActionListener(this);
+		vp.getAdmincontroll().getBack3().setActionCommand("back_admin_controll");
+		
+//		panel admin
+		
+		vp.getAdminpanel().getJoin().addActionListener(this);
+		vp.getAdminpanel().getJoin().setActionCommand("join");
+		
+		vp.getAdmincontroll().getGeneratepdf().addActionListener(this);
+		vp.getAdmincontroll().getGeneratepdf().setActionCommand("generatePDF");
+		
+		vp.getAdmincontroll().getGenerate().addActionListener(this);
+		vp.getAdmincontroll().getGenerate().setActionCommand("generate");
+	}
+	
+	public void cargarModelos() {
+		
+		DefaultListModel<String> temp_modelo_estudiantes = vp.getAdmincontroll().getModelo();
+		temp_modelo_estudiantes.clear();
+		for(int i = 0; i < edao.getLista().size(); i++) {
+			temp_modelo_estudiantes.addElement(edao.getLista().get(i).getDocumento()+" "+edao.getLista().get(i).getNombres());
+		}
+		vp.getAdmincontroll().getList_e().setModel(temp_modelo_estudiantes);
+		
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		switch (e.getActionCommand()) {
+		case "Student_registration":{
+			
+			
+			
+			break;
+		}
+		case "Activation":{
+			
+			vp.getActivationpanel().setVisible(true);
+			vp.getAdminpanel().setVisible(false);
+			
+			break;
+		}
+		case "Admin":{
+			
+			vp.getAdminpanel().setVisible(true);
+			vp.getActivationpanel().setVisible(false);
+			
+			break;
+		}
+		case "back_activation":{
+			
+			vp.setVisible(true);
+			vp.getAdminpanel().setVisible(false);
+			vp.getActivationpanel().setVisible(false);
+			
+		}
+		case "back_admin":{
+			
+			vp.setVisible(true);
+			vp.getAdminpanel().setVisible(false);
+			vp.getActivationpanel().setVisible(false);
+			
+			break;
+		}
+		case "join":{
+			
+			vp.setVisible(true);
+			vp.getAdminpanel().setVisible(false);
+			vp.getActivationpanel().setVisible(false);
+			vp.getAdmincontroll().setVisible(true);
+			
+			break;
+		}
+		case "generatePDF":{
+			
+			vp.getAdmincontroll().getPanel_pdfs().setVisible(true);
+			
+			break;
+		}
+		case "generate":{
+			
+			
+			
+			vp.getAdmincontroll().getPanel_pdfs().setVisible(false);
+			break;
+		}
+		case "back_admin_controll":{
+			
+			vp.setVisible(true);
+			vp.getAdminpanel().setVisible(false);
+			vp.getActivationpanel().setVisible(false);
+			vp.getAdmincontroll().setVisible(false);
+			
+			break;
+		}
+
+		default:
+			break;
+		}
+		
+	}
+	
+	
 	public void run() throws AddressException, MessagingException {
 		
 //		pdao.crear(new PersistenciaEstudiantesDTO(edao.getLista()));
@@ -239,5 +367,7 @@ public class Controller {
 		System.err.println("Fin del Programa");
 
 	}
+
+
 
 }
