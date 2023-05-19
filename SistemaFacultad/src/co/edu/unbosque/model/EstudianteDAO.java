@@ -1,5 +1,6 @@
 package co.edu.unbosque.model;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -28,7 +29,8 @@ public class EstudianteDAO implements OperacionesDAO{
 	//ARCHIVOS
 	
 	public void escribirArchivo() {
-		FileHandler.escribirSerializado("estudiantes.txt", lista);
+//		FileHandler.escribirSerializado("estudiantes.txt", lista);
+		escribirEnArchivo();
 	}
 	
 	private ArrayList<EstudianteDTO> cargarDesdeArchivo() {
@@ -58,6 +60,7 @@ public class EstudianteDAO implements OperacionesDAO{
 	
 	private void escribirEnArchivo() {
 		StringBuilder sb = new StringBuilder();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		int indice = lista.size();
 		for (EstudianteDTO e : lista) {
 			
@@ -67,12 +70,12 @@ public class EstudianteDAO implements OperacionesDAO{
 			sb.append(e.getGenero()+",");
 			sb.append(e.getUsuario()+",");
 			sb.append(e.getCorreo()+",");
-			sb.append(e.getFecha_nacimiento()+"");
+			sb.append(sdf.format(e.getFecha_nacimiento())+",");
 			sb.append((e.isEsta_activo()? "ACTIVO":"INACTIVO")+",");
 			sb.append(e.getPrograma()+",");
 			sb.append(e.getJornada()+",");
 			sb.append(e.getLugar_nacimiento()+",");
-			sb.append(e.getFecha_registro()+",");
+			sb.append(sdf.format(e.getFecha_registro())+",");
 			sb.append(e.getNacional_extranjero());
 			
 			

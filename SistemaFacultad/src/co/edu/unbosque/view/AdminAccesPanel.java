@@ -50,7 +50,7 @@ public class AdminAccesPanel extends JPanel {
 		shadow2.setLayout(null);
 		add(shadow2);
 
-		ind_user2 = new JLabel("Ingrese el Usuario");
+		ind_user2 = new JLabel("Nombre de Usuario");
 		ind_user2.setFont(franklin);
 		ind_user2.setFont(ind_user2.getFont().deriveFont(Font.PLAIN, 20));
 		ind_user2.setForeground(Color.WHITE);
@@ -66,7 +66,7 @@ public class AdminAccesPanel extends JPanel {
 		user2.setFont(new Font("Consolas", Font.PLAIN, 20));
 		background2.add(user2);
 
-		ind_pass = new JLabel("Ingrese la Contraseña");
+		ind_pass = new JLabel("Contraseña");
 		ind_pass.setFont(franklin);
 		ind_pass.setFont(ind_pass.getFont().deriveFont(Font.PLAIN, 20));
 		ind_pass.setForeground(Color.WHITE);

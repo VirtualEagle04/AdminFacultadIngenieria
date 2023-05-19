@@ -139,7 +139,7 @@ public class AdminControll extends JPanel {
 		barra1.setBounds(0, 0, 330, 365);
 
 		panel_list = new JPanel();
-		panel_list.setBounds(40, 80, 328, 335);
+		panel_list.setBounds(40, 75, 328, 362);
 		panel_list.setLayout(null);
 		panel_list.add(barra1);
 		add(panel_list);
@@ -166,6 +166,7 @@ public class AdminControll extends JPanel {
 		area1.setBounds(0, 0, 287, 180);
 		area1.setBackground(Color.LIGHT_GRAY);
 		area1.setEditable(false);
+		area1.setFont(new Font("Consolas", Font.PLAIN, 12));
 		panel_info.add(area1);
 
 		ascendant = new JButton();

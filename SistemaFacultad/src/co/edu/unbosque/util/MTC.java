@@ -179,15 +179,15 @@ public class MTC {
 	//PROGRAMA
 	public static HashMap<String, Integer> modaPrograma(ArrayList<EstudianteDTO> lista_estudiantes){
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		String[] generos = crearArrayPrograma(lista_estudiantes);
+		String[] programas = crearArrayPrograma(lista_estudiantes);
 		
-		for(int i = 0; i < generos.length; i++) {
-			String genero = generos[i];
-			if(map.containsKey(genero)) {
-				map.put(genero, map.get(genero) + 1);
+		for(int i = 0; i < programas.length; i++) {
+			String programa = programas[i];
+			if(map.containsKey(programa)) {
+				map.put(programa, map.get(programa) + 1);
 			}
 			else {
-				map.put(genero, 1);
+				map.put(programa, 1);
 			}
 		}
 		return map;
