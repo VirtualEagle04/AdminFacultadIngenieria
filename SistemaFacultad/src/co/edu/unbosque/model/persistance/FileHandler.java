@@ -129,6 +129,16 @@ public class FileHandler {
 		}
 	}
 
+	public static ArrayList<String> cargarDesdeArchivo(String nombre) {
+		ArrayList<String> desde_archivo = new ArrayList<>();
+		String contenido = FileHandler.abrirArchivo(nombre);
+		String[] lineas = contenido.split("\n");
+		for (String linea : lineas) {
+			desde_archivo.add(linea);
+		}
+		return desde_archivo;
+	}
+	
 	public static void crearPdf(String nombre_pdf, JFreeChart[] chart) {
 		Document documento = new Document();
 		ByteArrayOutputStream[] baos = new ByteArrayOutputStream[chart.length];
@@ -164,7 +174,6 @@ public class FileHandler {
 		}
 
 	}
-	
 	//GENERAL
 	public static JFreeChart[] crearGraficas(ArrayList<EstudianteDTO> lista_est) {
 		JFreeChart[] graficas = new JFreeChart[6];

@@ -6,6 +6,6 @@ import javax.mail.internet.AddressException;
 public class AplMain {
 	public static void main(String[] args) throws AddressException, MessagingException {
 		Controller c = new Controller();
-		c.run();
+//		c.run();
 	}
 }

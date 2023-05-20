@@ -1,6 +1,7 @@
 package co.edu.unbosque.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -35,6 +36,15 @@ public class PersistenciaEstudiantesDTO implements Serializable{
 
 	public void setFecha_generacion(Date fecha_generacion) {
 		this.fecha_generacion = fecha_generacion;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM d, yyyy - HH:mm:ss");
+		sb.append(sdf.format(getFecha_generacion()));
+		return sb.toString();
+		
 	}
 	
 	

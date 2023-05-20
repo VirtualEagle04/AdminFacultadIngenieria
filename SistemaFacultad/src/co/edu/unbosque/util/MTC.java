@@ -159,7 +159,7 @@ public class MTC {
 		}
 		return map;
 	}
-	//ACTIVO / INACTIVO
+	//ESTADO
 	public static HashMap<String, Integer> modaActivoInactivo(ArrayList<EstudianteDTO> lista_estudiantes){
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		String[] activos_inactivos = crearArrayActivoInactivo(lista_estudiantes);
@@ -175,19 +175,18 @@ public class MTC {
 		}
 		return map;
 	}
-	
 	//PROGRAMA
 	public static HashMap<String, Integer> modaPrograma(ArrayList<EstudianteDTO> lista_estudiantes){
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		String[] generos = crearArrayPrograma(lista_estudiantes);
+		String[] programas = crearArrayPrograma(lista_estudiantes);
 		
-		for(int i = 0; i < generos.length; i++) {
-			String genero = generos[i];
-			if(map.containsKey(genero)) {
-				map.put(genero, map.get(genero) + 1);
+		for(int i = 0; i < programas.length; i++) {
+			String programa = programas[i];
+			if(map.containsKey(programa)) {
+				map.put(programa, map.get(programa) + 1);
 			}
 			else {
-				map.put(genero, 1);
+				map.put(programa, 1);
 			}
 		}
 		return map;
@@ -208,7 +207,6 @@ public class MTC {
 		}
 		return map;
 	}
-	
 	//EDAD
 	public static HashMap<Integer, Integer> modaEdad(ArrayList<EstudianteDTO> lista_estudiantes) {
 		HashMap<Integer, Integer> map = new HashMap<>();
@@ -255,6 +253,27 @@ public class MTC {
 		}
 		
 		return mediana;
+	}
+	//PROGRAMAS POR ESTUDIANTES NACIONALES
+	public static HashMap<String, Integer> topNacionales(ArrayList<EstudianteDTO> lista_estudiantes){
+		String[] programas = {"Bioingenieria", "Ingenieria Ambiental", "Ingenieria Electronica", "Ingenieria Industrial", "Ingenieria de Sistemas" };
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		for(String programa : programas) {
+			map.put(programa, 0);
+		}
+		
+		String programa_temp = "";
+		for(EstudianteDTO estudiante : lista_estudiantes) {
+			if(estudiante.getNacional_extranjero().equalsIgnoreCase("Nacional")) {
+				
+				programa_temp = estudiante.getPrograma();
+				if(map.containsKey(programa_temp)) {
+					map.put(programa_temp, map.get(programa_temp) + 1);
+				}
+			}
+		}
+		
+		return map;
 	}
 	
 	

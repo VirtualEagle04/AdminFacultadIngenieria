@@ -1,11 +1,14 @@
 package co.edu.unbosque.view;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
+import java.util.Vector;
 
+import javax.swing.ComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,9 +19,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JToggleButton;
 import javax.swing.ListSelectionModel;
 
-public class AdminControll extends JPanel {
+public class AdminControl extends JPanel {
 
 	private JList<String> list_e;
 	private JList<String> list_pdf;
@@ -28,16 +32,17 @@ public class AdminControll extends JPanel {
 	private JLabel ind_lista, ind1, ind2, ind3, ind4, ind5;
 	private JTextArea area1;
 	private JTextField filter;
-	private JButton back3, ascendant, descending, delete, activate, actualpdf, generatepdf, generate;
+	private JButton back3, delete, activate, actualpdf, generatepdf, generate;
 	private JScrollPane barra1, barra2;
 	private JComboBox<String> campotipo;
-	private Font Franklin;
+	private Font franklin;
+	private JToggleButton sort;
 
-	public AdminControll() {
+	public AdminControl() {
 
 		try {
 
-			Franklin = Font.createFont(Font.TRUETYPE_FONT,
+			franklin = Font.createFont(Font.TRUETYPE_FONT,
 					new File("src/Assets/Fonts/Franklin Gothic Demi Cond Regular.ttf"));
 
 		} catch (FontFormatException e) {
@@ -66,13 +71,13 @@ public class AdminControll extends JPanel {
 
 		ind_lista = new JLabel("Seleccione Documento a Generar");
 		ind_lista.setBounds(70, 5, 270, 30);
-		ind_lista.setFont(Franklin);
+		ind_lista.setFont(franklin);
 		ind_lista.setFont(ind_lista.getFont().deriveFont(Font.PLAIN, 20));
 		ind_lista.setForeground(Color.WHITE);
 		panel_pdfs.add(ind_lista);
 
 		ind5 = new JLabel("Generar");
-		ind5.setFont(Franklin);
+		ind5.setFont(franklin);
 		ind5.setFont(ind5.getFont().deriveFont(Font.PLAIN, 17));
 		ind5.setBounds(169, 340, 120, 30);
 		ind5.setForeground(Color.WHITE);
@@ -103,28 +108,28 @@ public class AdminControll extends JPanel {
 		panel_pdfs.add(panel_list2);
 
 		ind1 = new JLabel("Generar Actual");
-		ind1.setFont(Franklin);
+		ind1.setFont(franklin);
 		ind1.setFont(ind1.getFont().deriveFont(Font.PLAIN, 17));
 		ind1.setBounds(500, 340, 120, 30);
 		ind1.setForeground(Color.WHITE);
 		add(ind1);
 
 		ind2 = new JLabel("Generar PDF");
-		ind2.setFont(Franklin);
+		ind2.setFont(franklin);
 		ind2.setFont(ind2.getFont().deriveFont(Font.PLAIN, 17));
 		ind2.setBounds(509, 385, 120, 30);
 		ind2.setForeground(Color.WHITE);
 		add(ind2);
 
 		ind3 = new JLabel("Eliminar Estudiante");
-		ind3.setFont(Franklin);
+		ind3.setFont(franklin);
 		ind3.setFont(ind3.getFont().deriveFont(Font.PLAIN, 15));
 		ind3.setBounds(425, 250, 150, 30);
 		ind3.setForeground(Color.WHITE);
 		add(ind3);
 
 		ind4 = new JLabel("Activar/Inactivar");
-		ind4.setFont(Franklin);
+		ind4.setFont(franklin);
 		ind4.setFont(ind4.getFont().deriveFont(Font.PLAIN, 15));
 		ind4.setBounds(570, 250, 150, 30);
 		ind4.setForeground(Color.WHITE);
@@ -139,7 +144,7 @@ public class AdminControll extends JPanel {
 		barra1.setBounds(0, 0, 330, 365);
 
 		panel_list = new JPanel();
-		panel_list.setBounds(40, 80, 328, 335);
+		panel_list.setBounds(40, 75, 328, 362);
 		panel_list.setLayout(null);
 		panel_list.add(barra1);
 		add(panel_list);
@@ -150,7 +155,7 @@ public class AdminControll extends JPanel {
 		filter.setFont(new Font("Consolas", Font.PLAIN, 15));
 		add(filter);
 
-		String[] orden = { "Activo", "Inactivo", "Top3 mas estudiantes", "Top3 mas colombianos" };
+		String[] orden = { "Nombre", "Apellido", "Documento",  "Activo", "Inactivo", "Top 3 Más Estudiantes", "Top 3 Más Nacionales" };
 
 		campotipo = new JComboBox<>(orden);
 		campotipo.setBounds(175, 50, 142, 20);
@@ -166,21 +171,15 @@ public class AdminControll extends JPanel {
 		area1.setBounds(0, 0, 287, 180);
 		area1.setBackground(Color.LIGHT_GRAY);
 		area1.setEditable(false);
+		area1.setFont(new Font("Consolas", Font.PLAIN, 12));
 		panel_info.add(area1);
 
-		ascendant = new JButton();
-		ascendant.setBounds(322, 50, 20, 20);
-		ascendant.setFocusable(false);
-		ascendant.setBorderPainted(false);
-		ascendant.setIcon(new ImageIcon("src/Assets/ArrowUP.png"));
-		add(ascendant);
-
-		descending = new JButton();
-		descending.setBounds(347, 50, 20, 20);
-		descending.setFocusable(false);
-		descending.setBorderPainted(false);
-		descending.setIcon(new ImageIcon("src/Assets/ArrowD.png"));
-		add(descending);
+		sort = new JToggleButton();
+		sort.setBounds(335, 50, 20, 20);
+		sort.setFocusable(false);
+		sort.setBorderPainted(false);
+		sort.setIcon(new ImageIcon("src/Assets/ArrowUP.png"));
+		add(sort);
 
 		delete = new JButton();
 		delete.setBounds(420, 250, 120, 30);
@@ -352,20 +351,12 @@ public class AdminControll extends JPanel {
 		this.filter = filter;
 	}
 
-	public JButton getAscendant() {
-		return ascendant;
+	public JToggleButton getSort() {
+		return sort;
 	}
 
-	public void setAscendant(JButton ascendant) {
-		this.ascendant = ascendant;
-	}
-
-	public JButton getDescending() {
-		return descending;
-	}
-
-	public void setDescending(JButton descending) {
-		this.descending = descending;
+	public void setSort(JToggleButton sort) {
+		this.sort = sort;
 	}
 
 	public JButton getDelete() {
@@ -433,11 +424,11 @@ public class AdminControll extends JPanel {
 	}
 
 	public Font getFranklin() {
-		return Franklin;
+		return franklin;
 	}
 
 	public void setFranklin(Font franklin) {
-		Franklin = franklin;
+		franklin = franklin;
 	}
 
 }

@@ -79,7 +79,7 @@ public class ActivationPanel extends JPanel {
 		code.setBorder(border2);
 		code.setOpaque(false);
 		code.setForeground(Color.WHITE);
-		code.setEditable(false);
+		code.setEditable(true);
 		code.setFont(new Font("Consolas", Font.PLAIN, 20));
 		background1.add(code);
 

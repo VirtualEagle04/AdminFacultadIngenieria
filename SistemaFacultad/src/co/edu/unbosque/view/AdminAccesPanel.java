@@ -11,21 +11,25 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.JToggleButton;
 import javax.swing.border.MatteBorder;
 
 public class AdminAccesPanel extends JPanel {
 
-	private Font Franklin;
-	private JTextField user2, password;
+	private Font franklin;
+	private JTextField user2;
 	private JLabel ind_user2, ind_pass, background2, shadow2;
 	private JButton join, back2;
+	private JPasswordField clave;
+	private JToggleButton mostrar_clave;
 
 	public AdminAccesPanel() {
 
 		try {
 
-			Franklin = Font.createFont(Font.TRUETYPE_FONT,
+			franklin = Font.createFont(Font.TRUETYPE_FONT,
 					new File("src/Assets/Fonts/Franklin Gothic Demi Cond Regular.ttf"));
 
 		} catch (FontFormatException e) {
@@ -50,8 +54,8 @@ public class AdminAccesPanel extends JPanel {
 		shadow2.setLayout(null);
 		add(shadow2);
 
-		ind_user2 = new JLabel("Ingrese el Usuario");
-		ind_user2.setFont(Franklin);
+		ind_user2 = new JLabel("Nombre de Usuario");
+		ind_user2.setFont(franklin);
 		ind_user2.setFont(ind_user2.getFont().deriveFont(Font.PLAIN, 20));
 		ind_user2.setForeground(Color.WHITE);
 		ind_user2.setBounds(50, 30, 150, 30);
@@ -66,21 +70,29 @@ public class AdminAccesPanel extends JPanel {
 		user2.setFont(new Font("Consolas", Font.PLAIN, 20));
 		background2.add(user2);
 
-		ind_pass = new JLabel("Ingrese la Contraseña");
-		ind_pass.setFont(Franklin);
+		ind_pass = new JLabel("Contraseña");
+		ind_pass.setFont(franklin);
 		ind_pass.setFont(ind_pass.getFont().deriveFont(Font.PLAIN, 20));
 		ind_pass.setForeground(Color.WHITE);
 		ind_pass.setBounds(50, 120, 170, 30);
 		background2.add(ind_pass);
 
-		password = new JTextField();
-		password.setBounds(50, 165, 250, 30);
+		clave = new JPasswordField();
+		clave.setBounds(50, 165, 250, 30);
 		MatteBorder border2 = BorderFactory.createMatteBorder(0, 0, 1, 0, Color.WHITE);
-		password.setBorder(border2);
-		password.setOpaque(false);
-		password.setForeground(Color.WHITE);
-		password.setFont(new Font("Consolas", Font.PLAIN, 20));
-		background2.add(password);
+		clave.setBorder(border2);
+		clave.setOpaque(false);
+		clave.setForeground(Color.WHITE);
+		clave.setFont(new Font("Consolas", Font.PLAIN, 20));
+		background2.add(clave);
+
+		mostrar_clave = new JToggleButton();
+		mostrar_clave.setBounds(305, 165, 30, 30);
+		mostrar_clave.setIcon(new ImageIcon("src/Assets/Ojocerrado.png"));
+		mostrar_clave.setFocusable(false);
+		mostrar_clave.setBorderPainted(false);
+		mostrar_clave.setContentAreaFilled(false);
+		background2.add(mostrar_clave);
 
 		join = new JButton();
 		join.setBounds(100, 230, 150, 30);
@@ -102,12 +114,20 @@ public class AdminAccesPanel extends JPanel {
 
 	}
 
+	public JToggleButton getMostrar_clave() {
+		return mostrar_clave;
+	}
+
+	public void setMostrar_clave(JToggleButton mostrar_clave) {
+		this.mostrar_clave = mostrar_clave;
+	}
+
 	public Font getFranklin() {
-		return Franklin;
+		return franklin;
 	}
 
 	public void setFranklin(Font franklin) {
-		Franklin = franklin;
+		franklin = franklin;
 	}
 
 	public JTextField getUser2() {
@@ -118,12 +138,12 @@ public class AdminAccesPanel extends JPanel {
 		this.user2 = user2;
 	}
 
-	public JTextField getPassword() {
-		return password;
+	public JPasswordField getClave() {
+		return clave;
 	}
 
-	public void setPassword(JTextField password) {
-		this.password = password;
+	public void setClave(JPasswordField clave) {
+		this.clave = clave;
 	}
 
 	public JLabel getInd_user2() {

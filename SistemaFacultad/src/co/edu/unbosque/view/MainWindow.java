@@ -14,29 +14,29 @@ public class MainWindow extends JFrame {
 	private JPanel background;
 	private JLabel logo, botones;
 	private JButton students, activation, admin;
-	private CrearEstudiante cest;
+	private CrearEstudiante creationpanel;
 	private ActivationPanel activationpanel;
 	private AdminAccesPanel adminpanel;
-	private AdminControll admincontroll;
+	private AdminControl admincontrol;
 
 	public MainWindow() {
 		
 		setSize(750, 480);
-		setTitle("Sistema Facultad de Ingenieria");
+		setTitle("Sistema Facultad de Ingeniería");
 		setLayout(null);
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-		cest = new CrearEstudiante();
+		creationpanel = new CrearEstudiante();
 		activationpanel = new ActivationPanel();
 		adminpanel = new AdminAccesPanel();
-		admincontroll = new AdminControll();
+		admincontrol = new AdminControl();
 
 		add(adminpanel).setVisible(false);
 		add(activationpanel).setVisible(false);
-		add(admincontroll).setVisible(false);
-		add(cest).setVisible(false);;
+		add(admincontrol).setVisible(false);
+		add(creationpanel).setVisible(false);;
 
 		logo = new JLabel(new ImageIcon("src/Assets/ueb.png"));
 		logo.setBounds(0, 0, 750, 480);
@@ -78,12 +78,12 @@ public class MainWindow extends JFrame {
 		setVisible(true);
 	}
 
-	public AdminControll getAdmincontroll() {
-		return admincontroll;
+	public AdminControl getAdmincontrol() {
+		return admincontrol;
 	}
 
-	public void setAdmincontroll(AdminControll admincontroll) {
-		this.admincontroll = admincontroll;
+	public void setAdmincontroll(AdminControl admincontrol) {
+		this.admincontrol = admincontrol;
 	}
 
 	public ActivationPanel getActivationpanel() {
@@ -146,4 +146,14 @@ public class MainWindow extends JFrame {
 		this.admin = admin;
 	}
 
+	public CrearEstudiante getCreationpanel() {
+		return creationpanel;
+	}
+
+	public void setCreationpanel(CrearEstudiante creationpanel) {
+		this.creationpanel = creationpanel;
+	}
+
+	
+	
 }
