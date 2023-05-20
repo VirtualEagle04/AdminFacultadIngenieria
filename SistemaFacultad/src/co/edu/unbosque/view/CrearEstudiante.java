@@ -130,8 +130,8 @@ public class CrearEstudiante extends JPanel {
 		documento.setBorder(borde);
 		documento.setOpaque(false);
 
-		String[] programas = { "Seleccionar", "Bioingeniería", "Ingeniería Ambiental", "Ingeniería Electrónica",
-				"Ingeniería Industrial", "Ingeniería de Sistemas" };
+		String[] programas = { "Seleccionar", "Bioingenieria", "Ingenieria Ambiental", "Ingenieria Electronica",
+				"Ingenieria Industrial", "Ingenieria de Sistemas" };
 
 		programa = new JComboBox(programas);
 		programa.setBounds(315, 248, 140, 25);
@@ -278,11 +278,16 @@ public class CrearEstudiante extends JPanel {
 		indlugar.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
 		indlugar.setBounds(315, 332, 140, 50);
 		indlugar.setForeground(Color.WHITE);
-
+		
+		
+		
 		add(mcalend);
 		add(calendar);
 		add(volver);
 		add(agregar);
+
+		
+		
 		campos.add(indnombre);
 		campos.add(nombre);
 		campos.add(indapellido);

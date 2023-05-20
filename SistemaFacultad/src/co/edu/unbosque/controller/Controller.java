@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -45,11 +48,9 @@ public class Controller implements ActionListener{
 	private MainWindow vp;
 	private PersistenciaEstudiantesDTO lista_temp;
 	
-	
-	private int contador_cambios = 0; //SE RESETEA CADA X CAMBIOS
+	private int contador_cambios = 0; //SE RESETEA CADA 3 CAMBIOS (Agregar, Eliminar, Activar/Desactivar Estudiante)
 	private ArrayList<String> valores;
-	
-	private Scanner sc;
+	private DefaultListModel<String> model_temp;
 	
 	private long documento_temp;
 	private String nombres_temp, apellidos_temp, correo_temp, usuario_temp, programa_temp, jornada_temp, lugar_temp, origen_temp, fecha_string_temp ;
@@ -63,40 +64,286 @@ public class Controller implements ActionListener{
 		uuidDAO = new UUIDUsuarioDAO();
 		adao = new AdminDAO();
 		pdao = new PersistenciaEstudiantesDAO();
+		
 		valores = new ArrayList<>();
-		sc = new Scanner(System.in);
 		vp = new MainWindow();
-		
+
 		agregarLectores();
-		cargarModelos();
-		cargarValores();
-	}
-	
-	public void cargarModelos() {
 		
-		DefaultListModel<String> temp_modelo_estudiantes = vp.getAdmincontroll().getModelo();
+		//ADMIN CONTROL LIST
+		DefaultListModel<String> temp_modelo_estudiantes = vp.getAdmincontrol().getModelo();
 		temp_modelo_estudiantes.clear();
 		for(int i = 0; i < edao.getLista().size(); i++) {
-			temp_modelo_estudiantes.addElement(edao.getLista().get(i).getDocumento()+" - "+edao.getLista().get(i).getNombres()+" "+edao.getLista().get(i).getApellidos());
+			temp_modelo_estudiantes.addElement(edao.getLista().get(i).getDocumento()+" "+edao.getLista().get(i).getNombres()+" "+edao.getLista().get(i).getApellidos());
 		}
-		vp.getAdmincontroll().getList_e().setModel(temp_modelo_estudiantes);
-				
+		vp.getAdmincontrol().getList_e().setModel(temp_modelo_estudiantes);
+			
+		//INICIAR LISTAS PAISES/MUNICIPIOS
 		ArrayList<String> lista_municipios = FileHandler.cargarDesdeArchivo("municipios.csv");
 		vp.getCreationpanel().getModelo_lugar().addAll(lista_municipios);
 		vp.getCreationpanel().getLista_lugar().setModel(vp.getCreationpanel().getModelo_lugar());
 		
-	}
-	
-	public void cargarValores() {
+		//CARGAR VALORES
 		for (int i = 0; i < edao.getLista().size(); i++) {
-			valores.add(edao.getLista().get(i).getDocumento()+" - "+edao.getLista().get(i).getNombres()+" "+edao.getLista().get(i).getApellidos());
+			valores.add(edao.getLista().get(i).getDocumento()+" "+edao.getLista().get(i).getNombres()+" "+edao.getLista().get(i).getApellidos());
 		}
+		
+		//CARGAR NOMBRES
+		ArrayList<EstudianteDTO> temp_e = new ArrayList<EstudianteDTO>();
+		for(EstudianteDTO estudiante : edao.getLista()) {
+			temp_e.add(estudiante);
+		}
+		
+		model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+		for(int i = 0; i < edao.getLista().size(); i++) {
+			
+			for(int j = 0; j < edao.getLista().size() - 1; j++) {
+				
+				if(temp_e.get(j).getNombres().split(" ")[0].compareTo(temp_e.get(j+1).getNombres().split(" ")[0]) > 0) {
+					EstudianteDTO aux = temp_e.get(j);
+					temp_e.set(j, temp_e.get(j+1));
+					temp_e.set(j+1, aux);
+				}
+				
+			}
+		}
+		model_temp.clear();
+		for(EstudianteDTO estudiante2 : temp_e) {
+			model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+		}
+		
+		valores.clear();
+		for(int i = 0; i < model_temp.size(); i++) {
+			valores.add(model_temp.getElementAt(i));
+		}
+		
+		model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
 	}
 	
-	public void reescribirModelos() {
-		vp.getAdmincontroll().getModelo().clear();
-		for (int i = 0; i < valores.size(); i++) {
-			vp.getAdmincontroll().getModelo().addElement(valores.get(i));
+	public void remodelar() {
+		ArrayList<EstudianteDTO> temp_e = new ArrayList<EstudianteDTO>();
+		for(EstudianteDTO estudiante : edao.getLista()) {
+			temp_e.add(estudiante);
+		}
+		
+		String tipo = (String) vp.getAdmincontrol().getCampotipo().getSelectedItem();
+		if(tipo.contains("Nombre")) {
+			vp.getAdmincontrol().getSort().setVisible(true);
+			vp.getAdmincontrol().getSort().setEnabled(true);
+			vp.getAdmincontrol().getSort().setSelected(false);
+			
+			model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+			for(int i = 0; i < edao.getLista().size(); i++) {
+				
+				for(int j = 0; j < edao.getLista().size() - 1; j++) {
+					
+					if(temp_e.get(j).getNombres().split(" ")[0].compareTo(temp_e.get(j+1).getNombres().split(" ")[0]) > 0) {
+						EstudianteDTO aux = temp_e.get(j);
+						temp_e.set(j, temp_e.get(j+1));
+						temp_e.set(j+1, aux);
+					}
+					
+				}
+			}
+			model_temp.clear();
+			for(EstudianteDTO estudiante2 : temp_e) {
+				model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+			}
+			
+			valores.clear();
+			for(int i = 0; i < model_temp.size(); i++) {
+				valores.add(model_temp.getElementAt(i));
+			}
+			
+		}
+		else if(tipo.contains("Apellido")) {
+			vp.getAdmincontrol().getSort().setVisible(true);
+			vp.getAdmincontrol().getSort().setEnabled(true);
+			vp.getAdmincontrol().getSort().setSelected(false);
+			
+			
+			model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+			for(int i = 0; i < edao.getLista().size(); i++) {
+				
+				for(int j = 0; j < edao.getLista().size() - 1; j++) {
+					
+					if(temp_e.get(j).getApellidos().split(" ")[0].compareTo(temp_e.get(j+1).getApellidos().split(" ")[0]) > 0) {
+						EstudianteDTO aux = temp_e.get(j);
+						temp_e.set(j, temp_e.get(j+1));
+						temp_e.set(j+1, aux);
+					}
+					
+				}
+			}
+			model_temp.clear();
+			for(EstudianteDTO estudiante2 : temp_e) {
+				model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+			}
+			
+			valores.clear();
+			for(int i = 0; i < model_temp.size(); i++) {
+				valores.add(model_temp.getElementAt(i));
+			}
+		}
+		else if(tipo.contains("Documento")) {
+			vp.getAdmincontrol().getSort().setVisible(true);
+			vp.getAdmincontrol().getSort().setEnabled(true);
+			vp.getAdmincontrol().getSort().setSelected(false);
+			
+			
+			model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+			for(int i = 0; i < edao.getLista().size(); i++) {
+				
+				for(int j = 0; j < edao.getLista().size() - 1; j++) {
+					
+					if(temp_e.get(j).getDocumento() > temp_e.get(j+1).getDocumento()) {
+						EstudianteDTO aux = temp_e.get(j);
+						temp_e.set(j, temp_e.get(j+1));
+						temp_e.set(j+1, aux);
+					}
+					
+				}
+			}
+			model_temp.clear();
+			for(EstudianteDTO estudiante2 : temp_e) {
+				model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+			}
+			
+			valores.clear();
+			for(int i = 0; i < model_temp.size(); i++) {
+				valores.add(model_temp.getElementAt(i));
+			}
+		}
+		else if(tipo.contains("Activo")) {
+			vp.getAdmincontrol().getSort().setVisible(false);
+			vp.getAdmincontrol().getSort().setEnabled(false);
+			vp.getAdmincontrol().getSort().setSelected(false);
+			
+			model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+			model_temp.clear();
+			for(EstudianteDTO estudiante : edao.getLista()) {
+				if(estudiante.isEsta_activo()) {
+					model_temp.addElement(estudiante.getDocumento()+" "+estudiante.getNombres()+" "+estudiante.getApellidos());
+				}
+			}
+			
+			valores.clear();
+			
+			for(int i = 0; i < model_temp.size(); i++) {
+				valores.add(model_temp.getElementAt(i));
+			}
+		}else if(tipo.contains("Inactivo")) {
+			vp.getAdmincontrol().getSort().setVisible(false);
+			vp.getAdmincontrol().getSort().setEnabled(false);
+			vp.getAdmincontrol().getSort().setSelected(false);
+			
+			model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+			model_temp.clear();
+			for(EstudianteDTO estudiante : edao.getLista()) {
+				if(estudiante.isEsta_activo() == false) {
+					model_temp.addElement(estudiante.getDocumento()+" "+estudiante.getNombres()+" "+estudiante.getApellidos());
+				}
+			}
+			
+			valores.clear();
+			
+			for(int i = 0; i < model_temp.size(); i++) {
+				valores.add(model_temp.getElementAt(i));
+			}
+		}else if(tipo.contains("Top 3 Más Estudiantes")) {
+			vp.getAdmincontrol().getSort().setVisible(false);
+			vp.getAdmincontrol().getSort().setEnabled(false);
+			vp.getAdmincontrol().getSort().setSelected(false);
+			
+			model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+			model_temp.clear();
+			
+			HashMap<String, Integer> map = MTC.modaPrograma(edao.getLista());
+			ArrayList<HashMap.Entry<String, Integer>> res = new ArrayList<>();
+			
+			for(HashMap.Entry<String, Integer> pareja : map.entrySet()) {
+				
+				res.add(pareja);
+				
+			}
+			//BUBBLESORT
+			for (int i = 0; i < res.size(); i++) {
+				for(int j = 0; j < res.size()-1; j++) {
+					if(res.get(j).getValue() < res.get(j+1).getValue()) {
+						HashMap.Entry<String, Integer> aux = res.get(j);
+						res.set(j, res.get(j+1));
+						res.set(j+1, aux);
+					}
+				}
+			}
+			String[] top = new String[3];
+			top[0] = res.get(0).getKey();
+			top[1] = res.get(1).getKey();
+			top[2] = res.get(2).getKey();
+			
+			for(EstudianteDTO estudiante : edao.getLista()) {
+				
+				for(String programa : top) {
+					if(estudiante.getPrograma().equalsIgnoreCase(programa)) {
+						model_temp.addElement(estudiante.getDocumento()+" "+estudiante.getNombres()+" "+estudiante.getApellidos());
+						break;
+					}
+				}
+				
+			}
+			
+			valores.clear();
+			
+			for(int i = 0; i < model_temp.size(); i++) {
+				valores.add(model_temp.getElementAt(i));
+			}
+		}else if(tipo.contains("Top 3 Más Nacionales")) {
+			vp.getAdmincontrol().getSort().setVisible(false);
+			vp.getAdmincontrol().getSort().setEnabled(false);
+			vp.getAdmincontrol().getSort().setSelected(false);
+			
+			model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+			model_temp.clear();
+			
+			HashMap<String, Integer> map = MTC.topNacionales(edao.getLista());
+			ArrayList<HashMap.Entry<String, Integer>> res = new ArrayList<>();
+			
+			for(HashMap.Entry<String, Integer> pareja : map.entrySet()) {
+				
+				res.add(pareja);
+				
+			}
+			//BUBBLESORT
+			for (int i = 0; i < res.size(); i++) {
+				for(int j = 0; j < res.size()-1; j++) {
+					if(res.get(j).getValue() < res.get(j+1).getValue()) {
+						HashMap.Entry<String, Integer> aux = res.get(j);
+						res.set(j, res.get(j+1));
+						res.set(j+1, aux);
+					}
+				}
+			}
+			String[] top = new String[3];
+			top[0] = res.get(0).getKey();
+			top[1] = res.get(1).getKey();
+			top[2] = res.get(2).getKey();
+			
+			for(EstudianteDTO estudiante : edao.getLista()) {
+				
+				for(String programa : top) {
+					if(estudiante.getPrograma().equalsIgnoreCase(programa)) {
+						model_temp.addElement(estudiante.getDocumento()+" "+estudiante.getNombres()+" "+estudiante.getApellidos());
+						break;
+					}
+				}
+				
+			}
+			
+			valores.clear();
+			
+			for(int i = 0; i < model_temp.size(); i++) {
+				valores.add(model_temp.getElementAt(i));
+			}
 		}
 	}
 
@@ -122,8 +369,8 @@ public class Controller implements ActionListener{
 		vp.getAdminpanel().getBack2().addActionListener(this);
 		vp.getAdminpanel().getBack2().setActionCommand("back_admin");
 		
-		vp.getAdmincontroll().getBack3().addActionListener(this);
-		vp.getAdmincontroll().getBack3().setActionCommand("back_admin_controll");
+		vp.getAdmincontrol().getBack3().addActionListener(this);
+		vp.getAdmincontrol().getBack3().setActionCommand("back_admin_control");
 		
 		//PANEL REGISTRO
 		vp.getCreationpanel().getCalendar().addActionListener(this);
@@ -155,9 +402,23 @@ public class Controller implements ActionListener{
 		//PANEL ADMIN
 		vp.getAdminpanel().getJoin().addActionListener(this);
 		vp.getAdminpanel().getJoin().setActionCommand("ingresar");
+
+		vp.getAdminpanel().getMostrar_clave().addItemListener(new ItemListener() {
+			
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				if(e.getStateChange() == ItemEvent.SELECTED) {
+					vp.getAdminpanel().getClave().setEchoChar((char) 0);
+					vp.getAdminpanel().getMostrar_clave().setIcon(new ImageIcon("src/Assets/Ojoabierto.png"));
+				}else {
+					vp.getAdminpanel().getClave().setEchoChar('•');
+					vp.getAdminpanel().getMostrar_clave().setIcon(new ImageIcon("src/Assets/Ojocerrado.png"));
+				}
+			}
+		});
 		
 		//PANEL ADMIN CONTROL
-		vp.getAdmincontroll().getFilter().getDocument().addDocumentListener(new DocumentListener() {
+		vp.getAdmincontrol().getFilter().getDocument().addDocumentListener(new DocumentListener() {
 			
 			@Override
 			public void insertUpdate(DocumentEvent e) { filtrarEstudiantes(); }
@@ -169,44 +430,48 @@ public class Controller implements ActionListener{
 			public void changedUpdate(DocumentEvent e) {}
 		});
 		
-		vp.getAdmincontroll().getCampotipo().addActionListener(this);
-		vp.getAdmincontroll().getCampotipo().setActionCommand("campo_tipo");
+		vp.getAdmincontrol().getCampotipo().addActionListener(this);
+		vp.getAdmincontrol().getCampotipo().setActionCommand("campo_tipo");
 		
-		vp.getAdmincontroll().getGeneratepdf().addActionListener(this);
-		vp.getAdmincontroll().getGeneratepdf().setActionCommand("generatePDF");
+		vp.getAdmincontrol().getGeneratepdf().addActionListener(this);
+		vp.getAdmincontrol().getGeneratepdf().setActionCommand("generatePDF");
 		
-		vp.getAdmincontroll().getGenerate().addActionListener(this);
-		vp.getAdmincontroll().getGenerate().setActionCommand("generate");
+		vp.getAdmincontrol().getGenerate().addActionListener(this);
+		vp.getAdmincontrol().getGenerate().setActionCommand("generate");
 		
-		vp.getAdmincontroll().getActualpdf().addActionListener(this);
-		vp.getAdmincontroll().getActualpdf().setActionCommand("actualPDF");
+		vp.getAdmincontrol().getActualpdf().addActionListener(this);
+		vp.getAdmincontrol().getActualpdf().setActionCommand("actualPDF");
 		
-		vp.getAdmincontroll().getDelete().addActionListener(this);
-		vp.getAdmincontroll().getDelete().setActionCommand("eliminar_estudiante");
+		vp.getAdmincontrol().getDelete().addActionListener(this);
+		vp.getAdmincontrol().getDelete().setActionCommand("eliminar_estudiante");
 		
-		vp.getAdmincontroll().getActivate().addActionListener(this);
-		vp.getAdmincontroll().getActivate().setActionCommand("activar_estudiante");
+		vp.getAdmincontrol().getActivate().addActionListener(this);
+		vp.getAdmincontrol().getActivate().setActionCommand("activar_estudiante");
 		
-		vp.getAdmincontroll().getList_e().addListSelectionListener(new ListSelectionListener() {
+		vp.getAdmincontrol().getList_e().addListSelectionListener(new ListSelectionListener() {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				for(EstudianteDTO estudiante : edao.getLista()) {
-					long id = Long.parseLong(vp.getAdmincontroll().getList_e().getSelectedValue().split(" ")[0]);
-					if(id == estudiante.getDocumento()){
-						vp.getAdmincontroll().getArea1().setText(estudiante.toString());
+					try {
+						long id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
+						if(id == estudiante.getDocumento()){
+							vp.getAdmincontrol().getArea1().setText(estudiante.toString());
+							
+							break;
+						} 
+					} catch (NullPointerException e1) {
 						
-						break;
 					}
 				}
 			}
 		});
 		
-		vp.getAdmincontroll().getList_pdf().addListSelectionListener(new ListSelectionListener() {
+		vp.getAdmincontrol().getList_pdf().addListSelectionListener(new ListSelectionListener() {
 			
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				
-				String fecha_temp = vp.getAdmincontroll().getList_pdf().getSelectedValue();
+				String fecha_temp = vp.getAdmincontrol().getList_pdf().getSelectedValue();
 				SimpleDateFormat sdf1 = new SimpleDateFormat("EEE, MMM d, yyyy - HH:mm:ss");
 				
 				for(PersistenciaEstudiantesDTO lista_individual : pdao.getLista_pdfs()) {
@@ -218,11 +483,184 @@ public class Controller implements ActionListener{
 				
 			}
 		});
+		
+		vp.getAdmincontrol().getSort().addItemListener(new ItemListener() {
+			
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				
+				ArrayList<EstudianteDTO> temp_e = new ArrayList<EstudianteDTO>();
+				for(EstudianteDTO estudiante : edao.getLista()) {
+					temp_e.add(estudiante);
+				}
+				
+				String tipo = (String) vp.getAdmincontrol().getCampotipo().getSelectedItem();
+				if(e.getStateChange() == ItemEvent.SELECTED) {
+					vp.getAdmincontrol().getSort().setIcon(new ImageIcon("src/Assets/ArrowD.png"));
+					//DESCENDENTE
+					
+					if(tipo.contains("Nombre")) {
+						
+						for(int i = 0; i < edao.getLista().size(); i++) {
+							
+							for(int j = 0; j < edao.getLista().size() - 1; j++) {
+								
+								if(temp_e.get(j).getNombres().split(" ")[0].compareTo(temp_e.get(j+1).getNombres().split(" ")[0]) < 0) {
+									EstudianteDTO aux = temp_e.get(j);
+									temp_e.set(j, temp_e.get(j+1));
+									temp_e.set(j+1, aux);
+								}
+								
+							}
+						}
+						model_temp.clear();
+						for(EstudianteDTO estudiante2 : temp_e) {
+							model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+						}
+						
+						valores.clear();
+						for(int i = 0; i < model_temp.size(); i++) {
+							valores.add(model_temp.getElementAt(i));
+						}
+						
+					}else if(tipo.contains("Apellido")) {
+						
+						for(int i = 0; i < edao.getLista().size(); i++) {
+							
+							for(int j = 0; j < edao.getLista().size() - 1; j++) {
+								
+								if(temp_e.get(j).getApellidos().split(" ")[0].compareTo(temp_e.get(j+1).getApellidos().split(" ")[0]) < 0) {
+									EstudianteDTO aux = temp_e.get(j);
+									temp_e.set(j, temp_e.get(j+1));
+									temp_e.set(j+1, aux);
+								}
+								
+							}
+						}
+						model_temp.clear();
+						for(EstudianteDTO estudiante2 : temp_e) {
+							model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+						}
+						
+						valores.clear();
+						for(int i = 0; i < model_temp.size(); i++) {
+							valores.add(model_temp.getElementAt(i));
+						}
+						
+					}else if(tipo.contains("Documento")) {
+						
+						for(int i = 0; i < edao.getLista().size(); i++) {
+							
+							for(int j = 0; j < edao.getLista().size() - 1; j++) {
+								
+								if(temp_e.get(j).getDocumento() < temp_e.get(j+1).getDocumento()) {
+									EstudianteDTO aux = temp_e.get(j);
+									temp_e.set(j, temp_e.get(j+1));
+									temp_e.set(j+1, aux);
+								}
+								
+							}
+						}
+						model_temp.clear();
+						for(EstudianteDTO estudiante2 : temp_e) {
+							model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+						}
+						
+						valores.clear();
+						for(int i = 0; i < model_temp.size(); i++) {
+							valores.add(model_temp.getElementAt(i));
+						}
+						
+					}
+					
+				}else {
+					vp.getAdmincontrol().getSort().setIcon(new ImageIcon("src/Assets/ArrowUP.png"));
+					//ASCENDENTE
+					
+					if(tipo.contains("Nombre")) {
+						
+						for(int i = 0; i < edao.getLista().size(); i++) {
+							
+							for(int j = 0; j < edao.getLista().size() - 1; j++) {
+								
+								if(temp_e.get(j).getNombres().split(" ")[0].compareTo(temp_e.get(j+1).getNombres().split(" ")[0]) > 0) {
+									EstudianteDTO aux = temp_e.get(j);
+									temp_e.set(j, temp_e.get(j+1));
+									temp_e.set(j+1, aux);
+								}
+								
+							}
+						}
+						model_temp.clear();
+						for(EstudianteDTO estudiante2 : temp_e) {
+							model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+						}
+						
+						valores.clear();
+						for(int i = 0; i < model_temp.size(); i++) {
+							valores.add(model_temp.getElementAt(i));
+						}
+						
+					}else if(tipo.contains("Apellido")) {
+						
+						for(int i = 0; i < edao.getLista().size(); i++) {
+							
+							for(int j = 0; j < edao.getLista().size() - 1; j++) {
+								
+								if(temp_e.get(j).getApellidos().split(" ")[0].compareTo(temp_e.get(j+1).getApellidos().split(" ")[0]) > 0) {
+									EstudianteDTO aux = temp_e.get(j);
+									temp_e.set(j, temp_e.get(j+1));
+									temp_e.set(j+1, aux);
+								}
+								
+							}
+						}
+						model_temp.clear();
+						for(EstudianteDTO estudiante2 : temp_e) {
+							model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+						}
+						
+						valores.clear();
+						for(int i = 0; i < model_temp.size(); i++) {
+							valores.add(model_temp.getElementAt(i));
+						}
+						
+					}else if(tipo.contains("Documento")) {
+						
+						for(int i = 0; i < edao.getLista().size(); i++) {
+							
+							for(int j = 0; j < edao.getLista().size() - 1; j++) {
+								
+								if(temp_e.get(j).getDocumento() > temp_e.get(j+1).getDocumento()) {
+									EstudianteDTO aux = temp_e.get(j);
+									temp_e.set(j, temp_e.get(j+1));
+									temp_e.set(j+1, aux);
+								}
+								
+							}
+						}
+						model_temp.clear();
+						for(EstudianteDTO estudiante2 : temp_e) {
+							model_temp.addElement(estudiante2.getDocumento()+" "+estudiante2.getNombres()+" "+estudiante2.getApellidos());
+						}
+						
+						valores.clear();
+						for(int i = 0; i < model_temp.size(); i++) {
+							valores.add(model_temp.getElementAt(i));
+						}
+						
+					}
+					
+				}
+				
+				
+			}
+		});
 	}
 	
 	public void filtrarEstudiantes() {
-		String texto_filtro = vp.getAdmincontroll().getFilter().getText();
-		filtrarModelo((DefaultListModel<String>) vp.getAdmincontroll().getList_e().getModel(), texto_filtro);
+		String texto_filtro = vp.getAdmincontrol().getFilter().getText();
+		filtrarModelo(model_temp, texto_filtro);
 	}
 	
 	public void filtrarModelo(DefaultListModel<String> modelo, String texto_filtro) {
@@ -233,6 +671,15 @@ public class Controller implements ActionListener{
 				modelo.addElement(s);
 			}
 		}
+	}
+	
+	public void verificarCambios() {
+		
+		if(contador_cambios == 3) {
+			pdao.crear(new PersistenciaEstudiantesDTO(edao.getLista()));
+			contador_cambios = 0;
+		}
+		
 	}
 	
 	@Override
@@ -282,6 +729,18 @@ public class Controller implements ActionListener{
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
 			vp.getCreationpanel().setVisible(false);
+			
+			vp.getCreationpanel().getDocumento().setText("");
+			vp.getCreationpanel().getNombre().setText("");
+			vp.getCreationpanel().getApellido().setText("");
+			vp.getCreationpanel().getCorreo().setText("");
+			vp.getCreationpanel().getFecha().setText("");
+			vp.getCreationpanel().getPaises().setText("");
+			vp.getCreationpanel().getPrograma().setSelectedIndex(0);
+			vp.getCreationpanel().getGenero().setSelectedIndex(0);
+			vp.getCreationpanel().getNacional().setSelectedIndex(0);
+			vp.getCreationpanel().getJornada().setSelectedIndex(0);
+			
 		}
 		case "back_activation":{
 			
@@ -293,6 +752,9 @@ public class Controller implements ActionListener{
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
 			vp.getCreationpanel().setVisible(false);
+			
+			vp.getActivationpanel().getUser().setText("");
+			vp.getActivationpanel().getCode().setText("");
 		}
 		case "back_admin":{
 			
@@ -304,9 +766,12 @@ public class Controller implements ActionListener{
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
 			vp.getCreationpanel().setVisible(false);
+			
+			vp.getAdminpanel().getUser2().setText("");
+			vp.getAdminpanel().getClave().setText("");
 			break;
 		}
-		case "back_admin_controll":{
+		case "back_admin_control":{
 			
 			vp.setVisible(true);
 			vp.getAdmin().setVisible(true);
@@ -314,8 +779,12 @@ public class Controller implements ActionListener{
 			vp.getActivation().setVisible(true);
 			vp.getAdminpanel().setVisible(false);
 			vp.getActivationpanel().setVisible(false);
-			vp.getAdmincontroll().setVisible(false);
+			vp.getAdmincontrol().setVisible(false);
 			vp.getCreationpanel().setVisible(false);
+			
+			vp.getAdmincontrol().getFilter().setText("");
+			vp.getAdmincontrol().getCampotipo().setSelectedIndex(0);
+			vp.getAdmincontrol().getList_e().clearSelection();
 			break;
 		}
 		case "abrir_calendario": {
@@ -377,9 +846,14 @@ public class Controller implements ActionListener{
 			fechaR_temp = new Date();
 			origen_temp = (String) vp.getCreationpanel().getNacional().getSelectedItem();
 			
+			if(origen_temp.contains("Nacional")) {
+				lugar_temp = "(Colombia/"+lugar_temp+")";
+			}
+			
 			edao.crear(new EstudianteDTO(documento_temp, nombres_temp, apellidos_temp, genero_temp, usuario_temp, correo_temp, fecha_temp, false, programa_temp, jornada_temp, lugar_temp, fechaR_temp, origen_temp));
 			valores.add(documento_temp + " - "+nombres_temp+" "+apellidos_temp);
-			reescribirModelos();
+			remodelar();
+			contador_cambios++;
 			JOptionPane.showMessageDialog(null, "Informacion de alta importancia:\nSu usuario es: "+usuario_temp+"\nGuardelo y recuerdelo.", "Usuario", JOptionPane.WARNING_MESSAGE);
 			
 			// ENVIAR CORREO DE CONFIRMACION
@@ -404,6 +878,17 @@ public class Controller implements ActionListener{
 
 			// ALMACENAR USUARIO-CODIGO
 			uuidDAO.crear(new UUIDUsuarioDTO(usuario_temp, codigo));
+			
+			vp.getCreationpanel().getDocumento().setText("");
+			vp.getCreationpanel().getNombre().setText("");
+			vp.getCreationpanel().getApellido().setText("");
+			vp.getCreationpanel().getCorreo().setText("");
+			vp.getCreationpanel().getFecha().setText("");
+			vp.getCreationpanel().getPaises().setText("");
+			vp.getCreationpanel().getPrograma().setSelectedIndex(0);
+			vp.getCreationpanel().getGenero().setSelectedIndex(0);
+			vp.getCreationpanel().getNacional().setSelectedIndex(0);
+			vp.getCreationpanel().getJornada().setSelectedIndex(0);
 			
 			
 			break;
@@ -508,7 +993,11 @@ public class Controller implements ActionListener{
 		}
 		case "ingresar":{
 			admin_usuario = vp.getAdminpanel().getUser2().getText();
-			admin_clave = vp.getAdminpanel().getPassword().getText();
+			StringBuilder sb = new StringBuilder();
+			for(char caracter : vp.getAdminpanel().getClave().getPassword()) {
+				sb.append(caracter);
+			}
+			admin_clave = sb.toString();
 			
 			boolean existe = false;
 			AdminDTO admin_verificacion = null;
@@ -524,7 +1013,9 @@ public class Controller implements ActionListener{
 					vp.setVisible(true);
 					vp.getAdminpanel().setVisible(false);
 					vp.getActivationpanel().setVisible(false);
-					vp.getAdmincontroll().setVisible(true);
+					vp.getAdmincontrol().setVisible(true);
+					vp.getAdminpanel().getUser2().setText("");
+					vp.getAdminpanel().getClave().setText("");
 				} else {
 					JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrectos. \nVuelva a intentarlo.", "Inicio Sesión Administradores", JOptionPane.WARNING_MESSAGE);
 				}
@@ -535,89 +1026,50 @@ public class Controller implements ActionListener{
 			break;
 		}
 		case "campo_tipo": {
-			
-			String tipo = (String) vp.getAdmincontroll().getCampotipo().getSelectedItem();
-			if(tipo.contains("Activo")) {
-				DefaultListModel<String> model_temp = (DefaultListModel<String>) vp.getAdmincontroll().getList_e().getModel();
-				model_temp.clear();
-				for(EstudianteDTO estudiante : edao.getLista()) {
-					if(estudiante.isEsta_activo()) {
-						model_temp.addElement(estudiante.getDocumento()+" - "+estudiante.getNombres()+" "+estudiante.getApellidos());
-					}
-				}
-			}else if(tipo.contains("Inactivo")) {
-				DefaultListModel<String> model_temp = (DefaultListModel<String>) vp.getAdmincontroll().getList_e().getModel();
-				model_temp.clear();
-				for(EstudianteDTO estudiante : edao.getLista()) {
-					if(estudiante.isEsta_activo() == false) {
-						model_temp.addElement(estudiante.getDocumento()+" - "+estudiante.getNombres()+" "+estudiante.getApellidos());
-					}
-				}
-			}else if(tipo.contains("Top3 mas estudiantes")) {
-				DefaultListModel<String> model_temp = (DefaultListModel<String>) vp.getAdmincontroll().getList_e().getModel();
-				model_temp.clear();
-				
-				HashMap<String, Integer> map = MTC.modaPrograma(edao.getLista());
-				ArrayList<HashMap.Entry<String, Integer>> res = new ArrayList<>();
-				
-				for(HashMap.Entry<String, Integer> pareja : map.entrySet()) {
-					
-					res.add(pareja);
-					
-				}
-				//BUBBLESORT
-				for (int i = 0; i < res.size(); i++) {
-					for(int j = 0; j < res.size()-1; j++) {
-						if(res.get(j).getValue() < res.get(j+1).getValue()) {
-							HashMap.Entry<String, Integer> aux = res.get(j);
-							res.set(j, res.get(j+1));
-							res.set(j+1, aux);
-						}
-					}
-				}
-				String[] top = new String[3];
-				top[0] = res.get(0).getKey();
-				top[1] = res.get(1).getKey();
-				top[2] = res.get(2).getKey();
-				
-				for(EstudianteDTO estudiante : edao.getLista()) {
-					
-					for(String programa : top) {
-						if(estudiante.getPrograma().equalsIgnoreCase(programa)) {
-							model_temp.addElement(estudiante.getDocumento()+" - "+estudiante.getNombres()+" "+estudiante.getApellidos());
-							break;
-						}
-					}
-					
-				}
-			}else if(tipo.contains("Top3 mas colombianos")) {
-				
-			}
+			vp.getAdmincontrol().getFilter().setText("");
+			remodelar();
 			
 			break;
 		}
+		
 		case "eliminar_estudiante": {
 			int index = 0;
 			long id = 0;
+			id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
 			for(int i = 0; i < edao.getLista().size(); i++) {
-				id = Long.parseLong(vp.getAdmincontroll().getList_e().getSelectedValue().split(" ")[0]);
 				if(id == edao.getLista().get(i).getDocumento()){
 					index = i;
 					break;
 				}
 			}
+			String usuario_temp = edao.getLista().get(index).getUsuario();
 			int res = JOptionPane.showConfirmDialog(null, "Desea eliminar al estudiante con Documento: \n"+id, "Eliminar Estudiante", JOptionPane.YES_NO_CANCEL_OPTION);
+
+			valores.clear();
+			for(EstudianteDTO estudiante : edao.getLista()) {
+				valores.add(estudiante.getDocumento()+" "+estudiante.getNombres()+" "+estudiante.getApellidos());
+			}
 			if(res==0) {
 				if(edao.eliminar(index)) {
 					valores.remove(index);
-					reescribirModelos();
+					remodelar();
+					contador_cambios++;
+					for(int i = 0; i < uuidDAO.getLista().size(); i++) {
+						if(uuidDAO.getLista().get(i).getUsuario().equals(usuario_temp)) {
+							uuidDAO.eliminar(i);
+							break;
+						}
+					}
+					vp.getAdmincontrol().getFilter().setText("");
+					vp.getAdmincontrol().getArea1().setText("");
+					vp.getAdmincontrol().getList_e().clearSelection();
 					JOptionPane.showMessageDialog(null, "Estudiante con Documento: \n"+id+"\nha sido eliminado correctamente.", "Eliminacion Exitosa", JOptionPane.INFORMATION_MESSAGE);
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "Estudiante con Documento: \n"+id+"\nno ha podido ser eliminado.", "Eliminacion Erronea", JOptionPane.ERROR_MESSAGE);
 				}
 			}
-			
+			remodelar();
 			
 			
 			break;
@@ -627,7 +1079,7 @@ public class Controller implements ActionListener{
 			long id = 0;
 			EstudianteDTO ea = null;
 			for(int i = 0; i < edao.getLista().size(); i++) {
-				id = Long.parseLong(vp.getAdmincontroll().getList_e().getSelectedValue().split(" ")[0]);
+				id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
 				if(id == edao.getLista().get(i).getDocumento()){
 					index = i;
 					ea = edao.getLista().get(i);
@@ -638,7 +1090,8 @@ public class Controller implements ActionListener{
 				int res = JOptionPane.showConfirmDialog(null, "Desea INACTIVAR al estudiante con Documento: \n"+id, "Inactivación Estudiante", JOptionPane.YES_NO_CANCEL_OPTION);
 				if(res==0) {
 					if(edao.actualizar(index, new EstudianteDTO(ea.getDocumento(), ea.getNombres(), ea.getApellidos(), ea.getGenero(), ea.getUsuario(), ea.getCorreo(), ea.getFecha_nacimiento(), false, ea.getPrograma(), ea.getJornada(), ea.getLugar_nacimiento(), ea.getFecha_registro(), ea.getNacional_extranjero()))) {
-						reescribirModelos();
+						remodelar();
+						contador_cambios++;
 						JOptionPane.showMessageDialog(null, "Estudiante con Documento: \n"+id+"\nha sido INACTIVADO correctamente.", "Inactivación Exitosa", JOptionPane.INFORMATION_MESSAGE);
 					}
 					else {
@@ -649,7 +1102,8 @@ public class Controller implements ActionListener{
 				int res = JOptionPane.showConfirmDialog(null, "Desea ACTIVAR al estudiante con Documento: \n"+id, "Activación Estudiante", JOptionPane.YES_NO_CANCEL_OPTION);
 				if(res==0) {
 					if(edao.actualizar(index, new EstudianteDTO(ea.getDocumento(), ea.getNombres(), ea.getApellidos(), ea.getGenero(), ea.getUsuario(), ea.getCorreo(), ea.getFecha_nacimiento(), true, ea.getPrograma(), ea.getJornada(), ea.getLugar_nacimiento(), ea.getFecha_registro(), ea.getNacional_extranjero()))) {
-						reescribirModelos();
+						remodelar();
+						contador_cambios++;
 						JOptionPane.showMessageDialog(null, "Estudiante con Documento: \n"+id+"\nha sido ACTIVADO correctamente.", "Activación Exitosa", JOptionPane.INFORMATION_MESSAGE);
 					}
 					else {
@@ -657,10 +1111,44 @@ public class Controller implements ActionListener{
 					}
 				}
 			}
+			if(vp.getAdmincontrol().getCampotipo().getSelectedItem().equals("Inactivo")) {
+				model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+				model_temp.clear();
+				for(EstudianteDTO estudiante : edao.getLista()) {
+					if(estudiante.isEsta_activo() == false) {
+						model_temp.addElement(estudiante.getDocumento()+" "+estudiante.getNombres()+" "+estudiante.getApellidos());
+					}
+				}
+				
+				valores.clear();
+				
+				for(int i = 0; i < model_temp.size(); i++) {
+					valores.add(model_temp.getElementAt(i));
+				}
+			}else if(vp.getAdmincontrol().getCampotipo().getSelectedItem().equals("Activo")) {
+				model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
+				model_temp.clear();
+				for(EstudianteDTO estudiante : edao.getLista()) {
+					if(estudiante.isEsta_activo()) {
+						model_temp.addElement(estudiante.getDocumento()+" "+estudiante.getNombres()+" "+estudiante.getApellidos());
+					}
+				}
+				
+				valores.clear();
+				
+				for(int i = 0; i < model_temp.size(); i++) {
+					valores.add(model_temp.getElementAt(i));
+				}
+			}
+			
+			vp.getAdmincontrol().getFilter().setText("");
+			vp.getAdmincontrol().getArea1().setText("");
+			vp.getAdmincontrol().getList_e().clearSelection();
 			break;
 		}
 		case "actualPDF": {
 			
+			pdao.crear(new PersistenciaEstudiantesDTO(edao.getLista()));
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
 			FileHandler.crearPdf("Estadisticas"+sdf.format(new Date())+".pdf", FileHandler.crearGraficas(edao.getLista()));
 			File pdf = new File("src/co/edu/unbosque/model/persistance/Estadisticas"+sdf.format(new Date())+".pdf");
@@ -680,20 +1168,20 @@ public class Controller implements ActionListener{
 		
 		case "generatePDF":{
 			
-			vp.getAdmincontroll().getPanel_pdfs().setVisible(true);
+			vp.getAdmincontrol().getPanel_pdfs().setVisible(true);
 			
-			DefaultListModel<String> temp_modelo_pdf = vp.getAdmincontroll().getModelo2();
+			DefaultListModel<String> temp_modelo_pdf = vp.getAdmincontrol().getModelo2();
 			temp_modelo_pdf.clear();
 			for(int i = 0; i < pdao.getLista_pdfs().size(); i++) {
 				temp_modelo_pdf.addElement(pdao.getLista_pdfs().get(i).toString());
 			}
-			vp.getAdmincontroll().getList_pdf().setModel(temp_modelo_pdf);
+			vp.getAdmincontrol().getList_pdf().setModel(temp_modelo_pdf);
 			
 			
 			break;
 		}
 		case "generate":{
-			vp.getAdmincontroll().getPanel_pdfs().setVisible(false);
+			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
 			
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
 			FileHandler.crearPdf("Estadisticas"+sdf.format(lista_temp.getFecha_generacion())+".pdf", FileHandler.crearGraficas(lista_temp.getLista_individual()));
@@ -716,203 +1204,4 @@ public class Controller implements ActionListener{
 		}
 		
 	}
-	
-	
-	public void run() throws AddressException, MessagingException {
-		
-//		pdao.crear(new PersistenciaEstudiantesDTO(edao.getLista()));
-		
-//		System.exit(0);
-		//UNICAMENTE PARA TESTEOS: ELIMINAR DESPUES DE IMPLEMENTARLO A LA VISTA
-		ppal: while(true) {
-			System.out.println("1) Crear Estudiante\n2) Activar Estudiante\n3) Listados (Estudiantes, UUID, Admins)\n4) Inicio Sesion Admins\n5) Salir");
-			int op = sc.nextInt();
-			sc.nextLine();
-			switch (op) {
-			// CREAR ESTUDIANTE
-			case 1: {
-				System.out.println("Documento: ");
-				long documento = sc.nextLong();
-				sc.nextLine();
-				System.out.println("Nombres: ");
-				String nombres = sc.nextLine();
-				System.out.println("Apellidos: ");
-				String apellidos = sc.nextLine();
-				System.out.println("Genero (M/F): ");
-				char genero = sc.next().charAt(0);
-				sc.nextLine();
-				System.out.println("Correo: ");
-				String correo = sc.nextLine(); // FILTAR POR CORREOS CORRECTOS Y VALIDOS (REGEX)
-				Date fecha_nacimiento = new Date(); // PEDIR FECHA VIA JCALENDAR
-				System.out.println("Programa Academico: ");
-				String programa = sc.nextLine();
-				System.out.println("Jornada Academica: ");
-				String jornada = sc.nextLine();
-				System.out.println("Lugar de Nacimiento: ");
-				String lugar_nacimiento = sc.nextLine();
-				Date fecha_registro = new Date();
-				System.out.println("Nacional/Extranjero: ");
-				String nacional_extranjero = sc.nextLine();
-
-				// CREACION DE USUARIO
-				String usuario = "";
-				if (nombres.split(" ").length > 1) {
-					usuario = nombres.split(" ")[0].charAt(0) + "" + nombres.split(" ")[1].charAt(0)
-							+ apellidos.split(" ")[0];
-				} else {
-					usuario = nombres.charAt(0) + apellidos.split(" ")[0] + apellidos.split(" ")[1].charAt(0);
-				}
-				usuario = usuario.toLowerCase();
-
-				// CREACION DE ESTUDIANTE
-				edao.crear(new EstudianteDTO(documento, nombres, apellidos, genero, usuario, correo, fecha_nacimiento,
-						false, programa, jornada, lugar_nacimiento, fecha_registro, nacional_extranjero));
-
-				// ENVIAR CORREO DE CONFIRMACION
-				String codigo = MailSender.createAuthEmail(correo);
-
-//					if(MailSender.sendEmail()) {
-//						System.out.println("Revise su correo e ingrese el Codigo de Confirmacion.");
-//					}else {
-//						System.out.println("Error en el envio del correo.");
-//					}
-
-				// ALMACENAR USUARIO-CODIGO
-				uuidDAO.crear(new UUIDUsuarioDTO(usuario, codigo));
-
-				break;
-			}
-			// ACTIVACION ESTUDIANTE
-			case 2: {
-				System.out.println("Ingrese el usuario: ");
-				String usuario = sc.nextLine();
-
-				// VERIFICAR LA EXISTENCIA DEL USUARIO
-				boolean existe = false;
-				EstudianteDTO estudiante_verificar = null;
-				for (EstudianteDTO estudiante : edao.getLista()) {
-					if (estudiante.getUsuario().equalsIgnoreCase(usuario)) {
-						existe = true;
-						estudiante_verificar = estudiante;
-						break;
-					}
-				}
-				if (existe) {
-					// VERIFICAR SI ESTA ACTIVO
-					if (estudiante_verificar.isEsta_activo()) {
-						System.out.println("El estudiante esta ACTIVO.");
-					} else { // NO ESTA ACTIVO
-						System.out.println("Ingrese el codigo de confirmacion: ");
-						String codigo_verificar = sc.nextLine();
-
-						UUIDUsuarioDTO usuario_verificar = null;
-						for (UUIDUsuarioDTO uuid_usuario : uuidDAO.getLista()) {
-							if (uuid_usuario.getUsuario().equalsIgnoreCase(usuario)) {
-								usuario_verificar = uuid_usuario;
-								break;
-							}
-						}
-						if (usuario_verificar.getUuid().equalsIgnoreCase(codigo_verificar)) {
-							System.out.println("El codigo es correcto. El estudiante ahora esta ACTIVO.");
-							estudiante_verificar.setEsta_activo(true);
-							edao.escribirArchivo();
-						} else {
-							System.out.println("El codigo es incorrecto.");
-						}
-
-					}
-				} else {
-					System.out.println(
-							"El usuario: " + usuario + " no existe como Estudiante.\nRegistre un estudiante primero.");
-				}
-
-				break;
-			}
-			// LISTADOS
-			case 3: {
-				listados: while (true) {
-					System.out.println("1) Estudiantes\n2) UUIDs\n3) Administradores\n4) Volver");
-					int list = sc.nextInt();
-					sc.nextLine();
-					switch (list) {
-					case 1: {
-						System.out.println(edao.mostrarTodo());
-						break;
-					}
-					case 2: {
-						System.out.println(uuidDAO.mostrarTodo());
-						break;
-					}
-					case 3: {
-						// SE DEBE IMPLEMENTAR QUE SE OCULTEN LAS CONTRASENAS CON * DEPENDIENDO DE LA
-						// CANTIDAD DE LETRAS
-						System.out.println(adao.mostrarTodo());
-						break;
-					}
-					case 4: {
-						break listados;
-					}
-					}
-
-				}
-				break;
-			}
-			// INICIO SESION ADMINS
-			case 4: {
-				System.out.println("------Inicio de Sesion------");
-				System.out.print("Usuario: ");
-				String inicio_usuario = sc.nextLine();
-				System.out.print("Contraseña: ");
-				String inicio_clave = sc.nextLine();
-
-				boolean existe = false;
-				AdminDTO admin_verificacion = null;
-				for (AdminDTO admin : adao.getLista()) {
-					if (admin.getUsuario_admin().equals(inicio_usuario)) {
-						admin_verificacion = admin;
-						existe = true;
-						break;
-					}
-				}
-				if (existe) {
-					if (admin_verificacion.getContrasena_admin().equals(inicio_clave)) {
-						System.out.println("Inicio de Sesion correcto.");
-					} else {
-						System.out.println("Inicio de Sesion incorrecto.");
-					}
-				} else {
-					System.out.println("El usuario no existe. Desea registrarse? (Si/No): ");
-					boolean registro = sc.nextLine().equalsIgnoreCase("si") ? true : false;
-					if (registro) {
-						System.out.print("Usuario: ");
-						String registro_usuario = sc.nextLine();
-						System.out.print("Contraseña: ");
-						String registro_contraseña = sc.nextLine();
-
-						// SE PODRIA IMPLEMENTAR LA FUNCIONALIDAD DE QUE LOS OTROS ADMINS DEBEN
-						// CONFIRMAR QUE SE QUIERE CREAR OTRO ADMIN, POR MEDIO DE CORREO
-
-						adao.crear(new AdminDTO(registro_usuario, registro_contraseña));
-						System.out.println("Administrador creado.");
-					} else {
-						break;
-					}
-				}
-
-				break;
-			}
-			// SALIR
-			case 5: {
-
-				break ppal;
-			}
-
-			}
-		}
-		System.err.println("Fin del Programa");
-
-	}
-
-
-
 }
