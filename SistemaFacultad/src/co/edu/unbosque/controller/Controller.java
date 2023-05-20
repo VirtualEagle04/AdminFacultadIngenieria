@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Scanner;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
@@ -817,10 +816,10 @@ public class Controller implements ActionListener{
 			break;
 		}
 		case "agregar": {
-			
-			documento_temp = Long.parseLong(vp.getCreationpanel().getDocumento().getText());
-			nombres_temp = vp.getCreationpanel().getNombre().getText();
-			apellidos_temp = vp.getCreationpanel().getApellido().getText();
+
+			documento_temp = Long.parseLong(vp.getCreationpanel().getDocumento().getText()); //TODO La cedula unicamente debe contener digitos, y su logitud es de 10.
+			nombres_temp = vp.getCreationpanel().getNombre().getText(); //TODO Los nombres no pueden contener caracteres invalidos.
+			apellidos_temp = vp.getCreationpanel().getApellido().getText(); //TODO Los apellidos no pueden contener caracteres invalidos.
 			String generoString = (String) vp.getCreationpanel().getGenero().getSelectedItem();
 			genero_temp = generoString.charAt(0);
 			
@@ -832,8 +831,8 @@ public class Controller implements ActionListener{
 			} else {
 				usuario_temp = nombres_temp.charAt(0) + apellidos_temp.split(" ")[0] + apellidos_temp.split(" ")[1].charAt(0);
 			}
-			usuario_temp = usuario_temp.toLowerCase(); //MOSTRAR USUARIO CON JOptionPane
-			correo_temp = vp.getCreationpanel().getCorreo().getText();
+			usuario_temp = usuario_temp.toLowerCase();
+			correo_temp = vp.getCreationpanel().getCorreo().getText(); //TODO El correo ingresado debe tener un formato valido de correo y dominio.
 			
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			try {
@@ -850,8 +849,9 @@ public class Controller implements ActionListener{
 				lugar_temp = "(Colombia/"+lugar_temp+")";
 			}
 			
+			//TODO Si faltan datos, o estan mal ingresados, JOptionPane con el error, de lo contrario, crear estudiante.
 			edao.crear(new EstudianteDTO(documento_temp, nombres_temp, apellidos_temp, genero_temp, usuario_temp, correo_temp, fecha_temp, false, programa_temp, jornada_temp, lugar_temp, fechaR_temp, origen_temp));
-			valores.add(documento_temp + " - "+nombres_temp+" "+apellidos_temp);
+			valores.add(documento_temp + " "+nombres_temp+" "+apellidos_temp);
 			remodelar();
 			contador_cambios++;
 			JOptionPane.showMessageDialog(null, "Informacion de alta importancia:\nSu usuario es: "+usuario_temp+"\nGuardelo y recuerdelo.", "Usuario", JOptionPane.WARNING_MESSAGE);
@@ -930,8 +930,8 @@ public class Controller implements ActionListener{
 		}
 		case "activar": {
 			
-			activacion_usuario = vp.getActivationpanel().getUser().getText();
-			activacion_codigo = vp.getActivationpanel().getCode().getText();
+			activacion_usuario = vp.getActivationpanel().getUser().getText(); //TODO Debe contener texto para verificar. 
+			activacion_codigo = vp.getActivationpanel().getCode().getText(); //TODO Debe contener texto para verificar.
 			
 			// VERIFICAR LA EXISTENCIA DEL USUARIO
 			boolean existe = false;
@@ -1035,7 +1035,7 @@ public class Controller implements ActionListener{
 		case "eliminar_estudiante": {
 			int index = 0;
 			long id = 0;
-			id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
+			id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]); //TODO si vp.getAdmincontrol().getList_e().getSelectedValue() == null, el usuario no ha seleccionado de la lista.
 			for(int i = 0; i < edao.getLista().size(); i++) {
 				if(id == edao.getLista().get(i).getDocumento()){
 					index = i;
@@ -1079,7 +1079,7 @@ public class Controller implements ActionListener{
 			long id = 0;
 			EstudianteDTO ea = null;
 			for(int i = 0; i < edao.getLista().size(); i++) {
-				id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
+				id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]); //TODO si vp.getAdmincontrol().getList_e().getSelectedValue() == null, el usuario no ha seleccionado de la lista.
 				if(id == edao.getLista().get(i).getDocumento()){
 					index = i;
 					ea = edao.getLista().get(i);
@@ -1181,10 +1181,10 @@ public class Controller implements ActionListener{
 			break;
 		}
 		case "generate":{
-			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
+			
 			
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
-			FileHandler.crearPdf("Estadisticas"+sdf.format(lista_temp.getFecha_generacion())+".pdf", FileHandler.crearGraficas(lista_temp.getLista_individual()));
+			FileHandler.crearPdf("Estadisticas"+sdf.format(lista_temp.getFecha_generacion())+".pdf", FileHandler.crearGraficas(lista_temp.getLista_individual())); //TODO Si lista_temp == null, el usuario no ha seleccionado ningun pdf de la lista.
 			if(!Desktop.isDesktopSupported()) {
 				
 			}else {
@@ -1195,6 +1195,7 @@ public class Controller implements ActionListener{
 					e1.printStackTrace();
 				}
 			}
+			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
 			
 			break;
 		}
