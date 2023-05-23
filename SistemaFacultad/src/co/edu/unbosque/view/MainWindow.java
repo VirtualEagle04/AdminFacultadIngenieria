@@ -6,7 +6,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
 public class MainWindow extends JFrame {
@@ -18,25 +17,27 @@ public class MainWindow extends JFrame {
 	private ActivationPanel activationpanel;
 	private AdminAccesPanel adminpanel;
 	private AdminControl admincontrol;
+	private ExceptionControl excontrol;
 
 	public MainWindow() {
-		
+
 		setSize(750, 480);
 		setTitle("Sistema Facultad de Ingeniería");
 		setLayout(null);
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		creationpanel = new CrearEstudiante();
 		activationpanel = new ActivationPanel();
 		adminpanel = new AdminAccesPanel();
 		admincontrol = new AdminControl();
+		excontrol = new ExceptionControl();
 
 		add(adminpanel).setVisible(false);
 		add(activationpanel).setVisible(false);
 		add(admincontrol).setVisible(false);
-		add(creationpanel).setVisible(false);;
+		add(creationpanel).setVisible(false);
 
 		logo = new JLabel(new ImageIcon("src/Assets/ueb.png"));
 		logo.setBounds(0, 0, 750, 480);
@@ -76,6 +77,22 @@ public class MainWindow extends JFrame {
 		add(background);
 
 		setVisible(true);
+	}
+
+	public ExceptionControl getExcontrol() {
+		return excontrol;
+	}
+
+	public void setExcontrol(ExceptionControl excontrol) {
+		this.excontrol = excontrol;
+	}
+
+	public JPanel getBackground() {
+		return background;
+	}
+
+	public void setAdmincontrol(AdminControl admincontrol) {
+		this.admincontrol = admincontrol;
 	}
 
 	public AdminControl getAdmincontrol() {
@@ -154,6 +171,4 @@ public class MainWindow extends JFrame {
 		this.creationpanel = creationpanel;
 	}
 
-	
-	
 }
