@@ -1,309 +1,306 @@
-1787684020,Rafael,De Pedro,M,rde263,rafaeldem56@gmail.com,11/09/2003,ACTIVO,Ingenieria Electronica,Diurno,Estados Federados de Micronesia,07/02/2023,Extranjero
-1692094818,Ramon,Duenas,M,rdu446,ramondum31@gmail.com,06/10/2005,ACTIVO,Ingenieria Electronica,Nocturno,Somalia,09/11/2024,Extranjero
-1630227540,Carlos,Vega,M,cve899,carlosvem82@gmail.com,04/02/2000,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/LOS PALMITOS),08/04/2017,Nacional
-1949985822,Antonio,Barragan,M,aba891,antoniobam40@gmail.com,12/04/2007,ACTIVO,Ingenieria Ambiental,Diurno,Islas Salomón,08/01/2019,Extranjero
-1705877018,Juan Jose,Estebanez,M,jes664,juan joseesm34@gmail.com,02/06/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/MAJAGUAL),09/02/2022,Nacional
-1356104503,David,Manjon,M,dma380,davidmam79@gmail.com,03/09/2005,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/PALMIRA),04/05/2021,Nacional
-1371550979,Pedro,Cueva,M,pcu511,pedrocum41@gmail.com,02/05/1999,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/MARMATO),11/09/2019,Nacional
-1149690251,Alberto,Gonzalez,M,ago128,albertogom1@gmail.com,11/10/2005,ACTIVO,Bioingenieria,Diurno,(Colombia/RIOFRIO),07/11/2018,Nacional
-1177369518,Laura,Navarro,F,lna66,lauranaf86@gmail.com,10/04/2002,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/POLICARPA),05/01/2019,Nacional
-1631596910,Carlos,Del Rio,M,cde438,carlosdem48@gmail.com,12/01/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/BARBOSA),12/05/2019,Nacional
-1557159869,Luis,Munoz,M,lmu6,luismum59@gmail.com,07/04/2001,ACTIVO,Ingenieria Industrial,Diurno,Senegal,07/09/2018,Extranjero
-1962834837,Jose Manuel,Jaen,M,jja365,jose manueljam53@gmail.com,11/02/2005,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/FLORIDA),09/02/2018,Nacional
-1932845168,Carmen,Polo,F,cpo142,carmenpof91@gmail.com,09/03/2001,ACTIVO,Ingenieria Industrial,Diurno,Alemania,10/03/2022,Extranjero
-1255690791,Pilar,Varela,F,pva72,pilarvaf90@gmail.com,04/04/1999,ACTIVO,Ingenieria Ambiental,Diurno,Guinea-Bissau,01/04/2016,Extranjero
-1038519771,Manuel,Diaz,M,mdi668,manueldim77@gmail.com,12/08/2003,ACTIVO,Ingenieria Ambiental,Diurno,Federación Rusa,09/04/2019,Extranjero
-1042250226,Angel,Estrella,M,aes819,angelesm88@gmail.com,08/01/2000,ACTIVO,Bioingenieria,Diurno,Islas Cook,10/02/2017,Extranjero
-1840487126,Jose Luis,Muniz,M,jmu841,jose luismum48@gmail.com,05/04/1999,ACTIVO,Bioingenieria,Diurno,Escocia,05/01/2017,Extranjero
-1474363331,Inmaculada,Nieves,F,ini677,inmaculadanif39@gmail.com,09/06/2005,ACTIVO,Ingenieria Electronica,Nocturno,Kuwait,05/03/2019,Extranjero
-1861871112,Diego,Julian,M,dju728,diegojum74@gmail.com,09/04/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Venezuela,06/10/2017,Extranjero
-1460880660,Jose Luis,Morales,M,jmo187,jose luismom92@gmail.com,02/05/2000,ACTIVO,Bioingenieria,Diurno,Francia,04/03/2017,Extranjero
-1344455753,Alejandro,Duran,M,adu312,alejandrodum43@gmail.com,07/07/2006,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/VILLAGOMEZ),10/03/2017,Nacional
+1787684020,Rafael,De Pedro,M,rde263,rafaeldem56@gmail.com,09/11/2003,ACTIVO,Ingenieria Electronica,Diurno,Estados Federados de Micronesia,02/07/2023,Extranjero
+1692094818,Ramon,Duenas,M,rdu446,ramondum31@gmail.com,10/06/2005,ACTIVO,Ingenieria Electronica,Nocturno,Somalia,11/09/2024,Extranjero
+1630227540,Carlos,Vega,M,cve899,carlosvem82@gmail.com,02/04/2000,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/LOS PALMITOS),04/08/2017,Nacional
+1949985822,Antonio,Barragan,M,aba891,antoniobam40@gmail.com,04/12/2007,ACTIVO,Ingenieria Ambiental,Diurno,Islas Salomón,01/08/2019,Extranjero
+1705877018,Juan Jose,Estebanez,M,jes664,juan joseesm34@gmail.com,06/02/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/MAJAGUAL),02/09/2022,Nacional
+1356104503,David,Manjon,M,dma380,davidmam79@gmail.com,09/03/2005,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/PALMIRA),05/04/2021,Nacional
+1371550979,Pedro,Cueva,M,pcu511,pedrocum41@gmail.com,05/02/1999,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/MARMATO),09/11/2019,Nacional
+1149690251,Alberto,Gonzalez,M,ago128,albertogom1@gmail.com,10/11/2005,ACTIVO,Bioingenieria,Diurno,(Colombia/RIOFRIO),11/07/2018,Nacional
+1177369518,Laura,Navarro,F,lna66,lauranaf86@gmail.com,04/10/2002,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/POLICARPA),01/05/2019,Nacional
+1631596910,Carlos,Del Rio,M,cde438,carlosdem48@gmail.com,01/12/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/BARBOSA),05/12/2019,Nacional
+1557159869,Luis,Munoz,M,lmu6,luismum59@gmail.com,04/07/2001,ACTIVO,Ingenieria Industrial,Diurno,Senegal,09/07/2018,Extranjero
+1962834837,Jose Manuel,Jaen,M,jja365,jose manueljam53@gmail.com,02/11/2005,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/FLORIDA),02/09/2018,Nacional
+1932845168,Carmen,Polo,F,cpo142,carmenpof91@gmail.com,03/09/2001,ACTIVO,Ingenieria Industrial,Diurno,Alemania,03/10/2022,Extranjero
+1255690791,Pilar,Varela,F,pva72,pilarvaf90@gmail.com,04/04/1999,ACTIVO,Ingenieria Ambiental,Diurno,Guinea-Bissau,04/01/2016,Extranjero
+1038519771,Manuel,Diaz,M,mdi668,manueldim77@gmail.com,08/12/2003,ACTIVO,Ingenieria Ambiental,Diurno,Federación Rusa,04/09/2019,Extranjero
+1042250226,Angel,Estrella,M,aes819,angelesm88@gmail.com,01/08/2000,INACTIVO,Bioingenieria,Diurno,Islas Cook,02/10/2017,Extranjero
+1840487126,Jose Luis,Muniz,M,jmu841,jose luismum48@gmail.com,04/05/1999,ACTIVO,Bioingenieria,Diurno,Escocia,01/05/2017,Extranjero
+1474363331,Inmaculada,Nieves,F,ini677,inmaculadanif39@gmail.com,06/09/2005,ACTIVO,Ingenieria Electronica,Nocturno,Kuwait,03/05/2019,Extranjero
+1861871112,Diego,Julian,M,dju728,diegojum74@gmail.com,04/09/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Venezuela,10/06/2017,Extranjero
+1460880660,Jose Luis,Morales,M,jmo187,jose luismom92@gmail.com,05/02/2000,ACTIVO,Bioingenieria,Diurno,Francia,03/04/2017,Extranjero
+1344455753,Alejandro,Duran,M,adu312,alejandrodum43@gmail.com,07/07/2006,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/VILLAGOMEZ),03/10/2017,Nacional
 1848915752,Javier,Gutierrez,M,jgu351,javiergum69@gmail.com,11/11/2004,ACTIVO,Ingenieria Electronica,Diurno,Brasil,12/12/2017,Extranjero
-1785912858,Antonio,Quintana,M,aqu852,antonioqum57@gmail.com,08/06/2003,ACTIVO,Ingenieria Ambiental,Diurno,Svalbard y Jan Mayen,12/06/2019,Extranjero
-1520641565,Josefa,Gomez,F,jgo367,josefagof87@gmail.com,05/06/2003,ACTIVO,Ingenieria Electronica,Diurno,Madagascar,05/12/2019,Extranjero
-1172203707,Milagros,Lopez,F,mlo589,milagroslof8@gmail.com,08/08/2002,ACTIVO,Bioingenieria,Diurno,Trinidad y Tobago,06/11/2022,Extranjero
-1447463417,Juana,Pelaez,F,jpe872,juanapef10@gmail.com,12/07/2006,ACTIVO,Bioingenieria,Diurno,Maldivas,06/06/2020,Extranjero
-1856212645,Lucia,Carretero,F,lca525,luciacaf63@gmail.com,09/05/2002,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SANTUARIO),05/02/2021,Nacional
-1835980910,Milagros,Muniz,F,mmu743,milagrosmuf37@gmail.com,08/02/2003,ACTIVO,Bioingenieria,Diurno,México,10/07/2018,Extranjero
-1854315635,Manuel,Arellano,M,mar382,manuelarm79@gmail.com,05/06/2003,ACTIVO,Bioingenieria,Diurno,(Colombia/PUERTO TRIUNFO),01/12/2016,Nacional
-1783543992,Mercedes,Gonzalez,F,mgo868,mercedesgof30@gmail.com,05/01/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/ALGARROBO),01/10/2023,Nacional
-1875879721,Catalina,Arrizabalaga,F,car483,catalinaarf73@gmail.com,04/03/2005,ACTIVO,Bioingenieria,Diurno,Islas Heard y McDonald,06/02/2022,Extranjero
-1675434966,Miguel Aï¿½ngel,Trinidad,M,mtr497,miguel aï¿½ngeltrm21@gmail.com,05/01/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/PISBA),02/10/2020,Nacional
-1961993856,Rafael,Ordonez,M,ror139,rafaelorm20@gmail.com,02/09/2004,ACTIVO,Ingenieria Industrial,Diurno,Inglaterra,12/04/2020,Extranjero
-1639703471,Miguel Aï¿½ngel,Bayona,M,mba129,miguel aï¿½ngelbam43@gmail.com,11/03/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Irán,07/02/2019,Extranjero
-1233639179,Salvador,Aguilar,M,sag661,salvadoragm94@gmail.com,08/06/2004,ACTIVO,Ingenieria Ambiental,Diurno,Albania,02/02/2020,Extranjero
-1771772386,Isabel,Perez,F,ipe752,isabelpef24@gmail.com,04/09/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/SAN LORENZO),06/01/2019,Nacional
-1521848232,Josefa,Juarez,F,jju598,josefajuf36@gmail.com,08/11/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/EL PEÑÓN),12/03/2016,Nacional
-1269880994,Lucia,Moyano,F,lmo505,luciamof65@gmail.com,12/12/2006,ACTIVO,Ingenieria Ambiental,Diurno,Egipto,10/05/2019,Extranjero
-1400801579,Manuel,Jover,M,mjo473,manueljom97@gmail.com,08/04/2005,ACTIVO,Ingenieria Electronica,Diurno,El Salvador,03/02/2022,Extranjero
-1737021606,Miguel Aï¿½ngel,Vega,M,mve898,miguel aï¿½ngelvem13@gmail.com,08/10/2006,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/FIRAVITOBA),09/05/2017,Nacional
-1986101355,Jesus,Herrera,M,jhe874,jesushem38@gmail.com,02/06/2000,ACTIVO,Bioingenieria,Diurno,Nauru,11/03/2016,Extranjero
-1634515919,Carmen,Fernandez,F,cfe114,carmenfef99@gmail.com,11/04/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,Irán,10/09/2017,Extranjero
-1550563783,Antonio,Alvarez,M,aal528,antonioalm53@gmail.com,03/02/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/TIBANÁ),04/06/2015,Nacional
-1054385160,Antonia,Espinosa,F,aes107,antoniaesf4@gmail.com,12/03/2005,ACTIVO,Ingenieria Ambiental,Diurno,Estonia,02/08/2019,Extranjero
-1176571302,Angel,Gaona,M,aga476,angelgam65@gmail.com,01/08/2001,ACTIVO,Ingenieria Industrial,Diurno,Isla Bouvet,06/06/2018,Extranjero
-1544894223,Francisco,Cruz,M,fcr591,franciscocrm31@gmail.com,08/04/2003,ACTIVO,Bioingenieria,Diurno,(Colombia/SOTAQUIRÁ),01/02/2019,Nacional
-1552859981,Begona,Herrera,F,bhe516,begonahef94@gmail.com,12/01/2002,ACTIVO,Ingenieria Electronica,Nocturno,Tanzania,05/10/2020,Extranjero
-1988017949,Juana,Nieto,F,jni20,juananif74@gmail.com,11/10/2004,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/EL ROBLE),01/08/2015,Nacional
-1690772319,Isabel,Santiago,F,isa9,isabelsaf90@gmail.com,11/09/2003,ACTIVO,Ingenieria Electronica,Diurno,Comoras,05/02/2016,Extranjero
-1276479109,Julia,Lopez,F,jlo130,julialof6@gmail.com,10/11/1999,ACTIVO,Ingenieria de Sistemas,Nocturno,Wallis y Futuna,07/12/2020,Extranjero
-1963013873,Monica,Ortiz,F,mor427,monicaorf88@gmail.com,07/07/2005,ACTIVO,Bioingenieria,Diurno,Malí,02/01/2021,Extranjero
-1181683288,Antonio,Fernandez,M,afe626,antoniofem13@gmail.com,10/03/2001,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/LA FLORIDA),06/02/2022,Nacional
-1960325637,Francisco,Velazquez,M,fve277,franciscovem40@gmail.com,04/11/2003,ACTIVO,Ingenieria Ambiental,Diurno,Ucrania,07/12/2023,Extranjero
-1504872971,Antonio,Conde,M,aco558,antoniocom68@gmail.com,09/04/2006,ACTIVO,Ingenieria Ambiental,Diurno,Gales,11/06/2021,Extranjero
-1445848840,Juan,Tejeda,M,jte35,juantem72@gmail.com,11/02/2001,ACTIVO,Ingenieria Ambiental,Diurno,Kuwait,04/05/2021,Extranjero
-1298805159,Angel,Jimenez,M,aji73,angeljim52@gmail.com,04/05/2005,ACTIVO,Ingenieria Electronica,Diurno,Singapur,08/02/2021,Extranjero
-1533510652,Josefa,Rico,F,jri82,josefarif5@gmail.com,11/08/2004,ACTIVO,Ingenieria Electronica,Nocturno,Tayikistán,05/10/2017,Extranjero
-1814421831,Jose Luis,Guijarro,M,jgu450,jose luisgum26@gmail.com,03/04/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/ALMEIDA),12/09/2021,Nacional
-1448693919,Francisco,Salinas,M,fsa462,franciscosam97@gmail.com,07/04/2001,ACTIVO,Ingenieria de Sistemas,Diurno,Jersey,06/01/2022,Extranjero
-1922758577,Francisco,Leiva,M,fle362,franciscolem36@gmail.com,02/09/2005,ACTIVO,Ingenieria Ambiental,Diurno,Gales,05/06/2024,Extranjero
-1720279201,Jose Luis,Osorio,M,jos799,jose luisosm14@gmail.com,11/07/2001,ACTIVO,Bioingenieria,Diurno,(Colombia/YOTOCO),11/01/2017,Nacional
-1878174979,Antonia,Fernandez,F,afe553,antoniafef57@gmail.com,07/01/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SAN LORENZO),12/02/2022,Nacional
-1429652924,Carmen,Blanca,F,cbl740,carmenblf40@gmail.com,10/01/2005,ACTIVO,Ingenieria Industrial,Diurno,Finlandia,09/05/2018,Extranjero
-1964817075,Teresa,Calle,F,tca309,teresacaf38@gmail.com,12/01/1999,ACTIVO,Ingenieria Industrial,Diurno,Bután,09/01/2017,Extranjero
-1840591180,Cristina,Ilie,F,cil889,cristinailf6@gmail.com,10/03/2002,ACTIVO,Ingenieria Ambiental,Diurno,Brunéi,03/09/2017,Extranjero
-1285998790,Santiago,Ares,M,sar600,santiagoarm6@gmail.com,09/11/2004,ACTIVO,Ingenieria Electronica,Diurno,Singapur,07/06/2021,Extranjero
-1789901072,Juan,Santos,M,jsa118,juansam68@gmail.com,07/07/2001,ACTIVO,Bioingenieria,Diurno,(Colombia/ARAUCA),06/02/2016,Nacional
-1851841193,Francisca,Sola,F,fso654,franciscasof3@gmail.com,03/12/2000,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/ABREGO),10/05/2019,Nacional
-1442473361,Jose Antonio,Jimenez,M,jji128,jose antoniojim88@gmail.com,07/05/2002,ACTIVO,Ingenieria Electronica,Nocturno,Islas Marianas del Norte,04/07/2016,Extranjero
-1680815291,Jesus,Llorens,M,jll689,jesusllm97@gmail.com,09/04/2005,ACTIVO,Ingenieria Ambiental,Diurno,Jamahiriya Árabe Libia,01/03/2018,Extranjero
-1109423545,Rosa,Ribas,F,rri752,rosarif80@gmail.com,02/11/2006,ACTIVO,Ingenieria Electronica,Diurno,Costa Rica,05/04/2024,Extranjero
-1611780062,Francisco Javier,Cuesta,M,fcu513,francisco javiercum64@gmail.com,06/08/2003,ACTIVO,Ingenieria Electronica,Nocturno,Gabón,03/01/2023,Extranjero
-1045076069,Alejandro,Parejo,M,apa194,alejandropam3@gmail.com,08/07/1999,ACTIVO,Bioingenieria,Diurno,(Colombia/MAGANGUÉ),03/05/2018,Nacional
-1187322110,Laura,Castillo,F,lca43,lauracaf22@gmail.com,04/03/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SANTIAGO),06/12/2018,Nacional
-1602998230,Juan Antonio,Exposito,M,jex422,juan antonioexm87@gmail.com,09/09/2006,ACTIVO,Bioingenieria,Diurno,Gales,04/06/2017,Extranjero
-1518073594,Carlos,Murillo,M,cmu567,carlosmum66@gmail.com,05/04/2006,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/PUERTO PARRA),01/05/2017,Nacional
-1548180641,Juan Carlos,Barranco,M,jba194,juan carlosbam69@gmail.com,05/03/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Georgia del Sur e Islas Sandwich del Sur,08/10/2023,Extranjero
-1907486238,Francisco,Frances,M,ffr176,franciscofrm31@gmail.com,05/11/2002,ACTIVO,Ingenieria Industrial,Diurno,Antigua y Barbuda,11/02/2021,Extranjero
-1992315768,Carmen,Carranza,F,cca3,carmencaf36@gmail.com,07/09/2003,ACTIVO,Ingenieria de Sistemas,Diurno,Eslovenia,01/03/2019,Extranjero
-1052733156,Ramon,Carril,M,rca91,ramoncam36@gmail.com,05/07/2005,ACTIVO,Bioingenieria,Diurno,(Colombia/PUERTO SALGAR),08/06/2019,Nacional
-1648208290,Vicente,Ruiz,M,vru211,vicenterum1@gmail.com,11/01/1999,ACTIVO,Ingenieria Electronica,Diurno,Panamá,02/09/2018,Extranjero
-1503709772,Pilar,Lujan,F,plu464,pilarluf91@gmail.com,11/04/2006,ACTIVO,Bioingenieria,Diurno,Isla Bouvet,10/08/2022,Extranjero
-1992513510,Jose Luis,Amoros,M,jam207,jose luisamm6@gmail.com,01/07/2002,ACTIVO,Ingenieria Electronica,Nocturno,Bahréin,02/05/2022,Extranjero
-1781162835,Ainhoa,Torres,F,ato118,ainhoatof18@gmail.com,11/07/2004,ACTIVO,Ingenieria Industrial,Diurno,Tailandia,02/11/2021,Extranjero
-1222001108,Mercedes,Martin,F,mma219,mercedesmaf46@gmail.com,09/07/2005,ACTIVO,Bioingenieria,Diurno,Somalia,09/06/2021,Extranjero
-1534955651,Raul,Catala,M,rca479,raulcam39@gmail.com,02/04/2005,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/BARRANCAS),06/11/2019,Nacional
-1552740750,Andrea,Fernandez,F,afe556,andreafef99@gmail.com,04/02/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Finlandia,12/11/2018,Extranjero
-1376420660,Teresa,Alvarez,F,tal600,teresaalf32@gmail.com,09/02/2000,ACTIVO,Bioingenieria,Diurno,Senegal,11/04/2019,Extranjero
-1615916403,Sergio,Gonzalez,M,sgo359,sergiogom10@gmail.com,12/02/2006,ACTIVO,Bioingenieria,Diurno,Vietnam,05/09/2018,Extranjero
-1278853480,Sergio,Losada,M,slo30,sergiolom16@gmail.com,09/12/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/BOGOTA D.C.),06/06/2020,Nacional
-1051629036,Alfonso,Julian,M,aju573,alfonsojum66@gmail.com,10/01/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/PUERTO ESCONDIDO),12/09/2019,Nacional
-1382837259,Alvaro,DAÂ­az,M,ada321,alvarodam17@gmail.com,02/01/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/RÍO FRÍO),12/08/2017,Nacional
-1961977167,Angel,Alvarez,M,aal803,angelalm30@gmail.com,02/03/2003,ACTIVO,Ingenieria Ambiental,Diurno,Liberia,09/04/2019,Extranjero
-1962471799,Miguel,Munoz,M,mmu349,miguelmum29@gmail.com,09/12/1999,ACTIVO,Ingenieria Ambiental,Diurno,Djibouti,02/05/2019,Extranjero
-1788974224,Josefa,Bernardez,F,jbe121,josefabef57@gmail.com,02/11/2003,ACTIVO,Bioingenieria,Diurno,(Colombia/TIBACUY),04/07/2022,Nacional
-1303261095,Miguel,Roca,M,mro784,miguelrom4@gmail.com,12/08/2002,ACTIVO,Ingenieria de Sistemas,Diurno,Emiratos Árabes Unidos,05/12/2019,Extranjero
-1588867264,Natalia,Nieto,F,nni545,natalianif72@gmail.com,08/01/2000,ACTIVO,Bioingenieria,Diurno,Macedonia del Norte,08/02/2019,Extranjero
-1898785209,Marta,Lopez,F,mlo838,martalof60@gmail.com,06/01/2005,ACTIVO,Ingenieria Industrial,Diurno,Siria,08/09/2019,Extranjero
-1233367667,Antonio,Neira,M,ane763,antonionem33@gmail.com,02/09/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/MIRITI - PARANÁ),03/12/2018,Nacional
-1888506311,Miguel Aï¿½ngel,Sanchez,M,msa193,miguel aï¿½ngelsam72@gmail.com,06/11/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,Hong Kong,01/10/2019,Extranjero
-1056841568,Pilar,Robles,F,pro759,pilarrof20@gmail.com,03/03/2001,ACTIVO,Ingenieria Industrial,Diurno,Mónaco,04/08/2022,Extranjero
-1378983303,Antonia,Casal,F,aca238,antoniacaf42@gmail.com,05/01/2002,ACTIVO,Ingenieria Electronica,Nocturno,Macao,03/09/2017,Extranjero
-1267054501,Juan Jose,Godoy,M,jgo299,juan josegom53@gmail.com,04/08/2002,ACTIVO,Ingenieria Industrial,Diurno,Lesoto,11/06/2017,Extranjero
-1128917568,Monica,Castillo,F,mca409,monicacaf76@gmail.com,07/12/2003,ACTIVO,Ingenieria Electronica,Diurno,Eslovenia,06/03/2021,Extranjero
-1300706646,Jose,Cortes,M,jco431,josecom10@gmail.com,11/01/2004,ACTIVO,Bioingenieria,Diurno,San Vicente y las Granadinas,12/04/2022,Extranjero
-1743629987,Marta,Marcos,F,mma591,martamaf14@gmail.com,10/02/1999,ACTIVO,Ingenieria Ambiental,Diurno,Lesoto,11/01/2023,Extranjero
-1569396097,Anna,Mera,F,ame893,annamef93@gmail.com,12/07/2002,ACTIVO,Ingenieria Ambiental,Diurno,Estonia,11/04/2019,Extranjero
-1649827639,Jose Antonio,Nunez,M,jnu668,jose antonionum17@gmail.com,02/03/2007,ACTIVO,Ingenieria Electronica,Diurno,Corea del Sur,01/03/2021,Extranjero
-1934021387,Angel,Merino,M,ame254,angelmem23@gmail.com,09/04/2000,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/SIBUNDOY),04/09/2023,Nacional
-1680255529,Mercedes,Gutierrez,F,mgu316,mercedesguf80@gmail.com,09/11/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,Guatemala,11/09/2017,Extranjero
-1434735111,Miguel,Cueto,M,mcu314,miguelcum75@gmail.com,08/01/2002,ACTIVO,Ingenieria Electronica,Nocturno,Seychelles,10/10/2020,Extranjero
-1918006918,Francisco Javier,Sanchez,M,fsa570,francisco javiersam66@gmail.com,05/08/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Colombia,04/06/2025,Extranjero
-1890443064,Marta,Del Castillo,F,mde628,martadef36@gmail.com,01/07/2003,ACTIVO,Bioingenieria,Diurno,(Colombia/SOMONDOCO),02/07/2015,Nacional
-1617287226,Rafael,Alonso,M,ral350,rafaelalm48@gmail.com,09/01/2001,ACTIVO,Ingenieria Ambiental,Diurno,Islandia,05/11/2019,Extranjero
-1708033668,Javier,Cano,M,jca211,javiercam28@gmail.com,06/01/2001,ACTIVO,Ingenieria Ambiental,Diurno,Groenlandia,08/06/2016,Extranjero
-1608066247,Manuel,Ortiz,M,mor448,manuelorm12@gmail.com,05/04/2005,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/PALMITO),11/05/2017,Nacional
-1475364946,Rafaela,Perez,F,rpe408,rafaelapef16@gmail.com,05/05/2002,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/SANTIAGO DE TOLÚ),10/02/2017,Nacional
-1948927368,Alfonso,Padilla,M,apa814,alfonsopam12@gmail.com,08/09/2005,ACTIVO,Ingenieria Ambiental,Diurno,Dinamarca,08/04/2022,Extranjero
-1908104913,Josefa,Marques,F,jma358,josefamaf51@gmail.com,05/01/2001,ACTIVO,Ingenieria Electronica,Diurno,Sudáfrica,11/05/2021,Extranjero
-1040337245,Miguel Aï¿½ngel,Rubio,M,mru828,miguel aï¿½ngelrum77@gmail.com,05/09/2005,ACTIVO,Bioingenieria,Diurno,Bolivia,02/09/2021,Extranjero
-1654252506,Manuela,Mengual,F,mme224,manuelamef81@gmail.com,04/06/2000,ACTIVO,Ingenieria de Sistemas,Diurno,Islas Marshall,04/11/2020,Extranjero
-1526589552,Miguel Aï¿½ngel,Fernandez,M,mfe271,miguel aï¿½ngelfem73@gmail.com,03/08/2005,ACTIVO,Ingenieria Electronica,Diurno,Nepal,10/03/2022,Extranjero
-1360599166,Francisco,Carranza,M,fca186,franciscocam47@gmail.com,07/06/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/LA DORADA),05/04/2021,Nacional
-1561471611,Dolores,Atienza,F,dat26,doloresatf85@gmail.com,01/08/2005,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/YACUANQUER),09/01/2024,Nacional
-1885548232,Enrique,Guerrero,M,egu240,enriquegum43@gmail.com,09/03/1999,ACTIVO,Ingenieria Ambiental,Diurno,Islas menores alejadas de los Estados Unidos,10/01/2021,Extranjero
-1063016507,Juan Jose,Campos,M,jca459,juan josecam22@gmail.com,04/09/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/VILLAHERMOSA),07/10/2020,Nacional
-1942548610,Francisco Javier,Pinero,M,fpi103,francisco javierpim34@gmail.com,01/07/2005,ACTIVO,Ingenieria Industrial,Diurno,Federación Rusa,05/03/2023,Extranjero
-1784203081,Alejandro,Lastra,M,ala270,alejandrolam67@gmail.com,02/04/2005,ACTIVO,Bioingenieria,Diurno,Omán,10/12/2018,Extranjero
-1066500522,Inmaculada,Asensio,F,ias439,inmaculadaasf71@gmail.com,09/07/2001,ACTIVO,Ingenieria Industrial,Diurno,Serbia,07/03/2019,Extranjero
-1118351029,Cristina,Cabrera,F,cca714,cristinacaf23@gmail.com,11/10/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,Rumania,07/08/2020,Extranjero
-1569142559,Francisco,Santiago,M,fsa93,franciscosam61@gmail.com,06/05/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/GONZÁLEZ),07/01/2018,Nacional
-1694743693,Antonio,Otero,M,aot616,antoniootm80@gmail.com,11/08/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Guernsey,10/11/2023,Extranjero
-1220583198,Juan Antonio,GarcAÂ­a,M,jga82,juan antoniogam17@gmail.com,11/10/2006,ACTIVO,Ingenieria Ambiental,Diurno,Lituania,03/09/2022,Extranjero
-1747792410,Jorge,Abad,M,jab881,jorgeabm40@gmail.com,05/02/2007,ACTIVO,Ingenieria de Sistemas,Nocturno,Ciudad del Vaticano,11/01/2020,Extranjero
-1996787056,Angel,Gonzalez,M,ago20,angelgom40@gmail.com,07/01/2007,ACTIVO,Ingenieria Industrial,Diurno,Guayana Francesa,04/04/2024,Extranjero
-1505345679,Marina,Casas,F,mca331,marinacaf2@gmail.com,04/10/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Chipre,11/02/2023,Extranjero
-1333849442,Beatriz,Catalan,F,bca719,beatrizcaf35@gmail.com,11/04/2004,ACTIVO,Bioingenieria,Diurno,Camerún,12/12/2022,Extranjero
-1636544288,Miguel,Marco,M,mma636,miguelmam20@gmail.com,04/11/2000,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/EL PAUJIL),10/02/2022,Nacional
-1247802176,Carmen,Fernandez,F,cfe607,carmenfef39@gmail.com,09/03/2005,ACTIVO,Ingenieria Ambiental,Diurno,Trinidad y Tobago,07/01/2025,Extranjero
-1114391042,Juana,Cabrera,F,jca584,juanacaf57@gmail.com,06/09/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/ARBELÁEZ),07/09/2019,Nacional
-1573724303,Pablo,Esteve,M,pes309,pabloesm37@gmail.com,10/02/2002,ACTIVO,Ingenieria Industrial,Diurno,Emiratos Árabes Unidos,11/11/2019,Extranjero
-1754520356,Manuel,Carrion,M,mca203,manuelcam42@gmail.com,06/09/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/CALAMAR),10/07/2022,Nacional
-1347797796,Alicia,Saez,F,asa881,aliciasaf67@gmail.com,05/01/2003,ACTIVO,Bioingenieria,Diurno,Israel,07/01/2022,Extranjero
-1215123362,Isabel,Morales,F,imo631,isabelmof81@gmail.com,03/05/2003,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/PUERTO CARREÑO),02/10/2017,Nacional
-1143053076,Sergio,Moya,M,smo521,sergiomom19@gmail.com,04/09/2006,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/CAREPA),06/03/2022,Nacional
-1528975108,Angeles,Casado,F,aca51,angelescaf87@gmail.com,03/05/2004,ACTIVO,Ingenieria Electronica,Diurno,India,12/03/2025,Extranjero
-1680418686,Jaume,Ferri,M,jfe880,jaumefem68@gmail.com,02/04/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/NOBSA),03/02/2021,Nacional
-1586213284,Ana,Alarcon,F,aal61,anaalf94@gmail.com,10/11/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,Finlandia,10/05/2025,Extranjero
-1160977436,Rosa,Pons,F,rpo497,rosapof79@gmail.com,01/06/2000,ACTIVO,Ingenieria Industrial,Diurno,Isla Norfolk,05/02/2019,Extranjero
-1317511739,Adrian,Rey,M,are133,adrianrem53@gmail.com,03/07/2004,ACTIVO,Ingenieria Electronica,Diurno,Senegal,01/10/2021,Extranjero
-1108726699,Manuel,Castano,M,mca694,manuelcam9@gmail.com,11/06/2005,ACTIVO,Bioingenieria,Diurno,Georgia,09/04/2018,Extranjero
-1499046888,Javier,Rico,M,jri234,javierrim33@gmail.com,06/02/2002,ACTIVO,Ingenieria Industrial,Diurno,India,12/06/2023,Extranjero
-1621513509,Mohamed,Moreno,M,mmo609,mohamedmom56@gmail.com,07/11/2003,ACTIVO,Ingenieria Industrial,Diurno,San Vicente y las Granadinas,10/03/2018,Extranjero
-1682234465,Diego,Alfaro,M,dal842,diegoalm22@gmail.com,02/09/2004,ACTIVO,Bioingenieria,Diurno,Kazajstán,05/10/2020,Extranjero
-1991196401,Ignacio,Hernandez,M,ihe275,ignaciohem80@gmail.com,09/03/2000,ACTIVO,Ingenieria Electronica,Nocturno,Isla de Man,07/01/2024,Extranjero
-1583926196,Jesus,Gutierrez,M,jgu472,jesusgum19@gmail.com,06/07/2001,ACTIVO,Bioingenieria,Diurno,(Colombia/VALDIVIA),06/11/2018,Nacional
-1582535657,Antonia,Lopez,F,alo536,antonialof50@gmail.com,11/09/2004,ACTIVO,Ingenieria Ambiental,Diurno,Antártida,10/01/2019,Extranjero
-1162318448,Jose Antonio,Ruiz,M,jru33,jose antoniorum92@gmail.com,07/02/2005,ACTIVO,Ingenieria Industrial,Diurno,Alemania,11/06/2023,Extranjero
-1565674534,Carlos,Perez,M,cpe123,carlospem63@gmail.com,08/12/2005,ACTIVO,Ingenieria Industrial,Diurno,Estonia,09/05/2022,Extranjero
-1041712108,Antonio,Benavent,M,abe687,antoniobem20@gmail.com,08/06/2002,ACTIVO,Ingenieria Electronica,Nocturno,Estados Unidos,06/05/2019,Extranjero
-1670786524,Irene,Torres,F,ito737,irenetof8@gmail.com,01/09/2000,ACTIVO,Bioingenieria,Diurno,Nauru,12/12/2023,Extranjero
-1817586927,Francisco Javier,Martin,M,fma161,francisco javiermam36@gmail.com,12/08/2003,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GRANADA),07/04/2023,Nacional
-1780591575,Antonio,Parra,M,apa355,antoniopam6@gmail.com,05/12/2000,ACTIVO,Ingenieria Industrial,Diurno,Bahamas,12/12/2023,Extranjero
-1612576897,Carlos,De la Fuente,M,cde679,carlosdem26@gmail.com,11/12/2004,ACTIVO,Ingenieria Industrial,Diurno,Argelia,07/11/2016,Extranjero
-1434929748,Nuria,Salguero,F,nsa370,nuriasaf51@gmail.com,05/05/2000,ACTIVO,Ingenieria Electronica,Diurno,Italia,09/06/2025,Extranjero
-1096064797,Jesus,Mansilla,M,jma705,jesusmam85@gmail.com,06/09/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Corea del Norte,03/07/2018,Extranjero
-1208334274,Amparo,Plata,F,apl235,amparoplf17@gmail.com,09/02/2005,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/TIPACOQUE),08/12/2017,Nacional
-1512652158,Angel,Alonso,M,aal77,angelalm32@gmail.com,10/03/2006,ACTIVO,Ingenieria Industrial,Diurno,Islas Pitcairn,02/07/2023,Extranjero
-1386314010,Antonia,Salazar,F,asa320,antoniasaf83@gmail.com,02/05/2000,ACTIVO,Ingenieria Industrial,Diurno,Ruanda,12/01/2021,Extranjero
-1340648833,Antonio,Cervera,M,ace406,antoniocem77@gmail.com,11/08/2005,ACTIVO,Ingenieria Electronica,Diurno,Islas Malvinas,12/04/2016,Extranjero
-1481002837,Susana,Perez,F,spe677,susanapef52@gmail.com,12/03/2006,ACTIVO,Ingenieria Industrial,Diurno,Cuba,05/05/2021,Extranjero
-1447723905,Pablo,Cortes,M,pco206,pablocom52@gmail.com,02/09/2001,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GIRARDOT),05/10/2018,Nacional
-1776921147,Marta,Yanez,F,mya59,martayaf45@gmail.com,12/01/2006,ACTIVO,Bioingenieria,Diurno,(Colombia/CALI),08/11/2022,Nacional
-1889799283,Irene,Alvarez,F,ial408,irenealf89@gmail.com,01/01/2001,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/LA LLANADA),04/06/2017,Nacional
-1269556053,Francisco,Roman,M,fro770,franciscorom29@gmail.com,11/05/2002,ACTIVO,Ingenieria Industrial,Diurno,Suazilandia,04/08/2016,Extranjero
-1086388305,Antonio,Calvo,M,aca481,antoniocam17@gmail.com,01/08/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/PUERTO TRIUNFO),04/01/2017,Nacional
-1410356350,Ana,Fernandez,F,afe189,anafef33@gmail.com,10/02/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Islas Caimán,09/09/2024,Extranjero
-1249507575,Daniel,Fernandez,M,dfe750,danielfem19@gmail.com,08/02/2000,ACTIVO,Ingenieria Industrial,Diurno,Chipre,12/12/2021,Extranjero
-1092041511,Jose Luis,Ortega,M,jor487,jose luisorm36@gmail.com,05/11/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/CÓRDOBA),05/02/2018,Nacional
-1029322687,Monica,Carrasco,F,mca378,monicacaf15@gmail.com,03/12/2003,ACTIVO,Ingenieria de Sistemas,Diurno,Vietnam,11/10/2019,Extranjero
-1986545872,Jose Luis,Rosell,M,jro212,jose luisrom29@gmail.com,04/04/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Ucrania,05/04/2019,Extranjero
-1835146110,Manuel,Fernandez,M,mfe218,manuelfem22@gmail.com,08/03/2001,ACTIVO,Ingenieria Electronica,Diurno,Egipto,12/12/2023,Extranjero
-1835517198,Jose,Cabeza,M,jca868,josecam97@gmail.com,02/03/2004,ACTIVO,Ingenieria Industrial,Diurno,Noruega,11/07/2024,Extranjero
-1207789395,Pablo,Alonso,M,pal42,pabloalm28@gmail.com,03/11/2002,ACTIVO,Ingenieria Ambiental,Diurno,Belice,04/05/2023,Extranjero
-1206147996,Antonio,Pinto,M,api162,antoniopim46@gmail.com,06/06/2003,ACTIVO,Ingenieria Ambiental,Diurno,Mónaco,10/06/2023,Extranjero
-1590713600,Beatriz,Perez,F,bpe448,beatrizpef4@gmail.com,08/02/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Estados Federados de Micronesia,02/10/2024,Extranjero
-1111330773,Antonio,Ruiz,M,aru399,antoniorum52@gmail.com,05/12/2004,ACTIVO,Ingenieria Ambiental,Diurno,El Salvador,10/06/2023,Extranjero
-1674309554,Juan Antonio,Lopez,M,jlo445,juan antoniolom16@gmail.com,03/03/2003,ACTIVO,Ingenieria Ambiental,Diurno,Tayikistán,05/09/2020,Extranjero
-1756201461,Jose,Ortiz,M,jor145,joseorm79@gmail.com,10/04/2004,ACTIVO,Ingenieria Ambiental,Diurno,Portugal,03/04/2019,Extranjero
-1363484234,Alvaro,Fernandez,M,afe471,alvarofem78@gmail.com,11/11/2006,ACTIVO,Bioingenieria,Diurno,Territorio Británico del Océano Índico,12/02/2023,Extranjero
-1678858109,Rafael,Casal,M,rca50,rafaelcam35@gmail.com,08/05/1999,ACTIVO,Ingenieria Electronica,Diurno,Estonia,01/10/2022,Extranjero
-1125703623,Laura,Sanchez,F,lsa492,laurasaf53@gmail.com,12/07/2005,ACTIVO,Ingenieria de Sistemas,Nocturno,Italia,08/06/2020,Extranjero
-1768917104,Javier,Mesa,M,jme284,javiermem79@gmail.com,08/04/2003,ACTIVO,Bioingenieria,Diurno,Estados Federados de Micronesia,05/01/2020,Extranjero
-1603733028,Jorge,De la Calle,M,jde625,jorgedem44@gmail.com,12/01/1999,ACTIVO,Ingenieria Industrial,Diurno,Pakistán,11/06/2021,Extranjero
-1217046167,Alberto,Segovia,M,ase241,albertosem87@gmail.com,07/09/2002,ACTIVO,Ingenieria Electronica,Nocturno,Hungría,04/07/2020,Extranjero
-1447729299,Ana,Marquez,F,ama702,anamaf39@gmail.com,03/09/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Botswana,09/09/2016,Extranjero
-1955801575,Pedro,Moreno,M,pmo871,pedromom59@gmail.com,04/03/2004,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/BELMIRA),06/01/2019,Nacional
-1358692742,Jesus,Nieto,M,jni218,jesusnim35@gmail.com,02/02/2000,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/TURBANA),03/02/2021,Nacional
-1901146532,David,Castellanos,M,dca224,davidcam56@gmail.com,12/03/2005,ACTIVO,Ingenieria Electronica,Nocturno,Canadá,07/05/2018,Extranjero
-1457515695,Jose,Bernabe,M,jbe220,josebem65@gmail.com,08/05/2003,ACTIVO,Ingenieria Industrial,Diurno,Afganistan,10/09/2024,Extranjero
-1785426193,Javier,Lopez,M,jlo385,javierlom96@gmail.com,11/01/2005,ACTIVO,Ingenieria Ambiental,Diurno,Reino Unido,06/05/2024,Extranjero
-1376835141,Ruben,Cordoba,M,rco872,rubencom23@gmail.com,11/10/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Honduras,08/12/2018,Extranjero
-1536783912,Manuel,Torres,M,mto510,manueltom34@gmail.com,01/01/2000,ACTIVO,Bioingenieria,Diurno,Nigeria,11/02/2023,Extranjero
-1322114482,Luis,Moreno,M,lmo434,luismom9@gmail.com,12/09/2000,ACTIVO,Ingenieria Electronica,Diurno,Egipto,01/05/2020,Extranjero
-1356000187,Raquel,Murillo,F,rmu291,raquelmuf47@gmail.com,10/05/2003,ACTIVO,Bioingenieria,Diurno,Sudán,08/04/2023,Extranjero
-1382563744,Juana,Tomas,F,jto120,juanatof97@gmail.com,08/05/2001,ACTIVO,Ingenieria Electronica,Diurno,Australia,06/03/2025,Extranjero
-1274231521,Manuel,Colomer,M,mco843,manuelcom49@gmail.com,07/10/1999,ACTIVO,Bioingenieria,Diurno,(Colombia/AYAPEL),11/06/2018,Nacional
-1998768447,Ramon,Murillo,M,rmu410,ramonmum79@gmail.com,02/10/1999,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/GAMEZA),04/10/2023,Nacional
-1682847065,Marina,Redondo,F,mre494,marinaref48@gmail.com,12/09/2003,ACTIVO,Ingenieria Ambiental,Diurno,Tokelau,03/09/2016,Extranjero
-1475147982,Manuel,Marquez,M,mma351,manuelmam80@gmail.com,12/02/2003,ACTIVO,Ingenieria de Sistemas,Diurno,Islandia,08/04/2021,Extranjero
-1844268000,Dolores,Arguello,F,dar326,doloresarf6@gmail.com,02/01/2006,ACTIVO,Ingenieria de Sistemas,Diurno,Irak,07/04/2023,Extranjero
-1086243440,Laura,Prieto,F,lpr367,lauraprf20@gmail.com,10/01/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SANTAFÉ DE ANTIOQUIA),04/07/2016,Nacional
-1923393728,Jorge,Domingo,M,jdo125,jorgedom92@gmail.com,06/01/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/GUTIÉRREZ),06/04/2017,Nacional
-1569093614,Eva,Villa,F,evi442,evavif21@gmail.com,02/04/2003,ACTIVO,Ingenieria Electronica,Nocturno,Emiratos Árabes Unidos,12/07/2016,Extranjero
-1315760750,Josep,Sanchez,M,jsa829,josepsam19@gmail.com,09/11/2002,ACTIVO,Bioingenieria,Diurno,Finlandia,12/08/2020,Extranjero
-1359233236,Enrique,Munoz,M,emu705,enriquemum26@gmail.com,02/03/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,Trinidad y Tobago,07/03/2023,Extranjero
-1790614888,Marta,Baz,F,mba40,martabaf38@gmail.com,03/02/2002,ACTIVO,Ingenieria Electronica,Diurno,Benín,04/01/2016,Extranjero
-1389824129,Francisco,Tamayo,M,fta820,franciscotam49@gmail.com,03/04/2004,ACTIVO,Ingenieria Ambiental,Diurno,Níger,11/03/2023,Extranjero
-1441893530,Joan,Sebastia,M,jse835,joansem44@gmail.com,06/01/2004,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/CABUYARO),11/05/2016,Nacional
-1561443175,Susana,Campos,F,sca84,susanacaf75@gmail.com,01/01/1999,ACTIVO,Bioingenieria,Diurno,(Colombia/ARANZAZU),04/11/2018,Nacional
-1547732113,Laura,Frutos,F,lfr50,laurafrf41@gmail.com,10/02/1999,ACTIVO,Ingenieria Electronica,Nocturno,Georgia,11/04/2017,Extranjero
-1402061657,Angeles,Gimeno,F,agi550,angelesgif19@gmail.com,01/10/2004,ACTIVO,Ingenieria Electronica,Nocturno,España,09/03/2022,Extranjero
-1925124469,Santiago,Estevez,M,ses470,santiagoesm55@gmail.com,07/11/2006,ACTIVO,Ingenieria Electronica,Nocturno,Togo,03/01/2019,Extranjero
-1520841826,Fernando,Bilbao,M,fbi50,fernandobim48@gmail.com,07/08/2006,ACTIVO,Bioingenieria,Diurno,(Colombia/ACANDÍ),04/01/2021,Nacional
-1700127372,Francisca,Ballesteros,F,fba397,franciscabaf60@gmail.com,05/12/2000,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/SARAVENA),05/08/2023,Nacional
-1299559484,Jose Luis,Novo,M,jno635,jose luisnom75@gmail.com,06/02/2002,ACTIVO,Ingenieria Ambiental,Diurno,Uruguay,03/06/2021,Extranjero
-1110528018,Pilar,Urbano,F,pur518,pilarurf59@gmail.com,11/08/2005,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/SOLEDAD),04/02/2019,Nacional
-1508001746,Ramon,Zamora,M,rza332,ramonzam42@gmail.com,05/03/2002,ACTIVO,Bioingenieria,Diurno,Perú,05/04/2020,Extranjero
-1013976544,Jose Manuel,Mateos,M,jma844,jose manuelmam79@gmail.com,12/06/2006,ACTIVO,Ingenieria Electronica,Diurno,Ciudad del Vaticano,12/12/2022,Extranjero
-1364105264,Manuel,Canal,M,mca611,manuelcam18@gmail.com,07/05/2004,ACTIVO,Bioingenieria,Diurno,Filipinas,11/08/2018,Extranjero
+1785912858,Antonio,Quintana,M,aqu852,antonioqum57@gmail.com,06/08/2003,ACTIVO,Ingenieria Ambiental,Diurno,Svalbard y Jan Mayen,06/12/2019,Extranjero
+1520641565,Josefa,Gomez,F,jgo367,josefagof87@gmail.com,06/05/2003,ACTIVO,Ingenieria Electronica,Diurno,Madagascar,12/05/2019,Extranjero
+1172203707,Milagros,Lopez,F,mlo589,milagroslof8@gmail.com,08/08/2002,ACTIVO,Bioingenieria,Diurno,Trinidad y Tobago,11/06/2022,Extranjero
+1447463417,Juana,Pelaez,F,jpe872,juanapef10@gmail.com,07/12/2006,ACTIVO,Bioingenieria,Diurno,Maldivas,06/06/2020,Extranjero
+1856212645,Lucia,Carretero,F,lca525,luciacaf63@gmail.com,05/09/2002,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SANTUARIO),02/05/2021,Nacional
+1835980910,Milagros,Muniz,F,mmu743,milagrosmuf37@gmail.com,02/08/2003,ACTIVO,Bioingenieria,Diurno,México,07/10/2018,Extranjero
+1854315635,Manuel,Arellano,M,mar382,manuelarm79@gmail.com,06/05/2003,ACTIVO,Bioingenieria,Diurno,(Colombia/PUERTO TRIUNFO),12/01/2016,Nacional
+1783543992,Mercedes,Gonzalez,F,mgo868,mercedesgof30@gmail.com,01/05/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/ALGARROBO),10/01/2023,Nacional
+1875879721,Catalina,Arrizabalaga,F,car483,catalinaarf73@gmail.com,03/04/2005,ACTIVO,Bioingenieria,Diurno,Islas Heard y McDonald,02/06/2022,Extranjero
+1675434966,Miguel Aï¿½ngel,Trinidad,M,mtr497,miguel aï¿½ngeltrm21@gmail.com,01/05/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/PISBA),10/02/2020,Nacional
+1961993856,Rafael,Ordonez,M,ror139,rafaelorm20@gmail.com,09/02/2004,ACTIVO,Ingenieria Industrial,Diurno,Inglaterra,04/12/2020,Extranjero
+1639703471,Miguel Aï¿½ngel,Bayona,M,mba129,miguel aï¿½ngelbam43@gmail.com,03/11/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Irán,02/07/2019,Extranjero
+1233639179,Salvador,Aguilar,M,sag661,salvadoragm94@gmail.com,06/08/2004,ACTIVO,Ingenieria Ambiental,Diurno,Albania,02/02/2020,Extranjero
+1771772386,Isabel,Perez,F,ipe752,isabelpef24@gmail.com,09/04/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/SAN LORENZO),01/06/2019,Nacional
+1521848232,Josefa,Juarez,F,jju598,josefajuf36@gmail.com,11/08/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/EL PEÑÓN),03/12/2016,Nacional
+1269880994,Lucia,Moyano,F,lmo505,luciamof65@gmail.com,12/12/2006,ACTIVO,Ingenieria Ambiental,Diurno,Egipto,05/10/2019,Extranjero
+1400801579,Manuel,Jover,M,mjo473,manueljom97@gmail.com,04/08/2005,ACTIVO,Ingenieria Electronica,Diurno,El Salvador,02/03/2022,Extranjero
+1737021606,Miguel Aï¿½ngel,Vega,M,mve898,miguel aï¿½ngelvem13@gmail.com,10/08/2006,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/FIRAVITOBA),05/09/2017,Nacional
+1986101355,Jesus,Herrera,M,jhe874,jesushem38@gmail.com,06/02/2000,ACTIVO,Bioingenieria,Diurno,Nauru,03/11/2016,Extranjero
+1634515919,Carmen,Fernandez,F,cfe114,carmenfef99@gmail.com,04/11/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,Irán,09/10/2017,Extranjero
+1550563783,Antonio,Alvarez,M,aal528,antonioalm53@gmail.com,02/03/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/TIBANÁ),06/04/2015,Nacional
+1054385160,Antonia,Espinosa,F,aes107,antoniaesf4@gmail.com,03/12/2005,ACTIVO,Ingenieria Ambiental,Diurno,Estonia,08/02/2019,Extranjero
+1176571302,Angel,Gaona,M,aga476,angelgam65@gmail.com,08/01/2001,ACTIVO,Ingenieria Industrial,Diurno,Isla Bouvet,06/06/2018,Extranjero
+1544894223,Francisco,Cruz,M,fcr591,franciscocrm31@gmail.com,04/08/2003,ACTIVO,Bioingenieria,Diurno,(Colombia/SOTAQUIRÁ),02/01/2019,Nacional
+1552859981,Begona,Herrera,F,bhe516,begonahef94@gmail.com,01/12/2002,ACTIVO,Ingenieria Electronica,Nocturno,Tanzania,10/05/2020,Extranjero
+1988017949,Juana,Nieto,F,jni20,juananif74@gmail.com,10/11/2004,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/EL ROBLE),08/01/2015,Nacional
+1690772319,Isabel,Santiago,F,isa9,isabelsaf90@gmail.com,09/11/2003,ACTIVO,Ingenieria Electronica,Diurno,Comoras,02/05/2016,Extranjero
+1276479109,Julia,Lopez,F,jlo130,julialof6@gmail.com,11/10/1999,ACTIVO,Ingenieria de Sistemas,Nocturno,Wallis y Futuna,12/07/2020,Extranjero
+1963013873,Monica,Ortiz,F,mor427,monicaorf88@gmail.com,07/07/2005,ACTIVO,Bioingenieria,Diurno,Malí,01/02/2021,Extranjero
+1181683288,Antonio,Fernandez,M,afe626,antoniofem13@gmail.com,03/10/2001,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/LA FLORIDA),02/06/2022,Nacional
+1960325637,Francisco,Velazquez,M,fve277,franciscovem40@gmail.com,11/04/2003,ACTIVO,Ingenieria Ambiental,Diurno,Ucrania,12/07/2023,Extranjero
+1504872971,Antonio,Conde,M,aco558,antoniocom68@gmail.com,04/09/2006,ACTIVO,Ingenieria Ambiental,Diurno,Gales,06/11/2021,Extranjero
+1445848840,Juan,Tejeda,M,jte35,juantem72@gmail.com,02/11/2001,ACTIVO,Ingenieria Ambiental,Diurno,Kuwait,05/04/2021,Extranjero
+1533510652,Josefa,Rico,F,jri82,josefarif5@gmail.com,08/11/2004,ACTIVO,Ingenieria Electronica,Nocturno,Tayikistán,10/05/2017,Extranjero
+1814421831,Jose Luis,Guijarro,M,jgu450,jose luisgum26@gmail.com,04/03/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/ALMEIDA),09/12/2021,Nacional
+1448693919,Francisco,Salinas,M,fsa462,franciscosam97@gmail.com,04/07/2001,ACTIVO,Ingenieria de Sistemas,Diurno,Jersey,01/06/2022,Extranjero
+1922758577,Francisco,Leiva,M,fle362,franciscolem36@gmail.com,09/02/2005,ACTIVO,Ingenieria Ambiental,Diurno,Gales,06/05/2024,Extranjero
+1720279201,Jose Luis,Osorio,M,jos799,jose luisosm14@gmail.com,07/11/2001,ACTIVO,Bioingenieria,Diurno,(Colombia/YOTOCO),01/11/2017,Nacional
+1878174979,Antonia,Fernandez,F,afe553,antoniafef57@gmail.com,01/07/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SAN LORENZO),02/12/2022,Nacional
+1429652924,Carmen,Blanca,F,cbl740,carmenblf40@gmail.com,01/10/2005,ACTIVO,Ingenieria Industrial,Diurno,Finlandia,05/09/2018,Extranjero
+1964817075,Teresa,Calle,F,tca309,teresacaf38@gmail.com,01/12/1999,ACTIVO,Ingenieria Industrial,Diurno,Bután,01/09/2017,Extranjero
+1840591180,Cristina,Ilie,F,cil889,cristinailf6@gmail.com,03/10/2002,ACTIVO,Ingenieria Ambiental,Diurno,Brunéi,09/03/2017,Extranjero
+1285998790,Santiago,Ares,M,sar600,santiagoarm6@gmail.com,11/09/2004,ACTIVO,Ingenieria Electronica,Diurno,Singapur,06/07/2021,Extranjero
+1789901072,Juan,Santos,M,jsa118,juansam68@gmail.com,07/07/2001,ACTIVO,Bioingenieria,Diurno,(Colombia/ARAUCA),02/06/2016,Nacional
+1851841193,Francisca,Sola,F,fso654,franciscasof3@gmail.com,12/03/2000,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/ABREGO),05/10/2019,Nacional
+1442473361,Jose Antonio,Jimenez,M,jji128,jose antoniojim88@gmail.com,05/07/2002,ACTIVO,Ingenieria Electronica,Nocturno,Islas Marianas del Norte,07/04/2016,Extranjero
+1680815291,Jesus,Llorens,M,jll689,jesusllm97@gmail.com,04/09/2005,ACTIVO,Ingenieria Ambiental,Diurno,Jamahiriya Árabe Libia,03/01/2018,Extranjero
+1109423545,Rosa,Ribas,F,rri752,rosarif80@gmail.com,11/02/2006,ACTIVO,Ingenieria Electronica,Diurno,Costa Rica,04/05/2024,Extranjero
+1611780062,Francisco Javier,Cuesta,M,fcu513,francisco javiercum64@gmail.com,08/06/2003,ACTIVO,Ingenieria Electronica,Nocturno,Gabón,01/03/2023,Extranjero
+1045076069,Alejandro,Parejo,M,apa194,alejandropam3@gmail.com,07/08/1999,ACTIVO,Bioingenieria,Diurno,(Colombia/MAGANGUÉ),05/03/2018,Nacional
+1187322110,Laura,Castillo,F,lca43,lauracaf22@gmail.com,03/04/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SANTIAGO),12/06/2018,Nacional
+1602998230,Juan Antonio,Exposito,M,jex422,juan antonioexm87@gmail.com,09/09/2006,ACTIVO,Bioingenieria,Diurno,Gales,06/04/2017,Extranjero
+1518073594,Carlos,Murillo,M,cmu567,carlosmum66@gmail.com,04/05/2006,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/PUERTO PARRA),05/01/2017,Nacional
+1548180641,Juan Carlos,Barranco,M,jba194,juan carlosbam69@gmail.com,03/05/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Georgia del Sur e Islas Sandwich del Sur,10/08/2023,Extranjero
+1907486238,Francisco,Frances,M,ffr176,franciscofrm31@gmail.com,11/05/2002,ACTIVO,Ingenieria Industrial,Diurno,Antigua y Barbuda,02/11/2021,Extranjero
+1992315768,Carmen,Carranza,F,cca3,carmencaf36@gmail.com,09/07/2003,ACTIVO,Ingenieria de Sistemas,Diurno,Eslovenia,03/01/2019,Extranjero
+1052733156,Ramon,Carril,M,rca91,ramoncam36@gmail.com,07/05/2005,ACTIVO,Bioingenieria,Diurno,(Colombia/PUERTO SALGAR),06/08/2019,Nacional
+1648208290,Vicente,Ruiz,M,vru211,vicenterum1@gmail.com,01/11/1999,ACTIVO,Ingenieria Electronica,Diurno,Panamá,09/02/2018,Extranjero
+1503709772,Pilar,Lujan,F,plu464,pilarluf91@gmail.com,04/11/2006,ACTIVO,Bioingenieria,Diurno,Isla Bouvet,08/10/2022,Extranjero
+1992513510,Jose Luis,Amoros,M,jam207,jose luisamm6@gmail.com,07/01/2002,ACTIVO,Ingenieria Electronica,Nocturno,Bahréin,05/02/2022,Extranjero
+1781162835,Ainhoa,Torres,F,ato118,ainhoatof18@gmail.com,07/11/2004,ACTIVO,Ingenieria Industrial,Diurno,Tailandia,11/02/2021,Extranjero
+1222001108,Mercedes,Martin,F,mma219,mercedesmaf46@gmail.com,07/09/2005,ACTIVO,Bioingenieria,Diurno,Somalia,06/09/2021,Extranjero
+1534955651,Raul,Catala,M,rca479,raulcam39@gmail.com,04/02/2005,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/BARRANCAS),11/06/2019,Nacional
+1552740750,Andrea,Fernandez,F,afe556,andreafef99@gmail.com,02/04/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Finlandia,11/12/2018,Extranjero
+1376420660,Teresa,Alvarez,F,tal600,teresaalf32@gmail.com,02/09/2000,ACTIVO,Bioingenieria,Diurno,Senegal,04/11/2019,Extranjero
+1615916403,Sergio,Gonzalez,M,sgo359,sergiogom10@gmail.com,02/12/2006,ACTIVO,Bioingenieria,Diurno,Vietnam,09/05/2018,Extranjero
+1278853480,Sergio,Losada,M,slo30,sergiolom16@gmail.com,12/09/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/BOGOTA D.C.),06/06/2020,Nacional
+1051629036,Alfonso,Julian,M,aju573,alfonsojum66@gmail.com,01/10/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/PUERTO ESCONDIDO),09/12/2019,Nacional
+1382837259,Alvaro,DAÂ­az,M,ada321,alvarodam17@gmail.com,01/02/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/RÍO FRÍO),08/12/2017,Nacional
+1961977167,Angel,Alvarez,M,aal803,angelalm30@gmail.com,03/02/2003,ACTIVO,Ingenieria Ambiental,Diurno,Liberia,04/09/2019,Extranjero
+1962471799,Miguel,Munoz,M,mmu349,miguelmum29@gmail.com,12/09/1999,ACTIVO,Ingenieria Ambiental,Diurno,Djibouti,05/02/2019,Extranjero
+1788974224,Josefa,Bernardez,F,jbe121,josefabef57@gmail.com,11/02/2003,ACTIVO,Bioingenieria,Diurno,(Colombia/TIBACUY),07/04/2022,Nacional
+1303261095,Miguel,Roca,M,mro784,miguelrom4@gmail.com,08/12/2002,ACTIVO,Ingenieria de Sistemas,Diurno,Emiratos Árabes Unidos,12/05/2019,Extranjero
+1588867264,Natalia,Nieto,F,nni545,natalianif72@gmail.com,01/08/2000,ACTIVO,Bioingenieria,Diurno,Macedonia del Norte,02/08/2019,Extranjero
+1898785209,Marta,Lopez,F,mlo838,martalof60@gmail.com,01/06/2005,ACTIVO,Ingenieria Industrial,Diurno,Siria,09/08/2019,Extranjero
+1233367667,Antonio,Neira,M,ane763,antonionem33@gmail.com,09/02/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/MIRITI - PARANÁ),12/03/2018,Nacional
+1888506311,Miguel Aï¿½ngel,Sanchez,M,msa193,miguel aï¿½ngelsam72@gmail.com,11/06/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,Hong Kong,10/01/2019,Extranjero
+1056841568,Pilar,Robles,F,pro759,pilarrof20@gmail.com,03/03/2001,ACTIVO,Ingenieria Industrial,Diurno,Mónaco,08/04/2022,Extranjero
+1378983303,Antonia,Casal,F,aca238,antoniacaf42@gmail.com,01/05/2002,ACTIVO,Ingenieria Electronica,Nocturno,Macao,09/03/2017,Extranjero
+1267054501,Juan Jose,Godoy,M,jgo299,juan josegom53@gmail.com,08/04/2002,ACTIVO,Ingenieria Industrial,Diurno,Lesoto,06/11/2017,Extranjero
+1128917568,Monica,Castillo,F,mca409,monicacaf76@gmail.com,12/07/2003,ACTIVO,Ingenieria Electronica,Diurno,Eslovenia,03/06/2021,Extranjero
+1300706646,Jose,Cortes,M,jco431,josecom10@gmail.com,01/11/2004,ACTIVO,Bioingenieria,Diurno,San Vicente y las Granadinas,04/12/2022,Extranjero
+1743629987,Marta,Marcos,F,mma591,martamaf14@gmail.com,02/10/1999,ACTIVO,Ingenieria Ambiental,Diurno,Lesoto,01/11/2023,Extranjero
+1569396097,Anna,Mera,F,ame893,annamef93@gmail.com,07/12/2002,ACTIVO,Ingenieria Ambiental,Diurno,Estonia,04/11/2019,Extranjero
+1649827639,Jose Antonio,Nunez,M,jnu668,jose antonionum17@gmail.com,03/02/2007,ACTIVO,Ingenieria Electronica,Diurno,Corea del Sur,03/01/2021,Extranjero
+1934021387,Angel,Merino,M,ame254,angelmem23@gmail.com,04/09/2000,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/SIBUNDOY),09/04/2023,Nacional
+1680255529,Mercedes,Gutierrez,F,mgu316,mercedesguf80@gmail.com,11/09/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,Guatemala,09/11/2017,Extranjero
+1434735111,Miguel,Cueto,M,mcu314,miguelcum75@gmail.com,01/08/2002,ACTIVO,Ingenieria Electronica,Nocturno,Seychelles,10/10/2020,Extranjero
+1918006918,Francisco Javier,Sanchez,M,fsa570,francisco javiersam66@gmail.com,08/05/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Colombia,06/04/2025,Extranjero
+1617287226,Rafael,Alonso,M,ral350,rafaelalm48@gmail.com,01/09/2001,ACTIVO,Ingenieria Ambiental,Diurno,Islandia,11/05/2019,Extranjero
+1708033668,Javier,Cano,M,jca211,javiercam28@gmail.com,01/06/2001,ACTIVO,Ingenieria Ambiental,Diurno,Groenlandia,06/08/2016,Extranjero
+1608066247,Manuel,Ortiz,M,mor448,manuelorm12@gmail.com,04/05/2005,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/PALMITO),05/11/2017,Nacional
+1475364946,Rafaela,Perez,F,rpe408,rafaelapef16@gmail.com,05/05/2002,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/SANTIAGO DE TOLÚ),02/10/2017,Nacional
+1948927368,Alfonso,Padilla,M,apa814,alfonsopam12@gmail.com,09/08/2005,ACTIVO,Ingenieria Ambiental,Diurno,Dinamarca,04/08/2022,Extranjero
+1908104913,Josefa,Marques,F,jma358,josefamaf51@gmail.com,01/05/2001,ACTIVO,Ingenieria Electronica,Diurno,Sudáfrica,05/11/2021,Extranjero
+1040337245,Miguel Aï¿½ngel,Rubio,M,mru828,miguel aï¿½ngelrum77@gmail.com,09/05/2005,ACTIVO,Bioingenieria,Diurno,Bolivia,09/02/2021,Extranjero
+1654252506,Manuela,Mengual,F,mme224,manuelamef81@gmail.com,06/04/2000,ACTIVO,Ingenieria de Sistemas,Diurno,Islas Marshall,11/04/2020,Extranjero
+1526589552,Miguel Aï¿½ngel,Fernandez,M,mfe271,miguel aï¿½ngelfem73@gmail.com,08/03/2005,ACTIVO,Ingenieria Electronica,Diurno,Nepal,03/10/2022,Extranjero
+1360599166,Francisco,Carranza,M,fca186,franciscocam47@gmail.com,06/07/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/LA DORADA),04/05/2021,Nacional
+1561471611,Dolores,Atienza,F,dat26,doloresatf85@gmail.com,08/01/2005,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/YACUANQUER),01/09/2024,Nacional
+1885548232,Enrique,Guerrero,M,egu240,enriquegum43@gmail.com,03/09/1999,ACTIVO,Ingenieria Ambiental,Diurno,Islas menores alejadas de los Estados Unidos,01/10/2021,Extranjero
+1063016507,Juan Jose,Campos,M,jca459,juan josecam22@gmail.com,09/04/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/VILLAHERMOSA),10/07/2020,Nacional
+1942548610,Francisco Javier,Pinero,M,fpi103,francisco javierpim34@gmail.com,07/01/2005,ACTIVO,Ingenieria Industrial,Diurno,Federación Rusa,03/05/2023,Extranjero
+1784203081,Alejandro,Lastra,M,ala270,alejandrolam67@gmail.com,04/02/2005,ACTIVO,Bioingenieria,Diurno,Omán,12/10/2018,Extranjero
+1066500522,Inmaculada,Asensio,F,ias439,inmaculadaasf71@gmail.com,07/09/2001,ACTIVO,Ingenieria Industrial,Diurno,Serbia,03/07/2019,Extranjero
+1118351029,Cristina,Cabrera,F,cca714,cristinacaf23@gmail.com,10/11/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,Rumania,08/07/2020,Extranjero
+1569142559,Francisco,Santiago,M,fsa93,franciscosam61@gmail.com,05/06/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/GONZÁLEZ),01/07/2018,Nacional
+1694743693,Antonio,Otero,M,aot616,antoniootm80@gmail.com,08/11/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Guernsey,11/10/2023,Extranjero
+1220583198,Juan Antonio,GarcAÂ­a,M,jga82,juan antoniogam17@gmail.com,10/11/2006,ACTIVO,Ingenieria Ambiental,Diurno,Lituania,09/03/2022,Extranjero
+1747792410,Jorge,Abad,M,jab881,jorgeabm40@gmail.com,02/05/2007,ACTIVO,Ingenieria de Sistemas,Nocturno,Ciudad del Vaticano,01/11/2020,Extranjero
+1996787056,Angel,Gonzalez,M,ago20,angelgom40@gmail.com,01/07/2007,ACTIVO,Ingenieria Industrial,Diurno,Guayana Francesa,04/04/2024,Extranjero
+1505345679,Marina,Casas,F,mca331,marinacaf2@gmail.com,10/04/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Chipre,02/11/2023,Extranjero
+1333849442,Beatriz,Catalan,F,bca719,beatrizcaf35@gmail.com,04/11/2004,ACTIVO,Bioingenieria,Diurno,Camerún,12/12/2022,Extranjero
+1636544288,Miguel,Marco,M,mma636,miguelmam20@gmail.com,11/04/2000,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/EL PAUJIL),02/10/2022,Nacional
+1247802176,Carmen,Fernandez,F,cfe607,carmenfef39@gmail.com,03/09/2005,ACTIVO,Ingenieria Ambiental,Diurno,Trinidad y Tobago,01/07/2025,Extranjero
+1114391042,Juana,Cabrera,F,jca584,juanacaf57@gmail.com,09/06/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/ARBELÁEZ),09/07/2019,Nacional
+1573724303,Pablo,Esteve,M,pes309,pabloesm37@gmail.com,02/10/2002,ACTIVO,Ingenieria Industrial,Diurno,Emiratos Árabes Unidos,11/11/2019,Extranjero
+1754520356,Manuel,Carrion,M,mca203,manuelcam42@gmail.com,09/06/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/CALAMAR),07/10/2022,Nacional
+1347797796,Alicia,Saez,F,asa881,aliciasaf67@gmail.com,01/05/2003,ACTIVO,Bioingenieria,Diurno,Israel,01/07/2022,Extranjero
+1215123362,Isabel,Morales,F,imo631,isabelmof81@gmail.com,05/03/2003,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/PUERTO CARREÑO),10/02/2017,Nacional
+1143053076,Sergio,Moya,M,smo521,sergiomom19@gmail.com,09/04/2006,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/CAREPA),03/06/2022,Nacional
+1528975108,Angeles,Casado,F,aca51,angelescaf87@gmail.com,05/03/2004,ACTIVO,Ingenieria Electronica,Diurno,India,03/12/2025,Extranjero
+1680418686,Jaume,Ferri,M,jfe880,jaumefem68@gmail.com,04/02/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/NOBSA),02/03/2021,Nacional
+1586213284,Ana,Alarcon,F,aal61,anaalf94@gmail.com,11/10/2002,ACTIVO,Ingenieria de Sistemas,Nocturno,Finlandia,05/10/2025,Extranjero
+1160977436,Rosa,Pons,F,rpo497,rosapof79@gmail.com,06/01/2000,ACTIVO,Ingenieria Industrial,Diurno,Isla Norfolk,02/05/2019,Extranjero
+1317511739,Adrian,Rey,M,are133,adrianrem53@gmail.com,07/03/2004,ACTIVO,Ingenieria Electronica,Diurno,Senegal,10/01/2021,Extranjero
+1108726699,Manuel,Castano,M,mca694,manuelcam9@gmail.com,06/11/2005,ACTIVO,Bioingenieria,Diurno,Georgia,04/09/2018,Extranjero
+1499046888,Javier,Rico,M,jri234,javierrim33@gmail.com,02/06/2002,ACTIVO,Ingenieria Industrial,Diurno,India,06/12/2023,Extranjero
+1621513509,Mohamed,Moreno,M,mmo609,mohamedmom56@gmail.com,11/07/2003,ACTIVO,Ingenieria Industrial,Diurno,San Vicente y las Granadinas,03/10/2018,Extranjero
+1682234465,Diego,Alfaro,M,dal842,diegoalm22@gmail.com,09/02/2004,ACTIVO,Bioingenieria,Diurno,Kazajstán,10/05/2020,Extranjero
+1991196401,Ignacio,Hernandez,M,ihe275,ignaciohem80@gmail.com,03/09/2000,ACTIVO,Ingenieria Electronica,Nocturno,Isla de Man,01/07/2024,Extranjero
+1583926196,Jesus,Gutierrez,M,jgu472,jesusgum19@gmail.com,07/06/2001,ACTIVO,Bioingenieria,Diurno,(Colombia/VALDIVIA),11/06/2018,Nacional
+1582535657,Antonia,Lopez,F,alo536,antonialof50@gmail.com,09/11/2004,ACTIVO,Ingenieria Ambiental,Diurno,Antártida,01/10/2019,Extranjero
+1162318448,Jose Antonio,Ruiz,M,jru33,jose antoniorum92@gmail.com,02/07/2005,ACTIVO,Ingenieria Industrial,Diurno,Alemania,06/11/2023,Extranjero
+1565674534,Carlos,Perez,M,cpe123,carlospem63@gmail.com,12/08/2005,ACTIVO,Ingenieria Industrial,Diurno,Estonia,05/09/2022,Extranjero
+1041712108,Antonio,Benavent,M,abe687,antoniobem20@gmail.com,06/08/2002,ACTIVO,Ingenieria Electronica,Nocturno,Estados Unidos,05/06/2019,Extranjero
+1670786524,Irene,Torres,F,ito737,irenetof8@gmail.com,09/01/2000,ACTIVO,Bioingenieria,Diurno,Nauru,12/12/2023,Extranjero
+1817586927,Francisco Javier,Martin,M,fma161,francisco javiermam36@gmail.com,08/12/2003,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GRANADA),04/07/2023,Nacional
+1780591575,Antonio,Parra,M,apa355,antoniopam6@gmail.com,12/05/2000,ACTIVO,Ingenieria Industrial,Diurno,Bahamas,12/12/2023,Extranjero
+1612576897,Carlos,De la Fuente,M,cde679,carlosdem26@gmail.com,12/11/2004,ACTIVO,Ingenieria Industrial,Diurno,Argelia,11/07/2016,Extranjero
+1434929748,Nuria,Salguero,F,nsa370,nuriasaf51@gmail.com,05/05/2000,ACTIVO,Ingenieria Electronica,Diurno,Italia,06/09/2025,Extranjero
+1096064797,Jesus,Mansilla,M,jma705,jesusmam85@gmail.com,09/06/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Corea del Norte,07/03/2018,Extranjero
+1208334274,Amparo,Plata,F,apl235,amparoplf17@gmail.com,02/09/2005,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/TIPACOQUE),12/08/2017,Nacional
+1512652158,Angel,Alonso,M,aal77,angelalm32@gmail.com,03/10/2006,ACTIVO,Ingenieria Industrial,Diurno,Islas Pitcairn,07/02/2023,Extranjero
+1386314010,Antonia,Salazar,F,asa320,antoniasaf83@gmail.com,05/02/2000,ACTIVO,Ingenieria Industrial,Diurno,Ruanda,01/12/2021,Extranjero
+1340648833,Antonio,Cervera,M,ace406,antoniocem77@gmail.com,08/11/2005,ACTIVO,Ingenieria Electronica,Diurno,Islas Malvinas,04/12/2016,Extranjero
+1481002837,Susana,Perez,F,spe677,susanapef52@gmail.com,03/12/2006,ACTIVO,Ingenieria Industrial,Diurno,Cuba,05/05/2021,Extranjero
+1447723905,Pablo,Cortes,M,pco206,pablocom52@gmail.com,09/02/2001,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GIRARDOT),10/05/2018,Nacional
+1776921147,Marta,Yanez,F,mya59,martayaf45@gmail.com,01/12/2006,ACTIVO,Bioingenieria,Diurno,(Colombia/CALI),11/08/2022,Nacional
+1889799283,Irene,Alvarez,F,ial408,irenealf89@gmail.com,01/01/2001,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/LA LLANADA),06/04/2017,Nacional
+1269556053,Francisco,Roman,M,fro770,franciscorom29@gmail.com,05/11/2002,ACTIVO,Ingenieria Industrial,Diurno,Suazilandia,08/04/2016,Extranjero
+1086388305,Antonio,Calvo,M,aca481,antoniocam17@gmail.com,08/01/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/PUERTO TRIUNFO),01/04/2017,Nacional
+1410356350,Ana,Fernandez,F,afe189,anafef33@gmail.com,02/10/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Islas Caimán,09/09/2024,Extranjero
+1249507575,Daniel,Fernandez,M,dfe750,danielfem19@gmail.com,02/08/2000,ACTIVO,Ingenieria Industrial,Diurno,Chipre,12/12/2021,Extranjero
+1092041511,Jose Luis,Ortega,M,jor487,jose luisorm36@gmail.com,11/05/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/CÓRDOBA),02/05/2018,Nacional
+1029322687,Monica,Carrasco,F,mca378,monicacaf15@gmail.com,12/03/2003,ACTIVO,Ingenieria de Sistemas,Diurno,Vietnam,10/11/2019,Extranjero
+1986545872,Jose Luis,Rosell,M,jro212,jose luisrom29@gmail.com,04/04/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Ucrania,04/05/2019,Extranjero
+1835146110,Manuel,Fernandez,M,mfe218,manuelfem22@gmail.com,03/08/2001,ACTIVO,Ingenieria Electronica,Diurno,Egipto,12/12/2023,Extranjero
+1835517198,Jose,Cabeza,M,jca868,josecam97@gmail.com,03/02/2004,ACTIVO,Ingenieria Industrial,Diurno,Noruega,07/11/2024,Extranjero
+1207789395,Pablo,Alonso,M,pal42,pabloalm28@gmail.com,11/03/2002,ACTIVO,Ingenieria Ambiental,Diurno,Belice,05/04/2023,Extranjero
+1206147996,Antonio,Pinto,M,api162,antoniopim46@gmail.com,06/06/2003,ACTIVO,Ingenieria Ambiental,Diurno,Mónaco,06/10/2023,Extranjero
+1590713600,Beatriz,Perez,F,bpe448,beatrizpef4@gmail.com,02/08/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Estados Federados de Micronesia,10/02/2024,Extranjero
+1111330773,Antonio,Ruiz,M,aru399,antoniorum52@gmail.com,12/05/2004,ACTIVO,Ingenieria Ambiental,Diurno,El Salvador,06/10/2023,Extranjero
+1674309554,Juan Antonio,Lopez,M,jlo445,juan antoniolom16@gmail.com,03/03/2003,ACTIVO,Ingenieria Ambiental,Diurno,Tayikistán,09/05/2020,Extranjero
+1756201461,Jose,Ortiz,M,jor145,joseorm79@gmail.com,04/10/2004,ACTIVO,Ingenieria Ambiental,Diurno,Portugal,04/03/2019,Extranjero
+1363484234,Alvaro,Fernandez,M,afe471,alvarofem78@gmail.com,11/11/2006,ACTIVO,Bioingenieria,Diurno,Territorio Británico del Océano Índico,02/12/2023,Extranjero
+1678858109,Rafael,Casal,M,rca50,rafaelcam35@gmail.com,05/08/1999,ACTIVO,Ingenieria Electronica,Diurno,Estonia,10/01/2022,Extranjero
+1125703623,Laura,Sanchez,F,lsa492,laurasaf53@gmail.com,07/12/2005,ACTIVO,Ingenieria de Sistemas,Nocturno,Italia,06/08/2020,Extranjero
+1768917104,Javier,Mesa,M,jme284,javiermem79@gmail.com,04/08/2003,ACTIVO,Bioingenieria,Diurno,Estados Federados de Micronesia,01/05/2020,Extranjero
+1603733028,Jorge,De la Calle,M,jde625,jorgedem44@gmail.com,01/12/1999,ACTIVO,Ingenieria Industrial,Diurno,Pakistán,06/11/2021,Extranjero
+1217046167,Alberto,Segovia,M,ase241,albertosem87@gmail.com,09/07/2002,ACTIVO,Ingenieria Electronica,Nocturno,Hungría,07/04/2020,Extranjero
+1447729299,Ana,Marquez,F,ama702,anamaf39@gmail.com,09/03/2001,ACTIVO,Ingenieria de Sistemas,Nocturno,Botswana,09/09/2016,Extranjero
+1955801575,Pedro,Moreno,M,pmo871,pedromom59@gmail.com,03/04/2004,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/BELMIRA),01/06/2019,Nacional
+1358692742,Jesus,Nieto,M,jni218,jesusnim35@gmail.com,02/02/2000,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/TURBANA),02/03/2021,Nacional
+1901146532,David,Castellanos,M,dca224,davidcam56@gmail.com,03/12/2005,ACTIVO,Ingenieria Electronica,Nocturno,Canadá,05/07/2018,Extranjero
+1457515695,Jose,Bernabe,M,jbe220,josebem65@gmail.com,05/08/2003,ACTIVO,Ingenieria Industrial,Diurno,Afganistan,09/10/2024,Extranjero
+1785426193,Javier,Lopez,M,jlo385,javierlom96@gmail.com,01/11/2005,ACTIVO,Ingenieria Ambiental,Diurno,Reino Unido,05/06/2024,Extranjero
+1376835141,Ruben,Cordoba,M,rco872,rubencom23@gmail.com,10/11/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,Honduras,12/08/2018,Extranjero
+1536783912,Manuel,Torres,M,mto510,manueltom34@gmail.com,01/01/2000,ACTIVO,Bioingenieria,Diurno,Nigeria,02/11/2023,Extranjero
+1322114482,Luis,Moreno,M,lmo434,luismom9@gmail.com,09/12/2000,ACTIVO,Ingenieria Electronica,Diurno,Egipto,05/01/2020,Extranjero
+1356000187,Raquel,Murillo,F,rmu291,raquelmuf47@gmail.com,05/10/2003,ACTIVO,Bioingenieria,Diurno,Sudán,04/08/2023,Extranjero
+1382563744,Juana,Tomas,F,jto120,juanatof97@gmail.com,05/08/2001,ACTIVO,Ingenieria Electronica,Diurno,Australia,03/06/2025,Extranjero
+1274231521,Manuel,Colomer,M,mco843,manuelcom49@gmail.com,10/07/1999,ACTIVO,Bioingenieria,Diurno,(Colombia/AYAPEL),06/11/2018,Nacional
+1998768447,Ramon,Murillo,M,rmu410,ramonmum79@gmail.com,10/02/1999,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/GAMEZA),10/04/2023,Nacional
+1682847065,Marina,Redondo,F,mre494,marinaref48@gmail.com,09/12/2003,ACTIVO,Ingenieria Ambiental,Diurno,Tokelau,09/03/2016,Extranjero
+1475147982,Manuel,Marquez,M,mma351,manuelmam80@gmail.com,02/12/2003,ACTIVO,Ingenieria de Sistemas,Diurno,Islandia,04/08/2021,Extranjero
+1844268000,Dolores,Arguello,F,dar326,doloresarf6@gmail.com,01/02/2006,ACTIVO,Ingenieria de Sistemas,Diurno,Irak,04/07/2023,Extranjero
+1086243440,Laura,Prieto,F,lpr367,lauraprf20@gmail.com,01/10/2004,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/SANTAFÉ DE ANTIOQUIA),07/04/2016,Nacional
+1923393728,Jorge,Domingo,M,jdo125,jorgedom92@gmail.com,01/06/2004,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/GUTIÉRREZ),04/06/2017,Nacional
+1569093614,Eva,Villa,F,evi442,evavif21@gmail.com,04/02/2003,ACTIVO,Ingenieria Electronica,Nocturno,Emiratos Árabes Unidos,07/12/2016,Extranjero
+1315760750,Josep,Sanchez,M,jsa829,josepsam19@gmail.com,11/09/2002,ACTIVO,Bioingenieria,Diurno,Finlandia,08/12/2020,Extranjero
+1359233236,Enrique,Munoz,M,emu705,enriquemum26@gmail.com,03/02/2003,ACTIVO,Ingenieria de Sistemas,Nocturno,Trinidad y Tobago,03/07/2023,Extranjero
+1790614888,Marta,Baz,F,mba40,martabaf38@gmail.com,02/03/2002,ACTIVO,Ingenieria Electronica,Diurno,Benín,01/04/2016,Extranjero
+1389824129,Francisco,Tamayo,M,fta820,franciscotam49@gmail.com,04/03/2004,ACTIVO,Ingenieria Ambiental,Diurno,Níger,03/11/2023,Extranjero
+1441893530,Joan,Sebastia,M,jse835,joansem44@gmail.com,01/06/2004,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/CABUYARO),05/11/2016,Nacional
+1561443175,Susana,Campos,F,sca84,susanacaf75@gmail.com,01/01/1999,ACTIVO,Bioingenieria,Diurno,(Colombia/ARANZAZU),11/04/2018,Nacional
+1547732113,Laura,Frutos,F,lfr50,laurafrf41@gmail.com,02/10/1999,ACTIVO,Ingenieria Electronica,Nocturno,Georgia,04/11/2017,Extranjero
+1402061657,Angeles,Gimeno,F,agi550,angelesgif19@gmail.com,10/01/2004,ACTIVO,Ingenieria Electronica,Nocturno,España,03/09/2022,Extranjero
+1925124469,Santiago,Estevez,M,ses470,santiagoesm55@gmail.com,11/07/2006,ACTIVO,Ingenieria Electronica,Nocturno,Togo,01/03/2019,Extranjero
+1520841826,Fernando,Bilbao,M,fbi50,fernandobim48@gmail.com,08/07/2006,ACTIVO,Bioingenieria,Diurno,(Colombia/ACANDÍ),01/04/2021,Nacional
+1700127372,Francisca,Ballesteros,F,fba397,franciscabaf60@gmail.com,12/05/2000,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/SARAVENA),08/05/2023,Nacional
+1299559484,Jose Luis,Novo,M,jno635,jose luisnom75@gmail.com,02/06/2002,ACTIVO,Ingenieria Ambiental,Diurno,Uruguay,06/03/2021,Extranjero
+1110528018,Pilar,Urbano,F,pur518,pilarurf59@gmail.com,08/11/2005,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/SOLEDAD),02/04/2019,Nacional
+1508001746,Ramon,Zamora,M,rza332,ramonzam42@gmail.com,03/05/2002,ACTIVO,Bioingenieria,Diurno,Perú,04/05/2020,Extranjero
+1013976544,Jose Manuel,Mateos,M,jma844,jose manuelmam79@gmail.com,06/12/2006,ACTIVO,Ingenieria Electronica,Diurno,Ciudad del Vaticano,12/12/2022,Extranjero
+1364105264,Manuel,Canal,M,mca611,manuelcam18@gmail.com,05/07/2004,ACTIVO,Bioingenieria,Diurno,Filipinas,08/11/2018,Extranjero
 1563502743,Juan,Duran,M,jdu613,juandum73@gmail.com,09/09/2001,ACTIVO,Ingenieria de Sistemas,Diurno,Honduras,01/01/2025,Extranjero
-1367646247,Isabel,Delgado,F,ide104,isabeldef51@gmail.com,06/03/2001,ACTIVO,Ingenieria Industrial,Diurno,Dominica,02/04/2023,Extranjero
-1934745870,Monica,Notario,F,mno224,monicanof98@gmail.com,07/12/2005,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/GAMEZA),03/04/2021,Nacional
-1115423547,Begona,Hernandez,F,bhe74,begonahef75@gmail.com,09/02/2005,INACTIVO,Ingenieria de Sistemas,Nocturno,Islas Cook,07/06/2019,Extranjero
-1400534521,Francisca,Calvo,F,fca80,franciscacaf70@gmail.com,11/03/2000,INACTIVO,Ingenieria Electronica,Nocturno,Colombia,08/03/2018,Extranjero
-1272538159,Marta,Marcos,F,mma161,martamaf66@gmail.com,10/01/2002,INACTIVO,Ingenieria Ambiental,Diurno,Polonia,03/05/2021,Extranjero
-1271526463,Luis,Jordan,M,ljo540,luisjom20@gmail.com,12/09/2002,ACTIVO,Ingenieria Ambiental,Diurno,Túnez,02/06/2020,Extranjero
-1533759022,Isabel,Moreno,F,imo531,isabelmof25@gmail.com,06/09/2000,ACTIVO,Ingenieria Electronica,Nocturno,Kiribati,09/11/2021,Extranjero
-1050552146,Sonia,Lopez,F,slo343,sonialof16@gmail.com,11/06/1999,INACTIVO,Ingenieria Industrial,Diurno,Irlanda,07/09/2023,Extranjero
-1746905106,Jose,Bautista,M,jba382,josebam23@gmail.com,01/08/2002,ACTIVO,Ingenieria de Sistemas,Diurno,Territorios Franceses del Sur,09/05/2023,Extranjero
-1620598616,Montserrat,Marcos,F,mma263,montserratmaf62@gmail.com,11/05/2005,ACTIVO,Ingenieria Industrial,Diurno,Rusia,02/10/2021,Extranjero
-1331753465,Javier,Ibarra,M,jib156,javieribm60@gmail.com,03/12/2001,INACTIVO,Ingenieria Ambiental,Diurno,Colombia,07/01/2021,Extranjero
-1117851851,Eduardo,Caballero,M,eca102,eduardocam42@gmail.com,02/03/2002,INACTIVO,Ingenieria de Sistemas,Diurno,Arabia Saudita,05/01/2017,Extranjero
-1978146889,Ana Isabel,Diez,F,adi535,ana isabeldif63@gmail.com,06/01/2001,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/BETULIA),04/05/2020,Nacional
-1073611375,Isabel,Valls,F,iva7,isabelvaf20@gmail.com,02/01/2006,ACTIVO,Ingenieria de Sistemas,Nocturno,Samoa,12/09/2018,Extranjero
-1604609171,Isabel,Fernandez,F,ife441,isabelfef76@gmail.com,06/08/2002,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/RÁQUIRA),03/10/2019,Nacional
-1147728355,Fernando,Mateos,M,fma199,fernandomam14@gmail.com,06/08/2004,ACTIVO,Ingenieria de Sistemas,Diurno,Mauritania,01/10/2023,Extranjero
-1302477712,Silvia,Mendez,F,sme234,silviamef3@gmail.com,09/03/2003,INACTIVO,Ingenieria Ambiental,Diurno,Chipre,05/06/2023,Extranjero
-1503260728,Jose Luis,Minana,M,jmi457,jose luismim75@gmail.com,02/09/2000,INACTIVO,Ingenieria Industrial,Diurno,Samoa Americana,01/10/2020,Extranjero
-1231453244,Inmaculada,Gonzalez,F,igo607,inmaculadagof54@gmail.com,08/03/2002,INACTIVO,Ingenieria Ambiental,Diurno,Islas Feroe,03/01/2017,Extranjero
-1341250926,Lucia,Aguilar,F,lag688,luciaagf27@gmail.com,05/06/1999,INACTIVO,Ingenieria Ambiental,Diurno,Islas Marianas del Norte,05/11/2017,Extranjero
-1449141044,Jose Luis,Saez,M,jsa188,jose luissam35@gmail.com,03/08/2004,ACTIVO,Ingenieria Industrial,Diurno,Isla de Navidad,03/06/2022,Extranjero
-1694917763,Rafael,Da Costa,M,rda127,rafaeldam58@gmail.com,10/12/2002,INACTIVO,Bioingenieria,Diurno,Senegal,05/08/2017,Extranjero
-1919119780,Concepcion,GarcAÂ­a,F,cga173,concepciongaf40@gmail.com,03/04/2004,INACTIVO,Ingenieria de Sistemas,Diurno,Tayikistán,07/07/2019,Extranjero
-1430550349,Francisca,Perez,F,fpe681,franciscapef78@gmail.com,11/10/2004,ACTIVO,Ingenieria Electronica,Diurno,República Checa,01/04/2023,Extranjero
-1637271406,Manuel,Pastor,M,mpa74,manuelpam2@gmail.com,12/06/2001,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/ALBANIA),07/12/2015,Nacional
-1763756702,Jesus,Porras,M,jpo671,jesuspom99@gmail.com,09/01/2002,INACTIVO,Ingenieria Industrial,Diurno,Guam,06/12/2020,Extranjero
-1666145308,Jesus,Cabello,M,jca725,jesuscam50@gmail.com,04/08/2000,INACTIVO,Ingenieria Electronica,Diurno,Filipinas,11/05/2021,Extranjero
-1503439099,Angela,Alvarez,F,aal414,angelaalf51@gmail.com,08/09/2006,INACTIVO,Ingenieria Industrial,Diurno,(Colombia/CHÍQUIZA),10/04/2022,Nacional
-1832000088,Jose,Duran,M,jdu270,josedum81@gmail.com,02/03/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/DIBULLA),06/02/2023,Nacional
-1025409124,Pedro,Suarez,M,psu600,pedrosum33@gmail.com,12/04/2006,INACTIVO,Ingenieria Industrial,Diurno,Isla Norfolk,02/01/2018,Extranjero
-1397115419,Josefa,Vidal,F,jvi443,josefavif55@gmail.com,08/09/2005,INACTIVO,Ingenieria Industrial,Diurno,Palau,02/03/2022,Extranjero
-1246061821,Javier,Madrid,M,jma862,javiermam38@gmail.com,08/08/2001,INACTIVO,Bioingenieria,Diurno,Corea del Norte,10/06/2022,Extranjero
-1410549140,Enrique,Merino,M,eme735,enriquemem91@gmail.com,06/02/2002,INACTIVO,Ingenieria Electronica,Nocturno,(Colombia/SANTA CATALINA),05/04/2019,Nacional
-1496833048,Yolanda,Acero,F,yac885,yolandaacf75@gmail.com,07/11/2001,ACTIVO,Ingenieria Industrial,Diurno,Irlanda del Norte,02/07/2024,Extranjero
-1697014151,Laura,Pereira,F,lpe735,laurapef72@gmail.com,03/11/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/FORTUL),05/03/2019,Nacional
-1130066574,Salvador,Jordan,M,sjo848,salvadorjom9@gmail.com,12/08/2003,INACTIVO,Ingenieria Ambiental,Diurno,Antártida,04/04/2020,Extranjero
+1367646247,Isabel,Delgado,F,ide104,isabeldef51@gmail.com,03/06/2001,ACTIVO,Ingenieria Industrial,Diurno,Dominica,04/02/2023,Extranjero
+1934745870,Monica,Notario,F,mno224,monicanof98@gmail.com,12/07/2005,ACTIVO,Ingenieria Electronica,Diurno,(Colombia/GAMEZA),04/03/2021,Nacional
+1115423547,Begona,Hernandez,F,bhe74,begonahef75@gmail.com,02/09/2005,INACTIVO,Ingenieria de Sistemas,Nocturno,Islas Cook,06/07/2019,Extranjero
+1400534521,Francisca,Calvo,F,fca80,franciscacaf70@gmail.com,03/11/2000,INACTIVO,Ingenieria Electronica,Nocturno,Colombia,03/08/2018,Extranjero
+1272538159,Marta,Marcos,F,mma161,martamaf66@gmail.com,01/10/2002,INACTIVO,Ingenieria Ambiental,Diurno,Polonia,05/03/2021,Extranjero
+1271526463,Luis,Jordan,M,ljo540,luisjom20@gmail.com,09/12/2002,ACTIVO,Ingenieria Ambiental,Diurno,Túnez,06/02/2020,Extranjero
+1533759022,Isabel,Moreno,F,imo531,isabelmof25@gmail.com,09/06/2000,ACTIVO,Ingenieria Electronica,Nocturno,Kiribati,11/09/2021,Extranjero
+1050552146,Sonia,Lopez,F,slo343,sonialof16@gmail.com,06/11/1999,INACTIVO,Ingenieria Industrial,Diurno,Irlanda,09/07/2023,Extranjero
+1746905106,Jose,Bautista,M,jba382,josebam23@gmail.com,08/01/2002,ACTIVO,Ingenieria de Sistemas,Diurno,Territorios Franceses del Sur,05/09/2023,Extranjero
+1620598616,Montserrat,Marcos,F,mma263,montserratmaf62@gmail.com,05/11/2005,ACTIVO,Ingenieria Industrial,Diurno,Rusia,10/02/2021,Extranjero
+1331753465,Javier,Ibarra,M,jib156,javieribm60@gmail.com,12/03/2001,INACTIVO,Ingenieria Ambiental,Diurno,Colombia,01/07/2021,Extranjero
+1117851851,Eduardo,Caballero,M,eca102,eduardocam42@gmail.com,03/02/2002,INACTIVO,Ingenieria de Sistemas,Diurno,Arabia Saudita,01/05/2017,Extranjero
+1978146889,Ana Isabel,Diez,F,adi535,ana isabeldif63@gmail.com,01/06/2001,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/BETULIA),05/04/2020,Nacional
+1073611375,Isabel,Valls,F,iva7,isabelvaf20@gmail.com,01/02/2006,ACTIVO,Ingenieria de Sistemas,Nocturno,Samoa,09/12/2018,Extranjero
+1604609171,Isabel,Fernandez,F,ife441,isabelfef76@gmail.com,08/06/2002,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/RÁQUIRA),10/03/2019,Nacional
+1147728355,Fernando,Mateos,M,fma199,fernandomam14@gmail.com,08/06/2004,ACTIVO,Ingenieria de Sistemas,Diurno,Mauritania,10/01/2023,Extranjero
+1302477712,Silvia,Mendez,F,sme234,silviamef3@gmail.com,03/09/2003,INACTIVO,Ingenieria Ambiental,Diurno,Chipre,06/05/2023,Extranjero
+1503260728,Jose Luis,Minana,M,jmi457,jose luismim75@gmail.com,09/02/2000,INACTIVO,Ingenieria Industrial,Diurno,Samoa Americana,10/01/2020,Extranjero
+1231453244,Inmaculada,Gonzalez,F,igo607,inmaculadagof54@gmail.com,03/08/2002,INACTIVO,Ingenieria Ambiental,Diurno,Islas Feroe,01/03/2017,Extranjero
+1341250926,Lucia,Aguilar,F,lag688,luciaagf27@gmail.com,06/05/1999,INACTIVO,Ingenieria Ambiental,Diurno,Islas Marianas del Norte,11/05/2017,Extranjero
+1449141044,Jose Luis,Saez,M,jsa188,jose luissam35@gmail.com,08/03/2004,ACTIVO,Ingenieria Industrial,Diurno,Isla de Navidad,06/03/2022,Extranjero
+1694917763,Rafael,Da Costa,M,rda127,rafaeldam58@gmail.com,12/10/2002,INACTIVO,Bioingenieria,Diurno,Senegal,08/05/2017,Extranjero
+1919119780,Concepcion,GarcAÂ­a,F,cga173,concepciongaf40@gmail.com,04/03/2004,INACTIVO,Ingenieria de Sistemas,Diurno,Tayikistán,07/07/2019,Extranjero
+1430550349,Francisca,Perez,F,fpe681,franciscapef78@gmail.com,10/11/2004,ACTIVO,Ingenieria Electronica,Diurno,República Checa,04/01/2023,Extranjero
+1637271406,Manuel,Pastor,M,mpa74,manuelpam2@gmail.com,06/12/2001,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/ALBANIA),12/07/2015,Nacional
+1763756702,Jesus,Porras,M,jpo671,jesuspom99@gmail.com,01/09/2002,INACTIVO,Ingenieria Industrial,Diurno,Guam,12/06/2020,Extranjero
+1666145308,Jesus,Cabello,M,jca725,jesuscam50@gmail.com,08/04/2000,INACTIVO,Ingenieria Electronica,Diurno,Filipinas,05/11/2021,Extranjero
+1503439099,Angela,Alvarez,F,aal414,angelaalf51@gmail.com,09/08/2006,INACTIVO,Ingenieria Industrial,Diurno,(Colombia/CHÍQUIZA),04/10/2022,Nacional
+1832000088,Jose,Duran,M,jdu270,josedum81@gmail.com,03/02/2004,ACTIVO,Bioingenieria,Diurno,(Colombia/DIBULLA),02/06/2023,Nacional
+1025409124,Pedro,Suarez,M,psu600,pedrosum33@gmail.com,04/12/2006,INACTIVO,Ingenieria Industrial,Diurno,Isla Norfolk,01/02/2018,Extranjero
+1397115419,Josefa,Vidal,F,jvi443,josefavif55@gmail.com,09/08/2005,INACTIVO,Ingenieria Industrial,Diurno,Palau,03/02/2022,Extranjero
+1246061821,Javier,Madrid,M,jma862,javiermam38@gmail.com,08/08/2001,INACTIVO,Bioingenieria,Diurno,Corea del Norte,06/10/2022,Extranjero
+1410549140,Enrique,Merino,M,eme735,enriquemem91@gmail.com,02/06/2002,INACTIVO,Ingenieria Electronica,Nocturno,(Colombia/SANTA CATALINA),04/05/2019,Nacional
+1496833048,Yolanda,Acero,F,yac885,yolandaacf75@gmail.com,11/07/2001,ACTIVO,Ingenieria Industrial,Diurno,Irlanda del Norte,07/02/2024,Extranjero
+1697014151,Laura,Pereira,F,lpe735,laurapef72@gmail.com,11/03/2000,ACTIVO,Bioingenieria,Diurno,(Colombia/FORTUL),03/05/2019,Nacional
+1130066574,Salvador,Jordan,M,sjo848,salvadorjom9@gmail.com,08/12/2003,INACTIVO,Ingenieria Ambiental,Diurno,Antártida,04/04/2020,Extranjero
 1218166421,Manuela,Rojo,F,mro390,manuelarof20@gmail.com,03/03/2004,INACTIVO,Ingenieria Industrial,Diurno,Tonga,10/10/2023,Extranjero
-1344348897,Francisco,Recuero,M,fre67,franciscorem75@gmail.com,09/09/2003,ACTIVO,Ingenieria Industrial,Diurno,Ucrania,11/01/2023,Extranjero
-1736211630,Angel,Arango,M,aar764,angelarm2@gmail.com,07/09/1999,INACTIVO,Ingenieria Ambiental,Diurno,(Colombia/RAMIRIQUÍ),04/01/2018,Nacional
-1776898442,Francisca,Conde,F,fco217,franciscacof37@gmail.com,12/07/2001,ACTIVO,Ingenieria Industrial,Diurno,Afganistan,08/02/2021,Extranjero
-1312387604,Cristina,Benavente,F,cbe382,cristinabef96@gmail.com,10/05/2003,INACTIVO,Ingenieria Industrial,Diurno,Alemania,03/10/2019,Extranjero
-1937116104,Jose,Lopez,M,jlo483,joselom52@gmail.com,01/08/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/MANAURE),02/08/2019,Nacional
-1034943451,Javier,Cortes,M,jco334,javiercom14@gmail.com,11/05/2001,ACTIVO,Ingenieria Ambiental,Diurno,San Cristóbal y Nieves,05/04/2019,Extranjero
-1005684145,Jose,Mayo,M,jma233,josemam11@gmail.com,11/01/2005,ACTIVO,Ingenieria Industrial,Diurno,Escocia,09/09/2024,Extranjero
-1621978972,Josefa,Parada,F,jpa688,josefapaf13@gmail.com,07/07/2004,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/EL CALVARIO),07/11/2017,Nacional
-1438843396,Antonio,Banos,M,aba323,antoniobam7@gmail.com,01/04/2001,INACTIVO,Ingenieria Ambiental,Diurno,Irán,11/04/2017,Extranjero
-1651983979,Jaime,Jimenez,M,jji553,jaimejim13@gmail.com,02/07/1999,INACTIVO,Ingenieria Industrial,Diurno,(Colombia/CHIRIGUANA),01/01/2022,Nacional
-1421364612,Pablo,Sanchez,M,psa411,pablosam77@gmail.com,11/09/2003,ACTIVO,Ingenieria Industrial,Diurno,Islas Cocos (Keeling),11/05/2021,Extranjero
-1261460374,Dolores,Egea,F,deg264,doloresegf87@gmail.com,05/01/2001,ACTIVO,Ingenieria de Sistemas,Diurno,República Democrática del Congo,02/11/2017,Extranjero
-1365950266,Salvador,Alonso,M,sal163,salvadoralm86@gmail.com,02/11/2005,INACTIVO,Ingenieria Electronica,Diurno,Maldivas,06/10/2021,Extranjero
-1503847348,Juana,Fernandez,F,jfe142,juanafef47@gmail.com,01/04/2002,INACTIVO,Ingenieria Industrial,Diurno,Martinica,07/07/2024,Extranjero
-1517314549,Susana,Otero,F,sot619,susanaotf9@gmail.com,05/02/2007,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/GUACHUCAL),03/08/2021,Nacional
-1046714783,Aitor,Serrano,M,ase394,aitorsem3@gmail.com,12/08/2002,ACTIVO,Bioingenieria,Diurno,Uganda,11/12/2019,Extranjero
-1936760591,Carlos,Pinedo,M,cpi872,carlospim83@gmail.com,03/09/2002,ACTIVO,Ingenieria Ambiental,Diurno,República Dominicana,01/08/2022,Extranjero
-1404429424,Marta,GarcAÂ­a,F,mga231,martagaf31@gmail.com,02/12/2002,ACTIVO,Ingenieria Ambiental,Diurno,España,02/05/2019,Extranjero
-1934779244,Cristina,Moreno,F,cmo73,cristinamof90@gmail.com,06/10/2002,ACTIVO,Ingenieria Electronica,Diurno,Grecia,11/11/2016,Extranjero
-1368317270,Francisca,Coll,F,fco83,franciscacof91@gmail.com,06/07/2000,ACTIVO,Ingenieria Ambiental,Diurno,Escocia,08/11/2023,Extranjero
-1520137272,Santiago,Quiros,M,squ80,santiagoqum45@gmail.com,01/03/2003,ACTIVO,Bioingenieria,Diurno,Alemania,04/07/2018,Extranjero
-1098919841,Lucia,Gracia,F,lgr703,luciagrf93@gmail.com,12/05/2000,INACTIVO,Ingenieria Industrial,Diurno,Siria,05/01/2023,Extranjero
-1170551429,Alberto,Montoro,M,amo289,albertomom42@gmail.com,12/04/2005,INACTIVO,Ingenieria Electronica,Diurno,Siria,06/04/2024,Extranjero
-1370551716,Ana,Boix,F,abo135,anabof64@gmail.com,07/03/2003,INACTIVO,Ingenieria Ambiental,Diurno,Turkmenistán,06/06/2025,Extranjero
-1578476454,Cristina,Prado,F,cpr10,cristinaprf75@gmail.com,07/08/2005,ACTIVO,Ingenieria Ambiental,Diurno,Isla de Man,06/01/2025,Extranjero
-1554025911,Ramon,Fernandez,M,rfe788,ramonfem84@gmail.com,08/02/2003,INACTIVO,Ingenieria Ambiental,Diurno,(Colombia/OTANCHE),08/04/2018,Nacional
-1631905836,Jesus,Andres,M,jan711,jesusanm98@gmail.com,01/08/1999,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/PUPIALES),11/07/2019,Nacional
-1066180270,Yolanda,Sanchez,F,ysa611,yolandasaf85@gmail.com,04/02/2003,ACTIVO,Ingenieria Industrial,Diurno,Afganistan,12/04/2018,Extranjero
-1852586167,Laura,Lopez,F,llo574,lauralof77@gmail.com,02/08/2001,ACTIVO,Ingenieria Electronica,Diurno,Gabón,12/04/2018,Extranjero
-1476185659,Teresa,Luque,F,tlu238,teresaluf41@gmail.com,04/07/2005,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/TABIO),11/03/2019,Nacional
-1958234071,Laura,Pereira,F,lpe748,laurapef49@gmail.com,11/05/2004,ACTIVO,Ingenieria Industrial,Diurno,Malí,03/12/2018,Extranjero
-1797995696,Antonio,Salvador,M,asa358,antoniosam24@gmail.com,02/10/2006,ACTIVO,Ingenieria Electronica,Diurno,Guinea-Bissau,10/05/2018,Extranjero
-1220914860,Ana,Fernandez,F,afe566,anafef29@gmail.com,03/09/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Estados Unidos,09/04/2024,Extranjero
-1221778843,Ana,Alvarez,F,aal256,anaalf77@gmail.com,03/04/2002,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GÓMEZ PLATA),11/12/2022,Nacional
-1317893597,Juana,Navarro,F,jna7,juananaf27@gmail.com,05/02/2001,ACTIVO,Ingenieria Industrial,Diurno,Guinea-Bissau,08/06/2018,Extranjero
-1479856895,Antonia,Blanco,F,abl70,antoniablf56@gmail.com,09/10/2002,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/EL TARRA),09/06/2024,Nacional
-1772266286,Unai,Jurado,M,uju458,unaijum98@gmail.com,09/05/2005,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GAMA),10/09/2020,Nacional
-1566013977,Pablo,Gutierrez,M,pgu637,pablogum30@gmail.com,03/11/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/CANDELARIA),05/05/2018,Nacional
-1611419867,Luis,Roldan,M,lro610,luisrom3@gmail.com,12/11/2000,ACTIVO,Ingenieria Ambiental,Diurno,Malasia,07/06/2022,Extranjero
-1711347269,Juan Jose,Martin,M,jma607,juan josemam77@gmail.com,03/06/2001,ACTIVO,Bioingenieria,Diurno,Estados Unidos,03/04/2018,Extranjero
-1031802995,Javier Felipe,Meza Montero,M,jfmeza,jmezam@unbosque.edu.co,12/12/2004,INACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/LETICIA),23/05/2023,Nacional
+1344348897,Francisco,Recuero,M,fre67,franciscorem75@gmail.com,09/09/2003,ACTIVO,Ingenieria Industrial,Diurno,Ucrania,01/11/2023,Extranjero
+1736211630,Angel,Arango,M,aar764,angelarm2@gmail.com,09/07/1999,INACTIVO,Ingenieria Ambiental,Diurno,(Colombia/RAMIRIQUÍ),01/04/2018,Nacional
+1776898442,Francisca,Conde,F,fco217,franciscacof37@gmail.com,07/12/2001,ACTIVO,Ingenieria Industrial,Diurno,Afganistan,02/08/2021,Extranjero
+1312387604,Cristina,Benavente,F,cbe382,cristinabef96@gmail.com,05/10/2003,INACTIVO,Ingenieria Industrial,Diurno,Alemania,10/03/2019,Extranjero
+1937116104,Jose,Lopez,M,jlo483,joselom52@gmail.com,08/01/2005,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/MANAURE),08/02/2019,Nacional
+1034943451,Javier,Cortes,M,jco334,javiercom14@gmail.com,05/11/2001,ACTIVO,Ingenieria Ambiental,Diurno,San Cristóbal y Nieves,04/05/2019,Extranjero
+1005684145,Jose,Mayo,M,jma233,josemam11@gmail.com,01/11/2005,ACTIVO,Ingenieria Industrial,Diurno,Escocia,09/09/2024,Extranjero
+1621978972,Josefa,Parada,F,jpa688,josefapaf13@gmail.com,07/07/2004,ACTIVO,Ingenieria Electronica,Nocturno,(Colombia/EL CALVARIO),11/07/2017,Nacional
+1438843396,Antonio,Banos,M,aba323,antoniobam7@gmail.com,04/01/2001,INACTIVO,Ingenieria Ambiental,Diurno,Irán,04/11/2017,Extranjero
+1651983979,Jaime,Jimenez,M,jji553,jaimejim13@gmail.com,07/02/1999,INACTIVO,Ingenieria Industrial,Diurno,(Colombia/CHIRIGUANA),01/01/2022,Nacional
+1421364612,Pablo,Sanchez,M,psa411,pablosam77@gmail.com,09/11/2003,ACTIVO,Ingenieria Industrial,Diurno,Islas Cocos (Keeling),05/11/2021,Extranjero
+1261460374,Dolores,Egea,F,deg264,doloresegf87@gmail.com,01/05/2001,ACTIVO,Ingenieria de Sistemas,Diurno,República Democrática del Congo,11/02/2017,Extranjero
+1365950266,Salvador,Alonso,M,sal163,salvadoralm86@gmail.com,11/02/2005,INACTIVO,Ingenieria Electronica,Diurno,Maldivas,10/06/2021,Extranjero
+1503847348,Juana,Fernandez,F,jfe142,juanafef47@gmail.com,04/01/2002,INACTIVO,Ingenieria Industrial,Diurno,Martinica,07/07/2024,Extranjero
+1517314549,Susana,Otero,F,sot619,susanaotf9@gmail.com,02/05/2007,ACTIVO,Ingenieria de Sistemas,Nocturno,(Colombia/GUACHUCAL),08/03/2021,Nacional
+1046714783,Aitor,Serrano,M,ase394,aitorsem3@gmail.com,08/12/2002,ACTIVO,Bioingenieria,Diurno,Uganda,12/11/2019,Extranjero
+1936760591,Carlos,Pinedo,M,cpi872,carlospim83@gmail.com,09/03/2002,ACTIVO,Ingenieria Ambiental,Diurno,República Dominicana,08/01/2022,Extranjero
+1404429424,Marta,GarcAÂ­a,F,mga231,martagaf31@gmail.com,12/02/2002,ACTIVO,Ingenieria Ambiental,Diurno,España,05/02/2019,Extranjero
+1934779244,Cristina,Moreno,F,cmo73,cristinamof90@gmail.com,10/06/2002,ACTIVO,Ingenieria Electronica,Diurno,Grecia,11/11/2016,Extranjero
+1368317270,Francisca,Coll,F,fco83,franciscacof91@gmail.com,07/06/2000,ACTIVO,Ingenieria Ambiental,Diurno,Escocia,11/08/2023,Extranjero
+1520137272,Santiago,Quiros,M,squ80,santiagoqum45@gmail.com,03/01/2003,ACTIVO,Bioingenieria,Diurno,Alemania,07/04/2018,Extranjero
+1098919841,Lucia,Gracia,F,lgr703,luciagrf93@gmail.com,05/12/2000,INACTIVO,Ingenieria Industrial,Diurno,Siria,01/05/2023,Extranjero
+1170551429,Alberto,Montoro,M,amo289,albertomom42@gmail.com,04/12/2005,INACTIVO,Ingenieria Electronica,Diurno,Siria,04/06/2024,Extranjero
+1370551716,Ana,Boix,F,abo135,anabof64@gmail.com,03/07/2003,INACTIVO,Ingenieria Ambiental,Diurno,Turkmenistán,06/06/2025,Extranjero
+1578476454,Cristina,Prado,F,cpr10,cristinaprf75@gmail.com,08/07/2005,ACTIVO,Ingenieria Ambiental,Diurno,Isla de Man,01/06/2025,Extranjero
+1554025911,Ramon,Fernandez,M,rfe788,ramonfem84@gmail.com,02/08/2003,INACTIVO,Ingenieria Ambiental,Diurno,(Colombia/OTANCHE),04/08/2018,Nacional
+1631905836,Jesus,Andres,M,jan711,jesusanm98@gmail.com,08/01/1999,ACTIVO,Ingenieria Industrial,Diurno,(Colombia/PUPIALES),07/11/2019,Nacional
+1066180270,Yolanda,Sanchez,F,ysa611,yolandasaf85@gmail.com,02/04/2003,ACTIVO,Ingenieria Industrial,Diurno,Afganistan,04/12/2018,Extranjero
+1852586167,Laura,Lopez,F,llo574,lauralof77@gmail.com,08/02/2001,ACTIVO,Ingenieria Electronica,Diurno,Gabón,04/12/2018,Extranjero
+1476185659,Teresa,Luque,F,tlu238,teresaluf41@gmail.com,07/04/2005,ACTIVO,Ingenieria de Sistemas,Diurno,(Colombia/TABIO),03/11/2019,Nacional
+1958234071,Laura,Pereira,F,lpe748,laurapef49@gmail.com,05/11/2004,ACTIVO,Ingenieria Industrial,Diurno,Malí,12/03/2018,Extranjero
+1797995696,Antonio,Salvador,M,asa358,antoniosam24@gmail.com,10/02/2006,ACTIVO,Ingenieria Electronica,Diurno,Guinea-Bissau,05/10/2018,Extranjero
+1220914860,Ana,Fernandez,F,afe566,anafef29@gmail.com,09/03/2005,ACTIVO,Ingenieria de Sistemas,Diurno,Estados Unidos,04/09/2024,Extranjero
+1221778843,Ana,Alvarez,F,aal256,anaalf77@gmail.com,04/03/2002,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GÓMEZ PLATA),12/11/2022,Nacional
+1317893597,Juana,Navarro,F,jna7,juananaf27@gmail.com,02/05/2001,ACTIVO,Ingenieria Industrial,Diurno,Guinea-Bissau,06/08/2018,Extranjero
+1479856895,Antonia,Blanco,F,abl70,antoniablf56@gmail.com,10/09/2002,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/EL TARRA),06/09/2024,Nacional
+1772266286,Unai,Jurado,M,uju458,unaijum98@gmail.com,05/09/2005,ACTIVO,Ingenieria Ambiental,Diurno,(Colombia/GAMA),09/10/2020,Nacional
+1566013977,Pablo,Gutierrez,M,pgu637,pablogum30@gmail.com,11/03/2002,ACTIVO,Bioingenieria,Diurno,(Colombia/CANDELARIA),05/05/2018,Nacional
+1611419867,Luis,Roldan,M,lro610,luisrom3@gmail.com,11/12/2000,ACTIVO,Ingenieria Ambiental,Diurno,Malasia,06/07/2022,Extranjero
+1711347269,Juan Jose,Martin,M,jma607,juan josemam77@gmail.com,06/03/2001,ACTIVO,Bioingenieria,Diurno,Estados Unidos,04/03/2018,Extranjero

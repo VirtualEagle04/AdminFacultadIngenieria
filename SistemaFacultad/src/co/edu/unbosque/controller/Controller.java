@@ -1097,7 +1097,7 @@ public class Controller implements ActionListener {
 			int index = 0;
 			long id = 0;
 			try {
-				if (vp.getAdmincontrol().getList_e().getSelectedValue() == null) {
+				if (vp.getAdmincontrol().getList_e().isSelectionEmpty()) {
 					throw new ItemNoSeleccionadoException();
 				}
 				id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
@@ -1154,7 +1154,7 @@ public class Controller implements ActionListener {
 
 			try {
 				EstudianteDTO ea = null;
-				if (vp.getAdmincontrol().getList_e().getSelectedValue() == null) {
+				if (vp.getAdmincontrol().getList_e().isSelectionEmpty()) {
 					throw new ItemNoSeleccionadoException();
 				}
 				for (int i = 0; i < edao.getLista().size(); i++) {
