@@ -87,10 +87,6 @@ public class MainWindow extends JFrame {
 		this.excontrol = excontrol;
 	}
 
-	public JPanel getBackground() {
-		return background;
-	}
-
 	public void setAdmincontrol(AdminControl admincontrol) {
 		this.admincontrol = admincontrol;
 	}
