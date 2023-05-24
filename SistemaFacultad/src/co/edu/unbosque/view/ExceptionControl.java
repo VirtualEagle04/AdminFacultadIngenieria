@@ -26,11 +26,10 @@ public class ExceptionControl {
 			}
 			contador++;
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Nombre\" no contiene informacion, por favor rellenela para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Nombre completo");
 		} catch (CaracteresInvalidosException e2) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Nombre\" contiene caracteres invalidos, por favor ingrese unicamente letras mayusculas y minusculas de la 'A' a la 'Z' y espacios.");
+			JOptionPane.showMessageDialog(null, e2.getMessage()
+					+ "\"Nombre completo\", por favor ingrese unicamente letras mayusculas y minusculas de la 'A' a la 'Z' y espacios.");
 		}
 		try {
 			String temp = apellido;
@@ -43,11 +42,10 @@ public class ExceptionControl {
 			contador++;
 
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Apellido\" no contiene informacion, por favor rellenela para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Apellido completo");
 		} catch (CaracteresInvalidosException e2) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Apellido\" contiene caracteres invalidos, por favor ingrese unicamente letras mayusculas y minusculas de la 'A' a la 'Z' y espacios.");
+			JOptionPane.showMessageDialog(null, e2.getMessage()
+					+ "\"Apellido completo\", por favor ingrese unicamente letras mayusculas y minusculas de la 'A' a la 'Z' y espacios.");
 		}
 
 		try {
@@ -63,13 +61,12 @@ public class ExceptionControl {
 			contador++;
 
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Documento\" no contiene informacion, por favor rellenela para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Documento de identidad");
 		} catch (CaracteresInvalidosException e2) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Documento\" contiene caracteres invalidos, por favor ingrese unicamente numeros.");
+			JOptionPane.showMessageDialog(null, e2.getMessage()
+					+ "\"Documento de identidad\", por favor ingrese unicamente letras mayusculas y minusculas de la 'A' a la 'Z' y espacios.");
 		} catch (DocumentoMuyLargoException e3) {
-			JOptionPane.showMessageDialog(null, "El Documento ingresado no puede tener mas de 10 Digitos");
+			JOptionPane.showMessageDialog(null, e3.getMessage());
 		}
 
 		try {
@@ -83,11 +80,10 @@ public class ExceptionControl {
 			contador++;
 
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Correo electronico\" no contiene informacion, por favor rellenela para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Correo electronico.");
 		} catch (CaracteresInvalidosException e2) {
 			JOptionPane.showMessageDialog(null,
-					"La casilla \"Correo electronico\" contiene caracteres invalidos, por favor ingrese un correo electronico valido.");
+					e2.getMessage() + "\"Correo electronico\", por favor ingrese un correo electronico valido.");
 		}
 
 		try {
@@ -98,8 +94,7 @@ public class ExceptionControl {
 			}
 			contador++;
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Lugar de Nacimiento\" no contiene informacion, por favor seleccione para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Lugar de Nacimiento.");
 		}
 
 		try {
@@ -110,8 +105,7 @@ public class ExceptionControl {
 			}
 			contador++;
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Fecha de nacimiento\" no contiene informacion, por favor seleccione para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Fecha de Nacimiento");
 		}
 
 		try {
@@ -122,9 +116,9 @@ public class ExceptionControl {
 			}
 			contador++;
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Programa\" no contiene informacion, por favor seleccione para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Programa Academico");
 		}
+
 		try {
 			String temp = genero;
 
@@ -133,8 +127,7 @@ public class ExceptionControl {
 			}
 			contador++;
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Genero\" no contiene informacion, por favor seleccione para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Genero");
 		}
 
 		if (contador < 8) {
@@ -144,10 +137,10 @@ public class ExceptionControl {
 		}
 	}
 
-	public void listaVacia() {
+	public void listaVacia(String message) {
 
 		JOptionPane.showMessageDialog(null,
-				"No se ha seleccionado un elemento valido, elija alguno de la lista o, en caso de que este vacia, ingrese un elemento nuevo.");
+				message + ", elija alguno de la lista o, en caso de que este vacia, ingrese un elemento nuevo.");
 	}
 
 	public boolean verificarTextoActivar(String usuario, String codigo) {
@@ -162,8 +155,7 @@ public class ExceptionControl {
 			}
 			contador++;
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Usuario\" no contiene informacion, por favor rellenela para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Usuario");
 		}
 
 		try {
@@ -174,8 +166,7 @@ public class ExceptionControl {
 			}
 			contador++;
 		} catch (StringVacioException e1) {
-			JOptionPane.showMessageDialog(null,
-					"La casilla \"Codigo\" no contiene informacion, por favor rellenela para continuar.");
+			JOptionPane.showMessageDialog(null, e1.getMessage() + "Codigo");
 		}
 
 		if (contador < 2) {
@@ -206,7 +197,7 @@ public class ExceptionControl {
 				verificacion = true;
 			}
 		} catch (FechaErroneaException e) {
-			JOptionPane.showMessageDialog(null, "Por favor ingrese una fecha de nacimiento valida");
+			JOptionPane.showMessageDialog(null, e.getMessage() + " ,por favor ingrese una fecha de nacimiento valida");
 		}
 		return verificacion;
 	}

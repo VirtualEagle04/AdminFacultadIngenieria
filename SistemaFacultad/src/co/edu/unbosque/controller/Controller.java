@@ -846,6 +846,7 @@ public class Controller implements ActionListener {
 				String nombres = vp.getCreationpanel().getNombre().getText();
 				String apellidos = vp.getCreationpanel().getApellido().getText();
 				String correo = vp.getCreationpanel().getCorreo().getText();
+				String fecha_vrf = vp.getCreationpanel().getFecha().getText();
 				String generoString = (String) vp.getCreationpanel().getGenero().getSelectedItem();
 				genero_temp = generoString.charAt(0);
 				programa_temp = (String) vp.getCreationpanel().getPrograma().getSelectedItem();
@@ -855,7 +856,7 @@ public class Controller implements ActionListener {
 				origen_temp = (String) vp.getCreationpanel().getNacional().getSelectedItem();
 
 				boolean verificacion = vp.getExcontrol().verificarInfo("" + documento, nombres, apellidos,
-						"" + genero_temp, correo, programa_temp, lugar_temp, "" + fecha_string_temp);
+						"" + genero_temp, correo, programa_temp, lugar_temp, "" + fecha_vrf);
 
 				boolean fecha_verificacion = true;
 				if (verificacion) {
@@ -870,7 +871,6 @@ public class Controller implements ActionListener {
 
 					nombres_temp = nombres;
 					apellidos_temp = apellidos;
-
 
 					// CREACION DE USUARIO
 					usuario_temp = "";
@@ -1097,11 +1097,11 @@ public class Controller implements ActionListener {
 			int index = 0;
 			long id = 0;
 			try {
-				id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
-
 				if (vp.getAdmincontrol().getList_e().getSelectedValue() == null) {
 					throw new ItemNoSeleccionadoException();
 				}
+				id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
+
 				for (int i = 0; i < edao.getLista().size(); i++) {
 					if (id == edao.getLista().get(i).getDocumento()) {
 						index = i;
@@ -1144,7 +1144,7 @@ public class Controller implements ActionListener {
 
 			} catch (ItemNoSeleccionadoException e2) {
 
-				vp.getExcontrol().listaVacia();
+				vp.getExcontrol().listaVacia(e2.getMessage());
 			}
 			break;
 		}
@@ -1154,11 +1154,12 @@ public class Controller implements ActionListener {
 
 			try {
 				EstudianteDTO ea = null;
+				if (vp.getAdmincontrol().getList_e().getSelectedValue() == null) {
+					throw new ItemNoSeleccionadoException();
+				}
 				for (int i = 0; i < edao.getLista().size(); i++) {
 					id = Long.parseLong(vp.getAdmincontrol().getList_e().getSelectedValue().split(" ")[0]);
-					if (vp.getAdmincontrol().getList_e().getSelectedValue() == null) {
-						throw new ItemNoSeleccionadoException();
-					}
+
 					if (id == edao.getLista().get(i).getDocumento()) {
 						index = i;
 						ea = edao.getLista().get(i);
@@ -1245,7 +1246,7 @@ public class Controller implements ActionListener {
 
 			} catch (ItemNoSeleccionadoException e2) {
 
-				vp.getExcontrol().listaVacia();
+				vp.getExcontrol().listaVacia(e2.getMessage());
 			}
 			break;
 		}
@@ -1285,13 +1286,13 @@ public class Controller implements ActionListener {
 		}
 		case "generate": {
 			try {
-
-				SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
-				FileHandler.crearPdf("Estadisticas" + sdf.format(lista_temp.getFecha_generacion()) + ".pdf",
-						FileHandler.crearGraficas(lista_temp.getLista_individual()));
 				if (lista_temp == null) {
 					throw new PdfNoSeleccionadoException();
 				}
+				SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYY");
+				FileHandler.crearPdf("Estadisticas" + sdf.format(lista_temp.getFecha_generacion()) + ".pdf",
+						FileHandler.crearGraficas(lista_temp.getLista_individual()));
+
 				if (!Desktop.isDesktopSupported()) {
 
 				} else {
@@ -1307,7 +1308,7 @@ public class Controller implements ActionListener {
 
 			} catch (PdfNoSeleccionadoException e2) {
 
-				JOptionPane.showMessageDialog(null, "Por favor seleccione un pdf de la lista.");
+				JOptionPane.showMessageDialog(null, e2.getMessage() + ", por favor seleccione un pdf de la lista.");
 
 			}
 			break;
