@@ -843,31 +843,19 @@ public class Controller implements ActionListener {
 			try {
 
 				String documento = vp.getCreationpanel().getDocumento().getText();
-				nombres_temp = vp.getCreationpanel().getNombre().getText();
-				apellidos_temp = vp.getCreationpanel().getApellido().getText();
+				String nombres = vp.getCreationpanel().getNombre().getText();
+				String apellidos = vp.getCreationpanel().getApellido().getText();
+				String correo = vp.getCreationpanel().getCorreo().getText();
 				String generoString = (String) vp.getCreationpanel().getGenero().getSelectedItem();
 				genero_temp = generoString.charAt(0);
-
-				// CREACION DE USUARIO
-				usuario_temp = "";
-				if (nombres_temp.split(" ").length > 1) {
-					usuario_temp = nombres_temp.split(" ")[0].charAt(0) + "" + nombres_temp.split(" ")[1].charAt(0)
-							+ apellidos_temp.split(" ")[0];
-				} else {
-					usuario_temp = nombres_temp.charAt(0) + apellidos_temp.split(" ")[0]
-							+ apellidos_temp.split(" ")[1].charAt(0);
-				}
-				usuario_temp = usuario_temp.toLowerCase();
-				correo_temp = vp.getCreationpanel().getCorreo().getText();
-
 				programa_temp = (String) vp.getCreationpanel().getPrograma().getSelectedItem();
 				jornada_temp = (String) vp.getCreationpanel().getJornada().getSelectedItem();
 				lugar_temp = (String) vp.getCreationpanel().getPaises().getText();
 				fechaR_temp = new Date();
 				origen_temp = (String) vp.getCreationpanel().getNacional().getSelectedItem();
 
-				boolean verificacion = vp.getExcontrol().verificarInfo("" + documento, nombres_temp, apellidos_temp,
-						"" + genero_temp, correo_temp, programa_temp, lugar_temp, "" + fecha_string_temp);
+				boolean verificacion = vp.getExcontrol().verificarInfo("" + documento, nombres, apellidos,
+						"" + genero_temp, correo, programa_temp, lugar_temp, "" + fecha_string_temp);
 
 				boolean fecha_verificacion = true;
 				if (verificacion) {
@@ -879,6 +867,22 @@ public class Controller implements ActionListener {
 					lugar_temp = "(Colombia/" + lugar_temp + ")";
 				}
 				if (verificacion && fecha_verificacion) {
+
+					nombres_temp = nombres;
+					apellidos_temp = apellidos;
+
+
+					// CREACION DE USUARIO
+					usuario_temp = "";
+					if (nombres_temp.split(" ").length > 1) {
+						usuario_temp = nombres_temp.split(" ")[0].charAt(0) + "" + nombres_temp.split(" ")[1].charAt(0)
+								+ apellidos_temp.split(" ")[0];
+					} else {
+						usuario_temp = nombres_temp.charAt(0) + apellidos_temp.split(" ")[0]
+								+ apellidos_temp.split(" ")[1].charAt(0);
+					}
+					usuario_temp = usuario_temp.toLowerCase();
+					correo_temp = correo;
 
 					SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 					try {
