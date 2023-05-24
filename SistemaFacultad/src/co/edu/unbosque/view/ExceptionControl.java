@@ -200,7 +200,6 @@ public class ExceptionControl {
 			int edad = (int) ChronoUnit.YEARS.between(fnacimiento, LocalDate.now());
 
 			if (edad < 15 || edad > 150) {
-				System.out.println(edad);
 				verificacion = false;
 				throw new FechaErroneaException();
 			} else {
