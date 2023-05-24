@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.Vector;
@@ -29,10 +31,10 @@ public class AdminControl extends JPanel {
 	private DefaultListModel<String> modelo;
 	private DefaultListModel<String> modelo2;
 	private JPanel panel_list, panel_list2, panel_info, panel_pdfs;
-	private JLabel ind_lista, ind1, ind2, ind3, ind4, ind5;
+	private JLabel ind_close, ind_lista, ind1, ind2, ind3, ind4, ind5;
 	private JTextArea area1;
 	private JTextField filter;
-	private JButton back3, delete, activate, actualpdf, generatepdf, generate;
+	private JButton close, back3, delete, activate, actualpdf, generatepdf, generate;
 	private JScrollPane barra1, barra2;
 	private JComboBox<String> campotipo;
 	private Font franklin;
@@ -68,6 +70,40 @@ public class AdminControl extends JPanel {
 		panel_pdfs.setBackground(new Color(81, 114, 157));
 		panel_pdfs.setLayout(null);
 		add(panel_pdfs).setVisible(false);
+		
+		panel_pdfs.addMouseListener(new MouseListener() {
+			
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				setComponentZOrder(panel_pdfs, 0);
+				panel_pdfs.repaint();
+			}
+			
+			@Override
+			public void mousePressed(MouseEvent e) {
+				setComponentZOrder(panel_pdfs, 0);
+				panel_pdfs.repaint();
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				setComponentZOrder(panel_pdfs, 0);
+				panel_pdfs.repaint();
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				setComponentZOrder(panel_pdfs, 0);
+				panel_pdfs.repaint();
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				setComponentZOrder(panel_pdfs, 0);
+				panel_pdfs.repaint();
+			}
+		});
+		
 
 		ind_lista = new JLabel("Seleccione Documento a Generar");
 		ind_lista.setBounds(70, 5, 270, 30);
@@ -79,19 +115,35 @@ public class AdminControl extends JPanel {
 		ind5 = new JLabel("Generar");
 		ind5.setFont(franklin);
 		ind5.setFont(ind5.getFont().deriveFont(Font.PLAIN, 17));
-		ind5.setBounds(169, 340, 120, 30);
+		ind5.setBounds(93, 340, 120, 30);
 		ind5.setForeground(Color.WHITE);
 		add(ind5);
 		panel_pdfs.add(ind5);
+		
+		ind_close = new JLabel("Cerrar");
+		ind_close.setFont(franklin);
+		ind_close.setFont(ind_close.getFont().deriveFont(Font.PLAIN, 17));
+		ind_close.setBounds(257, 340, 120, 30);
+		ind_close.setForeground(Color.WHITE);
+		add(ind_close);
+		panel_pdfs.add(ind_close);
 
 		generate = new JButton();
-		generate.setBounds(135, 340, 120, 30);
+		generate.setBounds(60, 340, 120, 30);
 		generate.setIcon(new ImageIcon("src/Assets/boton4.png"));
 		generate.setFocusable(false);
 		generate.setBorderPainted(false);
 		generate.setContentAreaFilled(false);
 		panel_pdfs.add(generate);
 
+		close = new JButton();
+		close.setBounds(220, 340, 120, 30);
+		close.setIcon(new ImageIcon("src/Assets/boton4.png"));
+		close.setFocusable(false);
+		close.setBorderPainted(false);
+		close.setContentAreaFilled(false);
+		panel_pdfs.add(close);
+		
 		list_pdf = new JList<>();
 		list_pdf.setBounds(20, 0, 320, 360);
 		modelo2 = new DefaultListModel<>();
@@ -171,6 +223,7 @@ public class AdminControl extends JPanel {
 		area1.setBounds(0, 0, 287, 180);
 		area1.setBackground(Color.LIGHT_GRAY);
 		area1.setEditable(false);
+		area1.setHighlighter(null);
 		area1.setFont(new Font("Consolas", Font.PLAIN, 12));
 		panel_info.add(area1);
 
@@ -213,6 +266,24 @@ public class AdminControl extends JPanel {
 		actualpdf.setContentAreaFilled(false);
 		add(actualpdf);
 
+	}
+
+	
+	
+	public JLabel getInd_close() {
+		return ind_close;
+	}
+
+	public void setInd_close(JLabel ind_close) {
+		this.ind_close = ind_close;
+	}
+
+	public JButton getClose() {
+		return close;
+	}
+
+	public void setClose(JButton close) {
+		this.close = close;
 	}
 
 	public JButton getBack3() {

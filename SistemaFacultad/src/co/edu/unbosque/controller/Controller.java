@@ -455,6 +455,9 @@ public class Controller implements ActionListener {
 
 		vp.getAdmincontrol().getActualpdf().addActionListener(this);
 		vp.getAdmincontrol().getActualpdf().setActionCommand("actualPDF");
+		
+		vp.getAdmincontrol().getClose().addActionListener(this);
+		vp.getAdmincontrol().getClose().setActionCommand("cerrar_pdfs");
 
 		vp.getAdmincontrol().getDelete().addActionListener(this);
 		vp.getAdmincontrol().getDelete().setActionCommand("eliminar_estudiante");
@@ -808,6 +811,7 @@ public class Controller implements ActionListener {
 			vp.getAdmincontrol().getFilter().setText("");
 			vp.getAdmincontrol().getCampotipo().setSelectedIndex(0);
 			vp.getAdmincontrol().getList_e().clearSelection();
+			vp.getAdmincontrol().getArea1().setText("");
 			break;
 		}
 		case "abrir_calendario": {
@@ -1282,6 +1286,16 @@ public class Controller implements ActionListener {
 			}
 			vp.getAdmincontrol().getList_pdf().setModel(temp_modelo_pdf);
 
+			vp.getAdmincontrol().getList_e().setEnabled(false);
+			vp.getAdmincontrol().getFilter().setEnabled(false);
+			vp.getAdmincontrol().getCampotipo().setEnabled(false);
+			vp.getAdmincontrol().getSort().setEnabled(false);
+			vp.getAdmincontrol().getPanel_pdfs().setEnabled(false);
+			vp.getAdmincontrol().getArea1().setEnabled(false);
+			vp.getAdmincontrol().getBack3().setEnabled(false);
+			vp.getAdmincontrol().getList_e().clearSelection();
+			
+			
 			break;
 		}
 		case "generate": {
@@ -1311,9 +1325,38 @@ public class Controller implements ActionListener {
 				JOptionPane.showMessageDialog(null, e2.getMessage() + ", por favor seleccione un pdf de la lista.");
 
 			}
+			
+			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
+			vp.getAdmincontrol().getList_e().setEnabled(true);
+			vp.getAdmincontrol().getFilter().setEnabled(true);
+			vp.getAdmincontrol().getCampotipo().setEnabled(true);
+			vp.getAdmincontrol().getSort().setEnabled(true);
+			vp.getAdmincontrol().getPanel_pdfs().setEnabled(true);
+			vp.getAdmincontrol().getArea1().setEnabled(true);
+			vp.getAdmincontrol().getBack3().setEnabled(true);
+			
+			
+			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
+			
+			
 			break;
 		}
-
+		case "cerrar_pdfs":{
+		
+		vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
+		
+		vp.getAdmincontrol().getList_e().setEnabled(true);
+		vp.getAdmincontrol().getFilter().setEnabled(true);
+		vp.getAdmincontrol().getCampotipo().setEnabled(true);
+		vp.getAdmincontrol().getSort().setEnabled(true);
+		vp.getAdmincontrol().getPanel_pdfs().setEnabled(true);
+		vp.getAdmincontrol().getArea1().setEnabled(true);
+		vp.getAdmincontrol().getBack3().setEnabled(true);
+	
+		break;
+		}
+		
+		
 		default:
 			break;
 		}
