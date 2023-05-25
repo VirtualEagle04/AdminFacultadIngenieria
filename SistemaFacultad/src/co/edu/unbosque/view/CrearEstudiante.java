@@ -1,8 +1,6 @@
 package co.edu.unbosque.view;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.Image;
@@ -225,13 +223,13 @@ public class CrearEstudiante extends JPanel {
 		confirmar_fecha.setFocusable(false);
 		mcalend.add(confirmar_fecha, JLayeredPane.DRAG_LAYER);
 
-		indnombre = new JLabel("Nombre Completo");
+		indnombre = new JLabel("Nombres Completos");
 		indnombre.setFont(franklin);
 		indnombre.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
 		indnombre.setBounds(315, 92, 140, 50);
 		indnombre.setForeground(Color.WHITE);
 
-		indapellido = new JLabel("Apellido Completo");
+		indapellido = new JLabel("Apellidos Completos");
 		indapellido.setFont(franklin);
 		indapellido.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
 		indapellido.setBounds(546, 92, 140, 50);
@@ -278,16 +276,12 @@ public class CrearEstudiante extends JPanel {
 		indlugar.setFont(indnombre.getFont().deriveFont(Font.PLAIN, 15));
 		indlugar.setBounds(315, 332, 140, 50);
 		indlugar.setForeground(Color.WHITE);
-		
-		
-		
+
 		add(mcalend);
 		add(calendar);
 		add(volver);
 		add(agregar);
 
-		
-		
 		campos.add(indnombre);
 		campos.add(nombre);
 		campos.add(indapellido);
