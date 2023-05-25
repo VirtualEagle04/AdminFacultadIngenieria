@@ -11,11 +11,12 @@ public class EstudianteDAO implements OperacionesDAO{
 	private ArrayList<EstudianteDTO> lista;
 	
 	public EstudianteDAO() {
-		//lista = (ArrayList<EstudianteDTO>) FileHandler.leerSerializado("estudiantes.txt");
-		lista = cargarDesdeArchivo();
-//		if (lista == null) {
-//			lista = new ArrayList<EstudianteDTO>();
-//		}
+		lista = (ArrayList<EstudianteDTO>) FileHandler.leerSerializado("estudiantes.txt");
+//		lista = cargarDesdeArchivo();
+		if (lista == null) {
+			lista = new ArrayList<EstudianteDTO>();
+		}
+//		FileHandler.escribirSerializado("estudiantes.txt", lista);
 	}
 
 	public ArrayList<EstudianteDTO> getLista() {
@@ -29,8 +30,8 @@ public class EstudianteDAO implements OperacionesDAO{
 	//ARCHIVOS
 	
 	public void escribirArchivo() {
-//		FileHandler.escribirSerializado("estudiantes.txt", lista);
-		escribirEnArchivo();
+		FileHandler.escribirSerializado("estudiantes.txt", lista);
+//		escribirEnArchivo();
 	}
 	
 	private ArrayList<EstudianteDTO> cargarDesdeArchivo() {
@@ -87,7 +88,6 @@ public class EstudianteDAO implements OperacionesDAO{
 			}
 		}
 		FileHandler.escribirArchivo("datosEstSobreescrito.csv", sb.toString());
-		//FileHandler.escribirSerializado("serie.fvr", lista);
 	}
 	
 	//CRUD
