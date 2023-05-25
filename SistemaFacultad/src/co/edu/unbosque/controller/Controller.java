@@ -54,8 +54,7 @@ public class Controller implements ActionListener {
 	private DefaultListModel<String> model_temp;
 
 	private long documento_temp;
-	private String nombres_temp, apellidos_temp, correo_temp, usuario_temp, programa_temp, jornada_temp, lugar_temp,
-			origen_temp, fecha_string_temp;
+	private String nombres_temp, apellidos_temp, correo_temp, usuario_temp, programa_temp, jornada_temp, lugar_temp,origen_temp, fecha_string_temp;
 	private Date fecha_temp, fechaR_temp;
 	private char genero_temp;
 	private String activacion_usuario, activacion_codigo;

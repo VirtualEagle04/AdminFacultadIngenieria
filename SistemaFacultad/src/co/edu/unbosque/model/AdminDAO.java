@@ -13,6 +13,8 @@ public class AdminDAO implements OperacionesDAO{
 		if (lista == null) {
 			lista = new ArrayList<AdminDTO>();
 		}
+		
+		//crear(new AdminDTO("admin", "admin"));
 	}
 
 	public ArrayList<AdminDTO> getLista() {
