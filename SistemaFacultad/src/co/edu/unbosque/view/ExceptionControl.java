@@ -5,6 +5,7 @@ import java.time.temporal.ChronoUnit;
 
 import javax.swing.JOptionPane;
 
+import co.edu.unbosque.util.exceptions.ApellidosIncompletosException;
 import co.edu.unbosque.util.exceptions.CaracteresInvalidosException;
 import co.edu.unbosque.util.exceptions.DocumentoMuyLargoException;
 import co.edu.unbosque.util.exceptions.FechaErroneaException;
@@ -34,6 +35,12 @@ public class ExceptionControl {
 		try {
 			String temp = apellido;
 
+			String[] comp = apellido.split(" ");
+
+			if (comp.length <= 1) {
+				throw new ApellidosIncompletosException();
+			}
+
 			if (temp.isEmpty()) {
 				throw new StringVacioException();
 			} else if (!temp.replaceAll("[A-Z,a-z,\s, ñ,Ñ,á,Á,é,É,í,Í,ó,Ó,ú,Ú]", "").isEmpty()) {
@@ -46,6 +53,8 @@ public class ExceptionControl {
 		} catch (CaracteresInvalidosException e2) {
 			JOptionPane.showMessageDialog(null, e2.getMessage()
 					+ "\"Apellido completo\", por favor ingrese unicamente letras mayusculas y minusculas de la 'A' a la 'Z' y espacios.");
+		} catch (ApellidosIncompletosException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
 
 		try {
@@ -74,7 +83,7 @@ public class ExceptionControl {
 
 			if (temp.isEmpty()) {
 				throw new StringVacioException();
-			} else if (!temp.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+			} else if (!temp.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$")) {
 				throw new CaracteresInvalidosException();
 			}
 			contador++;
