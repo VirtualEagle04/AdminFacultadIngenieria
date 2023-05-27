@@ -29,7 +29,8 @@ public class EstudianteDAOTest {
 	
 	@AfterAll
 	public static void finalizacion() {
-		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/5\n-Fallido: "+failed+"/5");
+		System.out.print("\u001B[0m");
+		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/5\n-Fallido: "+failed+"/5\n<----------------------------------->");
 	}
 	
 	@Test
@@ -41,9 +42,11 @@ public class EstudianteDAOTest {
 		try {
 			assertEquals(estudiante, temp);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		
@@ -62,9 +65,11 @@ public class EstudianteDAOTest {
 		try {
 			assertFalse(ver);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}
@@ -79,9 +84,11 @@ public class EstudianteDAOTest {
 		try {
 			assertEquals(estudiante, temp);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		edao.actualizar(0, aux);
@@ -100,9 +107,11 @@ public class EstudianteDAOTest {
 		try {
 			assertEquals(todo, sb.toString());
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		
@@ -124,9 +133,11 @@ public class EstudianteDAOTest {
 		try {
 			assertEquals(todo, sb.toString());
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}

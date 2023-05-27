@@ -28,7 +28,8 @@ public class AdminDAOTest {
 	
 	@AfterAll
 	public static void finalizacion() {
-		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/5\n-Fallido: "+failed+"/5");
+		System.out.print("\u001B[0m");
+		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/5\n-Fallido: "+failed+"/5\n<----------------------------------->");
 	}
 	
 	@Test
@@ -40,9 +41,11 @@ public class AdminDAOTest {
 		try {
 			assertEquals(admin, temp);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		
@@ -61,9 +64,11 @@ public class AdminDAOTest {
 		try {
 			assertFalse(ver);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}
@@ -78,9 +83,11 @@ public class AdminDAOTest {
 		try {
 			assertEquals(admin, temp);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		adao.actualizar(0, aux);
@@ -94,9 +101,11 @@ public class AdminDAOTest {
 		try {
 			assertEquals(todo, test);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		
@@ -113,9 +122,11 @@ public class AdminDAOTest {
 		try {
 			assertEquals(todo, test);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}

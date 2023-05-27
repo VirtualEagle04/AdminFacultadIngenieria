@@ -45,7 +45,8 @@ public class MailSenderTest {
 	
 	@AfterAll
 	public static void finalizacion() {
-		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/2\n-Fallido: "+failed+"/2");
+		System.out.print("\u001B[0m");
+		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/2\n-Fallido: "+failed+"/2\n<----------------------------------->");
 	}
 	
 	@Test
@@ -86,11 +87,16 @@ public class MailSenderTest {
 			
 			mimeMessage.setContent(multipart);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (MessagingException e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
+		System.out.print("\u001B[32m");
+		System.out.println("Test "+cont+" pasado.");
+	
 	}
 	
 	@Test
@@ -104,9 +110,11 @@ public class MailSenderTest {
 			transport.sendMessage(mimeMessage, mimeMessage.getRecipients(Message.RecipientType.TO));
 			transport.close();
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
-		} catch(MessagingException e) {
+		} catch (MessagingException e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 

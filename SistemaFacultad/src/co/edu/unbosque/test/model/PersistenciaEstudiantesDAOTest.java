@@ -30,7 +30,8 @@ public class PersistenciaEstudiantesDAOTest {
 	
 	@AfterAll
 	public static void finalizacion() {
-		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/3\n-Fallido: "+failed+"/3");
+		System.out.print("\u001B[0m");
+		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/3\n-Fallido: "+failed+"/3\n<----------------------------------->");
 	}
 	
 	@Test
@@ -42,9 +43,11 @@ public class PersistenciaEstudiantesDAOTest {
 		try {
 			assertEquals(lista, temp);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		pedao.getLista_pdfs().remove(pedao.getLista_pdfs().size()-1);
@@ -63,9 +66,11 @@ public class PersistenciaEstudiantesDAOTest {
 		try {
 			assertEquals(todo, sb.toString());
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}
@@ -85,9 +90,11 @@ public class PersistenciaEstudiantesDAOTest {
 		try {
 			assertEquals(todo, sb.toString());
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}

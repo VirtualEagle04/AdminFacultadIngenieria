@@ -29,7 +29,8 @@ public class UUIDUsuarioDAOTest {
 	
 	@AfterAll
 	public static void finalizacion() {
-		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/5\n-Fallido: "+failed+"/5");
+		System.out.print("\u001B[0m");
+		System.out.println("Fin de las pruebas unitarias:\n-Pasado: "+passed+"/5\n-Fallido: "+failed+"/5\n<----------------------------------->");
 	}
 	
 	@Test
@@ -41,9 +42,11 @@ public class UUIDUsuarioDAOTest {
 		try {
 			assertEquals(usuarioCodigo, temp);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		
@@ -62,9 +65,11 @@ public class UUIDUsuarioDAOTest {
 		try {
 			assertFalse(ver);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}
@@ -81,9 +86,11 @@ public class UUIDUsuarioDAOTest {
 		try {
 			assertEquals(usuarioCodigo, temp);
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		udao.eliminar(udao.getLista().size()-1);
@@ -103,9 +110,11 @@ public class UUIDUsuarioDAOTest {
 		try {
 			assertEquals(todo, sb.toString());
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 		
@@ -127,9 +136,11 @@ public class UUIDUsuarioDAOTest {
 		try {
 			assertEquals(todo, sb.toString());
 			passed++;
+			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
 		} catch (AssertionError e) {
 			failed++;
+			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}
