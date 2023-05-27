@@ -65,9 +65,9 @@ public class Controller implements ActionListener {
 		uuidDAO = new UUIDUsuarioDAO();
 		adao = new AdminDAO();
 		pdao = new PersistenciaEstudiantesDAO();
+		vp = new MainWindow();
 
 		valores = new ArrayList<>();
-		vp = new MainWindow();
 
 		agregarLectores();
 
@@ -356,60 +356,76 @@ public class Controller implements ActionListener {
 		}
 	}
 
-	public void agregarLectores() {
-
+	public int agregarLectores() {
+		int cuenta_listeners = 0;
 		// MENU INICIAL
 		vp.getStudents().addActionListener(this);
 		vp.getStudents().setActionCommand("Student_registration");
+		cuenta_listeners++;
 
 		vp.getActivation().addActionListener(this);
 		vp.getActivation().setActionCommand("Activation");
+		cuenta_listeners++;
 
 		vp.getAdmin().addActionListener(this);
 		vp.getAdmin().setActionCommand("Admin");
+		cuenta_listeners++;
 
 		// BOTONES VOLVER
 		vp.getCreationpanel().getVolver().addActionListener(this);
 		vp.getCreationpanel().getVolver().setActionCommand("back_creation");
+		cuenta_listeners++;
 
 		vp.getActivationpanel().getBack().addActionListener(this);
 		vp.getActivationpanel().getBack().setActionCommand("back_activation");
+		cuenta_listeners++;
 
 		vp.getAdminpanel().getBack2().addActionListener(this);
 		vp.getAdminpanel().getBack2().setActionCommand("back_admin");
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getBack3().addActionListener(this);
 		vp.getAdmincontrol().getBack3().setActionCommand("back_admin_control");
+		cuenta_listeners++;
 
 		// PANEL REGISTRO
 		vp.getCreationpanel().getCalendar().addActionListener(this);
 		vp.getCreationpanel().getCalendar().setActionCommand("abrir_calendario");
+		cuenta_listeners++;
 
 		vp.getCreationpanel().getAgregar().addActionListener(this);
 		vp.getCreationpanel().getAgregar().setActionCommand("agregar");
+		cuenta_listeners++;
 
 		vp.getCreationpanel().getConfirmar_fecha().addActionListener(this);
 		vp.getCreationpanel().getConfirmar_fecha().setActionCommand("confirmar_fecha");
+		cuenta_listeners++;
 
 		vp.getCreationpanel().getPrograma().addActionListener(this);
 		vp.getCreationpanel().getPrograma().setActionCommand("cambio_programa");
+		cuenta_listeners++;
 
 		vp.getCreationpanel().getNacional().addActionListener(this);
 		vp.getCreationpanel().getNacional().setActionCommand("cambio_origen");
+		cuenta_listeners++;
 
 		vp.getCreationpanel().getBpais().addActionListener(this);
 		vp.getCreationpanel().getBpais().setActionCommand("mostrar_lista");
+		cuenta_listeners++;
 
 		vp.getCreationpanel().getConfirmar().addActionListener(this);
 		vp.getCreationpanel().getConfirmar().setActionCommand("confirmar_lugar_nacimiento");
+		cuenta_listeners++;
 
 		// PANEL ACTIVACION
 		vp.getActivationpanel().getActivate().addActionListener(this);
 		vp.getActivationpanel().getActivate().setActionCommand("activar");
+		cuenta_listeners++;
 
 		// PANEL ADMIN
 		vp.getAdminpanel().getJoin().addActionListener(this);
 		vp.getAdminpanel().getJoin().setActionCommand("ingresar");
+		cuenta_listeners++;
 
 		vp.getAdminpanel().getMostrar_clave().addItemListener(new ItemListener() {
 
@@ -424,6 +440,7 @@ public class Controller implements ActionListener {
 				}
 			}
 		});
+		cuenta_listeners++;
 
 		// PANEL ADMIN CONTROL
 		vp.getAdmincontrol().getFilter().getDocument().addDocumentListener(new DocumentListener() {
@@ -442,27 +459,35 @@ public class Controller implements ActionListener {
 			public void changedUpdate(DocumentEvent e) {
 			}
 		});
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getCampotipo().addActionListener(this);
 		vp.getAdmincontrol().getCampotipo().setActionCommand("campo_tipo");
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getGeneratepdf().addActionListener(this);
 		vp.getAdmincontrol().getGeneratepdf().setActionCommand("generatePDF");
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getGenerate().addActionListener(this);
 		vp.getAdmincontrol().getGenerate().setActionCommand("generate");
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getActualpdf().addActionListener(this);
 		vp.getAdmincontrol().getActualpdf().setActionCommand("actualPDF");
+		cuenta_listeners++;
 		
 		vp.getAdmincontrol().getClose().addActionListener(this);
 		vp.getAdmincontrol().getClose().setActionCommand("cerrar_pdfs");
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getDelete().addActionListener(this);
 		vp.getAdmincontrol().getDelete().setActionCommand("eliminar_estudiante");
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getActivate().addActionListener(this);
 		vp.getAdmincontrol().getActivate().setActionCommand("activar_estudiante");
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getList_e().addListSelectionListener(new ListSelectionListener() {
 			@Override
@@ -481,6 +506,7 @@ public class Controller implements ActionListener {
 				}
 			}
 		});
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getList_pdf().addListSelectionListener(new ListSelectionListener() {
 
@@ -499,6 +525,7 @@ public class Controller implements ActionListener {
 
 			}
 		});
+		cuenta_listeners++;
 
 		vp.getAdmincontrol().getSort().addItemListener(new ItemListener() {
 
@@ -681,6 +708,8 @@ public class Controller implements ActionListener {
 
 			}
 		});
+		cuenta_listeners++;
+		return cuenta_listeners;
 	}
 
 	public void filtrarEstudiantes() {
@@ -1361,4 +1390,214 @@ public class Controller implements ActionListener {
 		}
 
 	}
+
+	public EstudianteDAO getEdao() {
+		return edao;
+	}
+
+	public void setEdao(EstudianteDAO edao) {
+		this.edao = edao;
+	}
+
+	public UUIDUsuarioDAO getUuidDAO() {
+		return uuidDAO;
+	}
+
+	public void setUuidDAO(UUIDUsuarioDAO uuidDAO) {
+		this.uuidDAO = uuidDAO;
+	}
+
+	public AdminDAO getAdao() {
+		return adao;
+	}
+
+	public void setAdao(AdminDAO adao) {
+		this.adao = adao;
+	}
+
+	public PersistenciaEstudiantesDAO getPdao() {
+		return pdao;
+	}
+
+	public void setPdao(PersistenciaEstudiantesDAO pdao) {
+		this.pdao = pdao;
+	}
+
+	public MainWindow getVp() {
+		return vp;
+	}
+
+	public void setVp(MainWindow vp) {
+		this.vp = vp;
+	}
+
+	public PersistenciaEstudiantesDTO getLista_temp() {
+		return lista_temp;
+	}
+
+	public void setLista_temp(PersistenciaEstudiantesDTO lista_temp) {
+		this.lista_temp = lista_temp;
+	}
+
+	public int getContador_cambios() {
+		return contador_cambios;
+	}
+
+	public void setContador_cambios(int contador_cambios) {
+		this.contador_cambios = contador_cambios;
+	}
+
+	public ArrayList<String> getValores() {
+		return valores;
+	}
+
+	public void setValores(ArrayList<String> valores) {
+		this.valores = valores;
+	}
+
+	public DefaultListModel<String> getModel_temp() {
+		return model_temp;
+	}
+
+	public void setModel_temp(DefaultListModel<String> model_temp) {
+		this.model_temp = model_temp;
+	}
+
+	public long getDocumento_temp() {
+		return documento_temp;
+	}
+
+	public void setDocumento_temp(long documento_temp) {
+		this.documento_temp = documento_temp;
+	}
+
+	public String getNombres_temp() {
+		return nombres_temp;
+	}
+
+	public void setNombres_temp(String nombres_temp) {
+		this.nombres_temp = nombres_temp;
+	}
+
+	public String getApellidos_temp() {
+		return apellidos_temp;
+	}
+
+	public void setApellidos_temp(String apellidos_temp) {
+		this.apellidos_temp = apellidos_temp;
+	}
+
+	public String getCorreo_temp() {
+		return correo_temp;
+	}
+
+	public void setCorreo_temp(String correo_temp) {
+		this.correo_temp = correo_temp;
+	}
+
+	public String getUsuario_temp() {
+		return usuario_temp;
+	}
+
+	public void setUsuario_temp(String usuario_temp) {
+		this.usuario_temp = usuario_temp;
+	}
+
+	public String getPrograma_temp() {
+		return programa_temp;
+	}
+
+	public void setPrograma_temp(String programa_temp) {
+		this.programa_temp = programa_temp;
+	}
+
+	public String getJornada_temp() {
+		return jornada_temp;
+	}
+
+	public void setJornada_temp(String jornada_temp) {
+		this.jornada_temp = jornada_temp;
+	}
+
+	public String getLugar_temp() {
+		return lugar_temp;
+	}
+
+	public void setLugar_temp(String lugar_temp) {
+		this.lugar_temp = lugar_temp;
+	}
+
+	public String getOrigen_temp() {
+		return origen_temp;
+	}
+
+	public void setOrigen_temp(String origen_temp) {
+		this.origen_temp = origen_temp;
+	}
+
+	public String getFecha_string_temp() {
+		return fecha_string_temp;
+	}
+
+	public void setFecha_string_temp(String fecha_string_temp) {
+		this.fecha_string_temp = fecha_string_temp;
+	}
+
+	public Date getFecha_temp() {
+		return fecha_temp;
+	}
+
+	public void setFecha_temp(Date fecha_temp) {
+		this.fecha_temp = fecha_temp;
+	}
+
+	public Date getFechaR_temp() {
+		return fechaR_temp;
+	}
+
+	public void setFechaR_temp(Date fechaR_temp) {
+		this.fechaR_temp = fechaR_temp;
+	}
+
+	public char getGenero_temp() {
+		return genero_temp;
+	}
+
+	public void setGenero_temp(char genero_temp) {
+		this.genero_temp = genero_temp;
+	}
+
+	public String getActivacion_usuario() {
+		return activacion_usuario;
+	}
+
+	public void setActivacion_usuario(String activacion_usuario) {
+		this.activacion_usuario = activacion_usuario;
+	}
+
+	public String getActivacion_codigo() {
+		return activacion_codigo;
+	}
+
+	public void setActivacion_codigo(String activacion_codigo) {
+		this.activacion_codigo = activacion_codigo;
+	}
+
+	public String getAdmin_usuario() {
+		return admin_usuario;
+	}
+
+	public void setAdmin_usuario(String admin_usuario) {
+		this.admin_usuario = admin_usuario;
+	}
+
+	public String getAdmin_clave() {
+		return admin_clave;
+	}
+
+	public void setAdmin_clave(String admin_clave) {
+		this.admin_clave = admin_clave;
+	}
+	
+	
 }

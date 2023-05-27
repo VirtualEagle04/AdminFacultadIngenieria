@@ -78,18 +78,6 @@ public class MTC {
 		
 		return arr_jornada;
 	}
-	public static String[] crearArrayOrigen(ArrayList<EstudianteDTO> lista_estudiantes){
-		
-		String[] arr_nacionalidades = new String[lista_estudiantes.size()];
-		int conteo = 0;
-		
-		for(EstudianteDTO estudiante : lista_estudiantes) {
-			arr_nacionalidades[conteo] = estudiante.getLugar_nacimiento();
-			conteo++;
-		}
-		
-		return arr_nacionalidades;
-	}	
 	public static String[] crearArrayNacionalidad(ArrayList<EstudianteDTO> lista_estudiantes){
 		
 		String[] arr_nacionalidades = new String[lista_estudiantes.size()];
@@ -102,6 +90,9 @@ public class MTC {
 		
 		return arr_nacionalidades;
 	}	
+	
+	
+	
 	//NACIONALIDAD
 	public static HashMap<String, Integer> modaNacionalidad(ArrayList<EstudianteDTO> lista_estudiantes){
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
@@ -109,31 +100,6 @@ public class MTC {
 		
 		for(int i = 0; i < nacionalidades.length; i++) {
 			String nacional_extranjero = nacionalidades[i];
-			if(map.containsKey(nacional_extranjero)) {
-				map.put(nacional_extranjero, map.get(nacional_extranjero) + 1);
-			}
-			else {
-				map.put(nacional_extranjero, 1);
-			}
-		}
-		return map;
-	}
-	//PAIS DE ORIGEN (NO SE UTILIZA PORQUE SON MUCHOS PAISES. SI SE LIMITA SE PUEDE USAR)
-	public static HashMap<String, Integer> modaOrigen(ArrayList<EstudianteDTO> lista_estudiantes){
-		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		String[] nacionalidades = crearArrayOrigen(lista_estudiantes);
-		String[] nacionales_internacionales = new String [nacionalidades.length];
-		
-		for(int i = 0; i < nacionalidades.length; i++) {
-			if(nacionalidades[i].toLowerCase().contains("colombia")) {
-				nacionales_internacionales[i] = "Colombia";
-			}else {
-				nacionales_internacionales[i] = nacionalidades[i];
-			}
-		}
-		
-		for(int i = 0; i < nacionales_internacionales.length; i++) {
-			String nacional_extranjero = nacionales_internacionales[i];
 			if(map.containsKey(nacional_extranjero)) {
 				map.put(nacional_extranjero, map.get(nacional_extranjero) + 1);
 			}

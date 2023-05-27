@@ -3,27 +3,28 @@ package co.edu.unbosque.test.model;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import co.edu.unbosque.model.AdminDAO;
-import co.edu.unbosque.model.AdminDTO;
+import co.edu.unbosque.model.UUIDUsuarioDAO;
+import co.edu.unbosque.model.UUIDUsuarioDTO;
 import co.edu.unbosque.model.persistance.FileHandler;
 
-public class AdminDAOTest {
+public class UUIDUsuarioDAOTest {
 	
-	
+
 	private static int cont = 0;
 	private static int passed = 0;
 	private static int failed = 0;
 	
-	private static AdminDAO adao = new AdminDAO();
+	private static UUIDUsuarioDAO udao = new UUIDUsuarioDAO();
 	
 	@BeforeAll
 	public static void inicializacion() {
-		System.out.println("Iniciando pruebas unitarias: AdminDAO");
+		System.out.println("Iniciando pruebas unitarias: UUIDUsuarioDAO");
 	}
 	
 	@AfterAll
@@ -34,12 +35,12 @@ public class AdminDAOTest {
 	
 	@Test
 	public void crearTest() {
-		AdminDTO admin = new AdminDTO("admin", "admin");
-		adao.crear(admin);
-		AdminDTO temp = adao.getLista().get(adao.getLista().size()-1);
+		UUIDUsuarioDTO usuarioCodigo = new UUIDUsuarioDTO("fvargasr", "f3937bc0d6");
+		udao.crear(usuarioCodigo);
+		UUIDUsuarioDTO temp = udao.getLista().get(udao.getLista().size()-1);
 		cont++;
 		try {
-			assertEquals(admin, temp);
+			assertEquals(usuarioCodigo, temp);
 			passed++;
 			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
@@ -53,9 +54,9 @@ public class AdminDAOTest {
 	
 	@Test
 	public void eliminarTest() {
-		int size_antes = adao.getLista().size();
-		adao.eliminar(adao.getLista().size()-1);
-		int size_despues = adao.getLista().size();
+		int size_antes = udao.getLista().size();
+		udao.eliminar(udao.getLista().size()-1);
+		int size_despues = udao.getLista().size();
 		cont++;
 		boolean ver = false;
 		if(size_antes <= size_despues) {
@@ -75,13 +76,15 @@ public class AdminDAOTest {
 	
 	@Test
 	public void actualizarTest() {
-		AdminDTO aux = adao.getLista().get(0); //admin, admin
-		AdminDTO admin = new AdminDTO("adminTest", "adminTest");
-		adao.actualizar(0, admin);
-		AdminDTO temp = adao.getLista().get(0);
+		UUIDUsuarioDTO usuarioC = new UUIDUsuarioDTO("test", "abcdef6h1i");
+		udao.crear(usuarioC);
+		UUIDUsuarioDTO aux = udao.getLista().get(0);
+		UUIDUsuarioDTO usuarioCodigo= new UUIDUsuarioDTO("fvargasr", "f3937bc0d6");
+		udao.actualizar(0, usuarioCodigo);
+		UUIDUsuarioDTO temp = udao.getLista().get(0);
 		cont++;
 		try {
-			assertEquals(admin, temp);
+			assertEquals(usuarioCodigo, temp);
 			passed++;
 			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
@@ -90,16 +93,22 @@ public class AdminDAOTest {
 			System.out.print("\u001B[31m");
 			System.out.println("Test "+cont+" fallido.");
 		}
-		adao.actualizar(0, aux);
+		udao.eliminar(udao.getLista().size()-1);
+		
 	}
 	
 	@Test
 	public void mostrarTodoTest() {
-		String todo = adao.mostrarTodo();
-		String test = "Administradores: \n"+adao.getLista().get(0).toString()+"<---------------------------->\n";
+		String todo = udao.mostrarTodo();
+		StringBuilder sb = new StringBuilder();
+		sb.append("UUIDs y Usuarios: \n");
+		for(UUIDUsuarioDTO uuid_usuario : udao.getLista()) {
+			sb.append(uuid_usuario.toString());
+			sb.append("<---------------------------->\n");
+		}
 		cont++;
 		try {
-			assertEquals(todo, test);
+			assertEquals(todo, sb.toString());
 			passed++;
 			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
@@ -113,14 +122,19 @@ public class AdminDAOTest {
 	
 	@Test
 	public void escribirArchivoTest() {
-		adao.escribirArchivo();
-		ArrayList<AdminDTO> lista_temp = (ArrayList<AdminDTO>) FileHandler.leerSerializado("admins.txt");
-		String todo = adao.mostrarTodo();
-		String test = "Administradores: \n"+lista_temp.get(0).toString()+"<---------------------------->\n";
+		udao.escribirArchivo();
+		ArrayList<UUIDUsuarioDTO> lista_temp = (ArrayList<UUIDUsuarioDTO>) FileHandler.leerSerializado("UUIDusuario.txt");
+		String todo = udao.mostrarTodo();
+		StringBuilder sb = new StringBuilder();
+		sb.append("UUIDs y Usuarios: \n");
+		for(UUIDUsuarioDTO uuid_usuario : udao.getLista()) {
+			sb.append(uuid_usuario.toString());
+			sb.append("<---------------------------->\n");
+		}
 		
 		cont++;
 		try {
-			assertEquals(todo, test);
+			assertEquals(todo, sb.toString());
 			passed++;
 			System.out.print("\u001B[32m");
 			System.out.println("Test "+cont+" pasado.");
@@ -130,7 +144,5 @@ public class AdminDAOTest {
 			System.out.println("Test "+cont+" fallido.");
 		}
 	}
-	
-	
 
 }

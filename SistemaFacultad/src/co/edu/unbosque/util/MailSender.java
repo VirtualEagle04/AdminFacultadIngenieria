@@ -69,4 +69,46 @@ public class MailSender {
 		
 		return codigo;
 	}
+
+	public static String getEmailFrom() {
+		return emailFrom;
+	}
+
+	public static void setEmailFrom(String emailFrom) {
+		MailSender.emailFrom = emailFrom;
+	}
+
+	public static String getPasswordFrom() {
+		return passwordFrom;
+	}
+
+	public static void setPasswordFrom(String passwordFrom) {
+		MailSender.passwordFrom = passwordFrom;
+	}
+
+	public static Properties getProp() {
+		return prop;
+	}
+
+	public static void setProp(Properties prop) {
+		MailSender.prop = prop;
+	}
+
+	public static Session getSession() {
+		return session;
+	}
+
+	public static void setSession(Session session) {
+		MailSender.session = session;
+	}
+
+	public static MimeMessage getMimeMessage() {
+		return mimeMessage;
+	}
+
+	public static void setMimeMessage(MimeMessage mimeMessage) {
+		MailSender.mimeMessage = mimeMessage;
+	}
+	
+	
 }
