@@ -64,7 +64,7 @@ public class ExceptionControl {
 				throw new StringVacioException();
 			} else if (!temp.replaceAll("^[0-9]+$", "").isEmpty()) {
 				throw new CaracteresInvalidosException();
-			} else if (temp.length() > 10) {
+			} else if ((temp.length() == 10) == false) {
 				throw new DocumentoMuyLargoException();
 			}
 			contador++;
