@@ -22,7 +22,9 @@ public class MainWindow extends JFrame {
 	public MainWindow() {
 
 		setSize(750, 480);
-		setTitle("Sistema Facultad de Ingeniería");
+		setTitle("Administrador de Datos | Facultad de Ingeniería");
+		ImageIcon icon = new ImageIcon("src/Assets/UEBlogo.png");
+		setIconImage(icon.getImage());
 		setLayout(null);
 		setResizable(false);
 		setLocationRelativeTo(null);
