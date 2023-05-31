@@ -14,6 +14,29 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.MatteBorder;
 
+/**
+ * Clase diseñada para la activacion del estudiante mediante la confirmacion de
+ * un codigo y usuario
+ * 
+ * @param Franklin   Font como tipografia llamada franklin gothic demi cond regular para
+ *                   su asignacion en los JLabel
+ * @param user       JTextField para el ingreso del usuario del estudiante
+ * @param code       JTextField para el ingreso del codigo de activacion del
+ *                   estudiante
+ * @param ind_user   JLabel para indicar donde ingresar el nombre del usuario
+ *                   del estudiante
+ * @param ind_code   JLabel para indicar donde ingresar el codigo de activacion
+ *                   del estudiante
+ * @param background JLabel que contiene el fondo del espacio de registro del
+ *                   estudiante
+ * @param shadow     JLabel que actua como sombra del fondo que contiene el
+ *                   espacio de registro del estudiante
+ * 
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ */
+
 public class ActivationPanel extends JPanel {
 
 	private Font Franklin;
@@ -99,7 +122,6 @@ public class ActivationPanel extends JPanel {
 		back.setIcon(new ImageIcon("src/Assets/VolverO.png"));
 		add(back);
 
-
 		setVisible(true);
 
 	}
@@ -176,6 +198,4 @@ public class ActivationPanel extends JPanel {
 		this.back = back;
 	}
 
-	
-	
 }

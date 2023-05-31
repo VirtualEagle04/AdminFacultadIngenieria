@@ -16,6 +16,33 @@ import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.border.MatteBorder;
 
+/**
+ * Clase diseñada para el acceso del administrador al panel del control del
+ * administrador
+ * 
+ * @param Franklin      Font como tipografia llamada franklin gothic demi cond
+ *                      regular para su asignacion en los JLabel
+ * @param user2         JTextField para el ingreso del nombre del usuario del
+ *                      administrador
+ * @param ind_user2     JLabel para indicar el espacio de texto del ingreso del
+ *                      nombre de usuario del administrador
+ * @param ind_pass      JLabel para indicar el espacio de texto del ingreso de
+ *                      la contraseña del usuario del administrador
+ * @param background2   JLabel que contiene el fondo del espacio de ingreso del
+ *                      administrador
+ * @param shadow2       JLabel que actua como sombra del espacio del ingreso del
+ *                      administrador
+ * @param clave         JPasswoedField para el ingreso de la contraseña del
+ *                      usuario del administrador
+ * @param mostrar_clave JToggleButton boton que permite mostrar y ocultar la
+ *                      clave del usuario del administrador
+ * 
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ *
+ */
+
 public class AdminAccesPanel extends JPanel {
 
 	private Font franklin;
