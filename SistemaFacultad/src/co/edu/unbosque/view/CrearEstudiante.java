@@ -23,6 +23,73 @@ import javax.swing.border.MatteBorder;
 
 import com.toedter.calendar.JCalendar;
 
+/**
+ * Clase que hereda de JPanel diseñada para el registro del estudiante
+ * 
+ * @param imgfondo        JLabel que permite cargar la imagen diseñada para el
+ *                        fondo del panel de registro
+ * @param fondo           JPanel para contener el JLabel que contiene la imagen
+ *                        del fondo
+ * @param campos          JPanel para organizar la distribucion de los
+ *                        componentes de registro de estudiante
+ * @param mcalend         JPanel para contener el JCalendar
+ * @param fondolista      JPanel para agregar un fondo de diferente color al
+ *                        panel que contiene la JList de paises y municipios
+ * @param plista          JPanel para contener la JList de paises y municipios
+ * @param calendario      JCalendar para seleccionar la fecha de nacimiento
+ * @param paises          JTextField para asignar el pais seleccionado en la
+ *                        JList de paises
+ * @param nombre          JTextField para registrar el nombre del estudiante
+ * @param apellido        JTextField para registrar el apellido del estudiente
+ * @param correo          JTextField para registrar el correo del estudiante
+ * @param documento       JTextField para registrar el documento del estudiante
+ * @param fecha           JTextField para asignar la fecha seleccionada en el
+ *                        JCalendar
+ * 
+ * @param programa        JComboBox permite seleccionar el programa al que
+ *                        pertenece el estudiante
+ * @param jornada         JComboBox permite seleccionar la jornada a la que
+ *                        pertenece el estudiante
+ * @param genero          JComboBox permite seleccionar el genero del estudiante
+ * @param nacional        JComboBox permite seleccionar el origen del
+ *                        estudiante, puede ser nacional o extranjero
+ * @param confirmar       JButton permite confirmar la seleccion de la lista de
+ *                        paises o municipios
+ * @param bpais           JButton que da acceso a la lista de paises o
+ *                        municipios
+ * @param calendar        JButton que da acceso al calendario
+ * @param volver          JButton que permite volver al inico del programa
+ * @param agregar         JButton que permite agregar un estudiante
+ * @param confirmar_fecha JButton permite la confirmacion de la fecha
+ *                        seleccionada
+ * 
+ * @param indpais         JLabel para indicar el pais
+ * @param indnombre       JLabel para indicar el nombre
+ * @param indapellido     JLabel para indicar el apellido
+ * @param indcorreo       JLabel para indicar el correo
+ * @param inddocumento    JLabel para indicar el documento
+ * @param indprograma     JLabel para indicar el programa
+ * @param indjornada      JLabel para indicar la jornada
+ * @param indgenero       JLabel para indicar el genero
+ * @param indfecha        JLabel para indicar la fecha
+ * @param indlugar        JLabel para indicar el lugar de nacimiento
+ * 
+ * @param franklin        Font fuente establecidad para ser cargada en los
+ *                        JLabel
+ * @param lista_lugar     Jlist que permite mostrar de manera eficiente todo el
+ *                        contenido relacionado a los paises o los municipios
+ * @param modelo_lugar    DefaultListModel permite almacenar de manera temporal
+ *                        la informacion que sera impuesta en la lista_lugar
+ * @param barra4          JSrollPane que permite mostrar todos los elementos de
+ *                        la lista_lugar que no quepan en el panel
+ * 
+ * 
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ *
+ */
+
 public class CrearEstudiante extends JPanel {
 
 	private JLabel imgfondo;

@@ -17,11 +17,10 @@ import javax.swing.JToggleButton;
 import javax.swing.border.MatteBorder;
 
 /**
- * Clase diseñada para el acceso del administrador al panel del control del
- * administrador
+ * Clase que hereda de JPanel diseñada para el acceso del administrador al panel
+ * del control del administrador
  * 
- * @param Franklin      Font como tipografia llamada franklin gothic demi cond
- *                      regular para su asignacion en los JLabel
+ * @param franklin      Font fuente establecidad para ser cargada en los JLabel
  * @param user2         JTextField para el ingreso del nombre del usuario del
  *                      administrador
  * @param ind_user2     JLabel para indicar el espacio de texto del ingreso del
@@ -32,6 +31,10 @@ import javax.swing.border.MatteBorder;
  *                      administrador
  * @param shadow2       JLabel que actua como sombra del espacio del ingreso del
  *                      administrador
+ * 
+ * @param join          JButton que permite dar acceso al panel de control del
+ *                      administrador
+ * @param back2         JButton que permite volver al inicio del programa
  * @param clave         JPasswoedField para el ingreso de la contraseña del
  *                      usuario del administrador
  * @param mostrar_clave JToggleButton boton que permite mostrar y ocultar la

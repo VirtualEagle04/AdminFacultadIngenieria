@@ -8,6 +8,43 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * Clase que hereda de JFrame en la cual se muestra el inicio del programa y el
+ * acceso a las demas funcionalidades del mismo
+ * 
+ * @param background      JPanel que permite asignar la coloracion base del
+ *                        programa
+ * @param logo            JLabel que permite cargar la imagen con el logo de la
+ *                        universidad
+ * @param botones         JLabel que permite cargar la imagen con el fondo
+ *                        asignado al apartado de los botones que correspondel a
+ *                        las demas funciones del programa
+ * @param students        JButton que permite acceder al panel de registro de
+ *                        estudiantes
+ * @param activation      JButton que permite acceder al panel de activacion de
+ *                        estudiantes
+ * @param admin           JButton que permite acceder al panel de inicio de
+ *                        sesion del administrador
+ * 
+ * @param creationpanel   Panel de la clase CrearEstudiante que muestra las
+ *                        funciones de creacion de un estudiante
+ * @param activationpanel Panel de la clase ActivationPanel que muestra las
+ *                        funciones de activacion de un estudiante
+ * @param adminpanel      Panel de la clase AdminAccesPanel que muestra las
+ *                        funciones del acceso del administrador
+ * @param admincontrol    Panel de la clase AdminControl que muestra las
+ *                        funcones de control que tiene el administrador
+ * @param excontrol       Objeto de la clase ExceptionControl encargada del
+ *                        control de las excepciones del programa
+ * 
+ * 
+ * 
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ *
+ */
+
 public class MainWindow extends JFrame {
 
 	private JPanel background;

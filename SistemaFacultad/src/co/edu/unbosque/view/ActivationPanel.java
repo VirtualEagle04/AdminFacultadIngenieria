@@ -15,11 +15,11 @@ import javax.swing.JTextField;
 import javax.swing.border.MatteBorder;
 
 /**
- * Clase diseñada para la activacion del estudiante mediante la confirmacion de
- * un codigo y usuario
+ * Clase que hereda de JPanel diseñada para la activacion del estudiante
+ * mediante la confirmacion de un codigo y usuario
  * 
- * @param Franklin   Font como tipografia llamada franklin gothic demi cond regular para
- *                   su asignacion en los JLabel
+ * @param Franklin   Font fuente establecidad para ser cargada en los JLabel su
+ *                   asignacion en los JLabel
  * @param user       JTextField para el ingreso del usuario del estudiante
  * @param code       JTextField para el ingreso del codigo de activacion del
  *                   estudiante
@@ -32,6 +32,9 @@ import javax.swing.border.MatteBorder;
  * @param shadow     JLabel que actua como sombra del fondo que contiene el
  *                   espacio de registro del estudiante
  * 
+ * @param activate   JButton que permite gestionar la activacion de la cuenta
+ *                   del estudiante
+ * @param back       boton que permite volver al inicio del programa
  * 
  * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
  *         Vargas Rozo

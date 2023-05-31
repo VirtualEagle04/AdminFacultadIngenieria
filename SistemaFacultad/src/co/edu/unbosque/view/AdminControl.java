@@ -24,6 +24,69 @@ import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.ListSelectionModel;
 
+/**
+ * 
+ * Clase que hereda de JPanel y que contiene la lista de estudiantes, el filtro
+ * de busqueda, nombres, apellidos, documentos, ordenamientos y generacion de
+ * pdf
+ * 
+ * @param list_e      JList que permite mostrar de manera eficiente todo el
+ *                    contenido relacionado a la gestion de los estudiantes
+ * @param list_pdf    JList que permite mostrar de manera eficiente todo el
+ *                    contenido relacionado a las versiones de los informes
+ *                    generados en pdf
+ * @param modelo      DefaultListModel permite almacenar de forma temporal la
+ *                    informacion que sera impuesta en la lista de estudiantes
+ * @param modelo2     DefaultListModel permite almacenar de forma temporal la
+ *                    informacion que sera impuesta en la lista de pdfs
+ * @param panel_list  JPanel que contiene la lista de estudiantes
+ * @param panel_list2 JPanel que contiene la lista de versiones de los pdfs
+ * @param panel_info  JPanel que contiene un JTextArea para mostrar la
+ *                    informacion de cada estudiante
+ * @param panel_pdfs  Jpanel que contiene el panel_list2 y botones para el
+ *                    funcionamiento y generacion de pdfs
+ * @param ind_close   JLabel para indicar el cerrado del panel_pdfs
+ * @param ind_lista   JLabel para indicar el documento pdf a generar
+ * @param ind1        JLabel para indicar la generacion del pdf actual
+ * @param ind2        JLabel para indicar el acceso al panel_pdfs que permitira
+ *                    la seleccion de las versiones de los pdfs
+ * @param ind3        JLabel para indicar la eliminacion de un estudiante de la
+ *                    lista
+ * @param ind4        JLabel para indicar la activacion o inactivacion de un
+ *                    estudiante
+ * @param ind5        JLabel para indicar la generacion de un pdf seleccionado
+ *                    de la lista de versiones de pdfs
+ * @param area1       JTextArea que contiene la informacion de cada estudiante
+ *                    seleccionado en la lista
+ * @param filter      JTextField que contiene el acceso de la informacion
+ *                    asociada al filtro de los estudiantes
+ * @param close       JButton que permite cerrar el panel que muestra la lista
+ *                    de pdfs
+ * @param back3       JButton que permite volver al inicio del programa
+ * @param delete      JButton que permite la confirmaicon frente a la
+ *                    eliminacion de un estudiante
+ * @param activate    JButton que permite activar o inactivar a un estudiante
+ * @param actualpdf   JButton que perminte generar el pdf actual
+ * @param generarpdf  JButton que permite acceder al panel que muestra la lista
+ *                    de versiones de pdfs
+ * @param generate    JButton que permite seleccionar y generar el pdf
+ *                    seleccionado en la lista de pdfs
+ * @param barra1      JScrollPane que permite mostrar todos los elementos de la
+ *                    lista de estudiantes aun asi no quepan en el panel
+ * @param barra2      JScrollPanle que permite mostrar todos los elementos de la
+ *                    lista de pdfs aun asi no quepan en el panel
+ * @param campotipo   JComboBox que permite seleccionar determinados filtrados
+ *                    de la informacion en la lista de los estudiantes
+ * @param franklin    Font fuente establecidad para ser cargada en los JLabel
+ * @param sort        JToggleButton boton empleado para realizar los
+ *                    ordenamientos correspondientes en la lista de estudiantes
+ * 
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ *
+ */
+
 public class AdminControl extends JPanel {
 
 	private JList<String> list_e;
@@ -70,40 +133,39 @@ public class AdminControl extends JPanel {
 		panel_pdfs.setBackground(new Color(81, 114, 157));
 		panel_pdfs.setLayout(null);
 		add(panel_pdfs).setVisible(false);
-		
+
 		panel_pdfs.addMouseListener(new MouseListener() {
-			
+
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				setComponentZOrder(panel_pdfs, 0);
 				panel_pdfs.repaint();
 			}
-			
+
 			@Override
 			public void mousePressed(MouseEvent e) {
 				setComponentZOrder(panel_pdfs, 0);
 				panel_pdfs.repaint();
 			}
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
 				setComponentZOrder(panel_pdfs, 0);
 				panel_pdfs.repaint();
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				setComponentZOrder(panel_pdfs, 0);
 				panel_pdfs.repaint();
 			}
-			
+
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				setComponentZOrder(panel_pdfs, 0);
 				panel_pdfs.repaint();
 			}
 		});
-		
 
 		ind_lista = new JLabel("Seleccione Documento a Generar");
 		ind_lista.setBounds(70, 5, 270, 30);
@@ -119,7 +181,7 @@ public class AdminControl extends JPanel {
 		ind5.setForeground(Color.WHITE);
 		add(ind5);
 		panel_pdfs.add(ind5);
-		
+
 		ind_close = new JLabel("Cerrar");
 		ind_close.setFont(franklin);
 		ind_close.setFont(ind_close.getFont().deriveFont(Font.PLAIN, 17));
@@ -143,7 +205,7 @@ public class AdminControl extends JPanel {
 		close.setBorderPainted(false);
 		close.setContentAreaFilled(false);
 		panel_pdfs.add(close);
-		
+
 		list_pdf = new JList<>();
 		list_pdf.setBounds(20, 0, 320, 360);
 		modelo2 = new DefaultListModel<>();
@@ -207,7 +269,8 @@ public class AdminControl extends JPanel {
 		filter.setFont(new Font("Consolas", Font.PLAIN, 15));
 		add(filter);
 
-		String[] orden = { "Nombre", "Apellido", "Documento",  "Activo", "Inactivo", "Top 3 Más Estudiantes", "Top 3 Más Nacionales" };
+		String[] orden = { "Nombre", "Apellido", "Documento", "Activo", "Inactivo", "Top 3 Más Estudiantes",
+				"Top 3 Más Nacionales" };
 
 		campotipo = new JComboBox<>(orden);
 		campotipo.setBounds(175, 50, 142, 20);
@@ -268,8 +331,6 @@ public class AdminControl extends JPanel {
 
 	}
 
-	
-	
 	public JLabel getInd_close() {
 		return ind_close;
 	}
