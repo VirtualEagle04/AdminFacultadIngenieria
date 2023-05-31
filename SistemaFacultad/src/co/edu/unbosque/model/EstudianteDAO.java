@@ -1,11 +1,16 @@
 package co.edu.unbosque.model;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 import co.edu.unbosque.model.persistance.FileHandler;
-
+/**
+ * Clase Data Acces Object de los estudiantes
+ * 
+ * @param lista ArrayList que almacena todos los objetos creados de la clase EstudiantesDTO
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo 
+ */
 public class EstudianteDAO implements OperacionesDAO{
 	
 	private ArrayList<EstudianteDTO> lista;
@@ -26,12 +31,14 @@ public class EstudianteDAO implements OperacionesDAO{
 	}
 	
 	//ARCHIVOS
-	
+	/**
+	 * Metodo encargado de actualizar el serializado reespectivo de la clase
+	 */
 	public void escribirArchivo() {
 		FileHandler.escribirSerializado("estudiantes.txt", lista);
 	}
-	
-	//CRUD
+
+	// CRUD
 
 	@Override
 	public void crear(Object obj) {

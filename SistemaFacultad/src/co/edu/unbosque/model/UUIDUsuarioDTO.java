@@ -2,12 +2,22 @@ package co.edu.unbosque.model;
 
 import java.io.Serializable;
 
-public class UUIDUsuarioDTO implements Serializable{
-	
+/**
+ * 
+ * Clase Data transfer Object de los informes
+ * 
+ * @param usuario String que almacena un atributo
+ * @param uuid    String que almacena un atributo
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ */
+public class UUIDUsuarioDTO implements Serializable {
+
 	private static final long serialVersionUID = 8817131621514665080L;
 	private String usuario;
 	private String uuid;
-	
+
 	public UUIDUsuarioDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -33,13 +43,13 @@ public class UUIDUsuarioDTO implements Serializable{
 	public void setUuid(String uuid) {
 		this.uuid = uuid;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Usuario: "+getUsuario()+"\n");
-		sb.append("UUID: "+getUuid()+"\n");
+		sb.append("Usuario: " + getUsuario() + "\n");
+		sb.append("UUID: " + getUuid() + "\n");
 		return sb.toString();
 	}
-	
+
 }

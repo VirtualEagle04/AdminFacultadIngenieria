@@ -5,12 +5,22 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class PersistenciaEstudiantesDTO implements Serializable{
-	
+/**
+ * 
+ * Clase Data transfer Object de los informes
+ * 
+ * @param lista_individual ArrayList atributo propio de la clase
+ * @param fecha_generacion Date que almacena un atributo
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ */
+public class PersistenciaEstudiantesDTO implements Serializable {
+
 	private static final long serialVersionUID = -8331248926046685238L;
 	private ArrayList<EstudianteDTO> lista_individual;
 	private Date fecha_generacion;
-	
+
 	public PersistenciaEstudiantesDTO() {
 		lista_individual = new ArrayList<>();
 		fecha_generacion = new Date();
@@ -37,16 +47,14 @@ public class PersistenciaEstudiantesDTO implements Serializable{
 	public void setFecha_generacion(Date fecha_generacion) {
 		this.fecha_generacion = fecha_generacion;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM d, yyyy - HH:mm:ss");
 		sb.append(sdf.format(getFecha_generacion()));
 		return sb.toString();
-		
+
 	}
-	
-	
-	
+
 }

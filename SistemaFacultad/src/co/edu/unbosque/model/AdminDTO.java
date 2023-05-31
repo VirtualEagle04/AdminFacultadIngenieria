@@ -1,7 +1,16 @@
 package co.edu.unbosque.model;
 
 import java.io.Serializable;
-
+/**
+ * 
+ * Clase Data transfer Object de los administradores
+ * 
+ * @param usuario_admin String que almacena un atributo
+ * @param contraseña_admin String que almacena un atributo
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ */
 public class AdminDTO implements Serializable{
 	
 	private static final long serialVersionUID = -7133709986467525024L;

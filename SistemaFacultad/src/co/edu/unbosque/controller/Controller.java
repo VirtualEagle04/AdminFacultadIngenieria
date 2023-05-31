@@ -40,6 +40,53 @@ import co.edu.unbosque.util.exceptions.ItemNoSeleccionadoException;
 import co.edu.unbosque.util.exceptions.PdfNoSeleccionadoException;
 import co.edu.unbosque.view.MainWindow;
 
+/**
+ * Establece la lógica entre la interfaz de usuario y las representaciones
+ * planteadas en el modelo.
+ * 
+ * @param edao               Objeto de la clase {@link EstudianteDAO}
+ * @param uuidDAO            Objeto de la clase {@link UUIDUsuarioDAO}
+ * @param adao               Objeto de la clase {@link AdminDAO}
+ * @param pdao               Objeto de la clase
+ *                           {@link PersistenciaEstudiantesDAO}
+ * @param vp                 Objeto de la clase {@link MainWindow}
+ * @param lista_temp         Objeto de la clase
+ *                           {@link PersistenciaEstudiantesDTO}
+ * 
+ * @param contador_cambios   Int que se encarga de almacenar los cambios
+ *                           realizados
+ * @param valores            ArrayList para acceder facilmente a todos los
+ *                           Pokemones desde los filtros
+ * @param model_temp         DefaultListModel que se encarga de almacenar el
+ *                           filtro actual de la lista de estudiantes
+ * @param documento_temp     Long encargado de almacenar el documento
+ *                           temporalmente
+ * @param nombres_temp       String que almacena un atributo en un momento dado
+ * @param apellidos_temp     String que almacena un atributo en un momento dado
+ * @param correo_temp        String que almacena un atributo en un momento dado
+ * @param usuario_temp       String que almacena un atributo en un momento dado
+ * @param programa_temp      String que almacena un atributo en un momento dado
+ * @param jornada_temp       String que almacena un atributo en un momento dado
+ * @param lugar_temp         String que almacena un atributo en un momento dado
+ * @param origen_temp        String que almacena un atributo en un momento dado
+ * @param fecha_string_temp  String que almacena un atributo en un momento dado
+ * @param fecha_temp         Date que almacena una fecha de nacimiento en un
+ *                           momento dado
+ * @param fechaR_temp        Date que almacena una fecha de registro en un
+ *                           momento dado
+ * @param genero_temp        Char que almacena un atributo en un momento dado
+ * @param activacion_usuario String que almacena el usuario
+ * @param activacion_codigo  String que almacena el codigo de activacion para el
+ *                           usuario
+ * @param admin_usuario      String que almacena un usuario especifico de
+ *                           administrador
+ * @param admin_clave        String que almacena una clave especifica de un
+ *                           administrador
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ *
+ */
 public class Controller implements ActionListener {
 
 	private EstudianteDAO edao;
@@ -54,7 +101,8 @@ public class Controller implements ActionListener {
 	private DefaultListModel<String> model_temp;
 
 	private long documento_temp;
-	private String nombres_temp, apellidos_temp, correo_temp, usuario_temp, programa_temp, jornada_temp, lugar_temp,origen_temp, fecha_string_temp;
+	private String nombres_temp, apellidos_temp, correo_temp, usuario_temp, programa_temp, jornada_temp, lugar_temp,
+			origen_temp, fecha_string_temp;
 	private Date fecha_temp, fechaR_temp;
 	private char genero_temp;
 	private String activacion_usuario, activacion_codigo;
@@ -124,7 +172,9 @@ public class Controller implements ActionListener {
 
 		model_temp = (DefaultListModel<String>) vp.getAdmincontrol().getList_e().getModel();
 	}
-
+/**
+ * Por cada cambio realizado en la Jlist de el panel AdminControl refresca la lista, actualizando con los cambios hechaos
+ */
 	public void remodelar() {
 		ArrayList<EstudianteDTO> temp_e = new ArrayList<EstudianteDTO>();
 		for (EstudianteDTO estudiante : edao.getLista()) {
@@ -356,6 +406,10 @@ public class Controller implements ActionListener {
 		}
 	}
 
+	/**
+	 * Metodo encargado de agregar el respectivo lector al componente requerido
+	 * @return contador de listeners activados
+	 */
 	public int agregarLectores() {
 		int cuenta_listeners = 0;
 		// MENU INICIAL
@@ -476,7 +530,7 @@ public class Controller implements ActionListener {
 		vp.getAdmincontrol().getActualpdf().addActionListener(this);
 		vp.getAdmincontrol().getActualpdf().setActionCommand("actualPDF");
 		cuenta_listeners++;
-		
+
 		vp.getAdmincontrol().getClose().addActionListener(this);
 		vp.getAdmincontrol().getClose().setActionCommand("cerrar_pdfs");
 		cuenta_listeners++;
@@ -711,12 +765,20 @@ public class Controller implements ActionListener {
 		cuenta_listeners++;
 		return cuenta_listeners;
 	}
-
+	/**
+	 * Recibe en tiempo real el String de cierto JTextField y lo almacena.
+	 */
+	
 	public void filtrarEstudiantes() {
 		String texto_filtro = vp.getAdmincontrol().getFilter().getText();
 		filtrarModelo(model_temp, texto_filtro);
 	}
-
+	/**
+	 * Itera por todos los valores de la JList hasta encontrar aquellos que contengan el filtro.
+	 * 
+	 * @param modelo DefaultListModel del JList en el Panel de AdminControl.
+	 * @param filtro String anteriormente almancenado.
+	 */
 	public void filtrarModelo(DefaultListModel<String> modelo, String texto_filtro) {
 		modelo.clear();
 		for (int i = 0; i < valores.size(); i++) {
@@ -727,6 +789,11 @@ public class Controller implements ActionListener {
 		}
 	}
 
+	/**
+	 * Verifica si cada cambio que haga parte del CRUD aumenta el contador de
+	 * cambios y verifica si es igual o mayor a 3 para generar una version del
+	 * informe
+	 */
 	public void verificarCambios() {
 
 		if (contador_cambios == 3) {
@@ -736,6 +803,9 @@ public class Controller implements ActionListener {
 
 	}
 
+	/**
+	 * Establece los comandos y la funcionalidad de cada elemento interactivo.
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
@@ -1322,8 +1392,7 @@ public class Controller implements ActionListener {
 			vp.getAdmincontrol().getArea1().setEnabled(false);
 			vp.getAdmincontrol().getBack3().setEnabled(false);
 			vp.getAdmincontrol().getList_e().clearSelection();
-			
-			
+
 			break;
 		}
 		case "generate": {
@@ -1353,7 +1422,7 @@ public class Controller implements ActionListener {
 				JOptionPane.showMessageDialog(null, e2.getMessage() + ", por favor seleccione un pdf de la lista.");
 
 			}
-			
+
 			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
 			vp.getAdmincontrol().getList_e().setEnabled(true);
 			vp.getAdmincontrol().getFilter().setEnabled(true);
@@ -1362,29 +1431,26 @@ public class Controller implements ActionListener {
 			vp.getAdmincontrol().getPanel_pdfs().setEnabled(true);
 			vp.getAdmincontrol().getArea1().setEnabled(true);
 			vp.getAdmincontrol().getBack3().setEnabled(true);
-			
-			
+
 			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
-			
-			
+
 			break;
 		}
-		case "cerrar_pdfs":{
-		
-		vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
-		
-		vp.getAdmincontrol().getList_e().setEnabled(true);
-		vp.getAdmincontrol().getFilter().setEnabled(true);
-		vp.getAdmincontrol().getCampotipo().setEnabled(true);
-		vp.getAdmincontrol().getSort().setEnabled(true);
-		vp.getAdmincontrol().getPanel_pdfs().setEnabled(true);
-		vp.getAdmincontrol().getArea1().setEnabled(true);
-		vp.getAdmincontrol().getBack3().setEnabled(true);
-	
-		break;
+		case "cerrar_pdfs": {
+
+			vp.getAdmincontrol().getPanel_pdfs().setVisible(false);
+
+			vp.getAdmincontrol().getList_e().setEnabled(true);
+			vp.getAdmincontrol().getFilter().setEnabled(true);
+			vp.getAdmincontrol().getCampotipo().setEnabled(true);
+			vp.getAdmincontrol().getSort().setEnabled(true);
+			vp.getAdmincontrol().getPanel_pdfs().setEnabled(true);
+			vp.getAdmincontrol().getArea1().setEnabled(true);
+			vp.getAdmincontrol().getBack3().setEnabled(true);
+
+			break;
 		}
-		
-		
+
 		default:
 			break;
 		}
@@ -1598,6 +1664,5 @@ public class Controller implements ActionListener {
 	public void setAdmin_clave(String admin_clave) {
 		this.admin_clave = admin_clave;
 	}
-	
-	
+
 }

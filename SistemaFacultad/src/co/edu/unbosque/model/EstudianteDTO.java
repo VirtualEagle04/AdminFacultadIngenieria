@@ -4,8 +4,29 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class EstudianteDTO implements Serializable{
-	
+/**
+ * 
+ * Clase Data transfer Object de los administradores
+ * 
+ * @param documento           Long encargado de almacenar un atributo
+ * @param nombres             String encargado de almacenar un atributo
+ * @param apellidos           String encargado de almacenar un atributo
+ * @param genero              char encargado de almacenar un atributo
+ * @param usuario             String encargado de almacenar un atributo
+ * @param correo              String encargado de almacenar un atributo
+ * @param fecha_nacimiento    Date encargado de almacenar un atributo
+ * @param esta_activo         boolean encargado de almacenar un atributo
+ * @param programa            String encargado de almacenar un atributo
+ * @param jornada             String encargado de almacenar un atributo
+ * @param lugar_nacimiento    String encargado de almacenar un atributo
+ * @param fecha_registro      Date encargado de almacenar un atributo
+ * @param nacional_extranjero String encargado de almacenar un atributo
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ */
+public class EstudianteDTO implements Serializable {
+
 	private static final long serialVersionUID = 765794194752650816L;
 	private long documento;
 	private String nombres;
@@ -20,7 +41,7 @@ public class EstudianteDTO implements Serializable{
 	private String lugar_nacimiento;
 	private Date fecha_registro;
 	private String nacional_extranjero;
-	
+
 	public EstudianteDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -151,26 +172,25 @@ public class EstudianteDTO implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		sb.append("Documento: "+getDocumento()+"\n");
-		sb.append("Nombres: "+getNombres()+"\n");
-		sb.append("Apellidos: "+getApellidos()+"\n");
-		sb.append("Genero: "+getGenero()+"\n");
-		sb.append("Usuario: "+getUsuario()+"\n");
-		sb.append("Correo: "+getCorreo()+"\n");
-		sb.append("Fecha de Nacimiento: "+dateFormat.format(getFecha_nacimiento())+"\n");
-		sb.append("Estado: "+(isEsta_activo()? "ACTIVO":"INACTIVO")+"\n");
-		sb.append("Programa Academico: "+getPrograma()+"\n");
-		sb.append("Jornada Academica: "+getJornada()+"\n");
-		sb.append("Lugar de Nacimiento: "+getLugar_nacimiento()+"\n");
-		sb.append("Fecha de Registro: "+dateFormat.format(getFecha_registro())+"\n");
-		sb.append("Nacional/Extranjero: "+getNacional_extranjero()+"\n");
+		sb.append("Documento: " + getDocumento() + "\n");
+		sb.append("Nombres: " + getNombres() + "\n");
+		sb.append("Apellidos: " + getApellidos() + "\n");
+		sb.append("Genero: " + getGenero() + "\n");
+		sb.append("Usuario: " + getUsuario() + "\n");
+		sb.append("Correo: " + getCorreo() + "\n");
+		sb.append("Fecha de Nacimiento: " + dateFormat.format(getFecha_nacimiento()) + "\n");
+		sb.append("Estado: " + (isEsta_activo() ? "ACTIVO" : "INACTIVO") + "\n");
+		sb.append("Programa Academico: " + getPrograma() + "\n");
+		sb.append("Jornada Academica: " + getJornada() + "\n");
+		sb.append("Lugar de Nacimiento: " + getLugar_nacimiento() + "\n");
+		sb.append("Fecha de Registro: " + dateFormat.format(getFecha_registro()) + "\n");
+		sb.append("Nacional/Extranjero: " + getNacional_extranjero() + "\n");
 		return sb.toString();
 	}
-	
-	
+
 }

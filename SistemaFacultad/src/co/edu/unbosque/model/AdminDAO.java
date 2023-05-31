@@ -3,7 +3,14 @@ package co.edu.unbosque.model;
 import java.util.ArrayList;
 
 import co.edu.unbosque.model.persistance.FileHandler;
-
+/**
+ * Clase Data Acces Object de los administradores
+ * 
+ * @param lista ArrayList que almacena todos los objetos creados de la clase AdminDTO
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo 
+ */
 public class AdminDAO implements OperacionesDAO{
 
 	private ArrayList<AdminDTO> lista;
@@ -26,13 +33,14 @@ public class AdminDAO implements OperacionesDAO{
 	}
 	
 	//ARCHIVOS
-	
+	/**
+	 * Metodo encargado de actualizar el serializado reespectivo de la clase
+	 */
 	public void escribirArchivo() {
 		FileHandler.escribirSerializado("admins.txt", lista);
 	}
 	
 	//CRUD
-	
 	@Override
 	public void crear(Object obj) {
 		lista.add((AdminDTO) obj);
