@@ -1,8 +1,8 @@
 package co.edu.unbosque.test.util;
 
 import java.util.Properties;
-import java.util.UUID;
 
+import java.util.UUID;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -21,7 +21,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 
 import co.edu.unbosque.util.MailSender;
 
-@TestMethodOrder(org.junit.jupiter.api.MethodOrderer.OrderAnnotation.class)
 /**
  * Clase encargada de las pruebas unitarias del MailSender
  * 
@@ -40,6 +39,9 @@ import co.edu.unbosque.util.MailSender;
  * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
  *         Vargas Rozo
  */
+
+@TestMethodOrder(org.junit.jupiter.api.MethodOrderer.OrderAnnotation.class)
+
 public class MailSenderTest {
 
 	private static int cont = 0;

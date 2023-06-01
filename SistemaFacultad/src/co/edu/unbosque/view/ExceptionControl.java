@@ -11,8 +11,37 @@ import co.edu.unbosque.util.exceptions.DocumentoMuyLargoException;
 import co.edu.unbosque.util.exceptions.FechaErroneaException;
 import co.edu.unbosque.util.exceptions.StringVacioException;
 
+/**
+ * Clase encargada de todos los avisos y recomendaciones de las excepciones
+ * 
+ * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
+ *         Vargas Rozo
+ */
 public class ExceptionControl {
-
+	/**
+	 * Metodo encargado de la verificacion de la entrada correcta de los datos
+	 * ingresados por el usuario, en caso de encontrar una erronea soltara alguna
+	 * excepcion propia
+	 * 
+	 * @param documento String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @param nombre    String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @param apellido  String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @param genero    String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @param correo    String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @param programa  String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @param lugar     String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @param fecha     String que almacena algun dato temporal que ingreso el
+	 *                  usuario
+	 * @return Booleano que refleja la correcta verificacion o en su defecto el mal
+	 *         ingreso de los datos
+	 */
 	public boolean verificarInfo(String documento, String nombre, String apellido, String genero, String correo,
 			String programa, String lugar, String fecha) {
 
@@ -146,12 +175,27 @@ public class ExceptionControl {
 		}
 	}
 
+	/**
+	 * Metodo encargado de mostrar un JOptionPane acerca de alguna lista que no
+	 * tiene seleccionado un item
+	 * 
+	 * @param message String que almacena un texto de advertencia
+	 */
 	public void listaVacia(String message) {
 
 		JOptionPane.showMessageDialog(null,
 				message + ", elija alguno de la lista o, en caso de que este vacia, ingrese un elemento nuevo.");
 	}
 
+	/**
+	 * Metodo que verifica el correcto ingreso de datos en ciertos casos
+	 * 
+	 * @param usuario String que almacena un atributo temporal ingresado por el
+	 *                usuario
+	 * @param codigo  String que almacena un atributo temporal ingresado por el
+	 *                usuario
+	 * @return Booleano que refleja si se ingreso o no bien los datos
+	 */
 	public boolean verificarTextoActivar(String usuario, String codigo) {
 
 		int contador = 0;
@@ -186,6 +230,15 @@ public class ExceptionControl {
 
 	}
 
+	/**
+	 * Metodo para verificar el correcto ingreso de la fecha y coherencia de la
+	 * misma
+	 * 
+	 * @param fecha String que almacena una fecha ingresada y guardada temporalmente
+	 *              que fue ingresada por el usuario
+	 * @return Booleano que refleja el correcto ingreso de la fecha o en su defecto
+	 *         una excepcion que avise al usuario del error
+	 */
 	public boolean verificarFecha(String fecha) {
 		boolean verificacion = false;
 		try {

@@ -23,8 +23,6 @@ import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.chart.renderer.category.StandardBarPainter;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.TextAnchor;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
@@ -35,7 +33,6 @@ import co.edu.unbosque.model.EstudianteDTO;
 import co.edu.unbosque.model.persistance.FileHandler;
 import co.edu.unbosque.util.MTC;
 
-@TestMethodOrder(org.junit.jupiter.api.MethodOrderer.OrderAnnotation.class)
 /**
  * Clase encargada de las pruebas unitarias del FileHandler
  * 
@@ -46,6 +43,9 @@ import co.edu.unbosque.util.MTC;
  * @author Juan Esteban Quintero, Javier Felipe Meza, Joann Zamudio, Federico
  *         Vargas Rozo
  */
+
+@TestMethodOrder(org.junit.jupiter.api.MethodOrderer.OrderAnnotation.class)
+
 public class FileHandlerTest {
 
 	private static int cont = 0;
